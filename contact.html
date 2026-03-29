@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlorifyTC – Kontakta oss | AI, Data Science & Digital Utveckling</title>
+  <meta name="description" content="Kontakta GlorifyTC för frågor om AI-lösningar, dataanalys och digital utveckling. Vi svarar inom 24 timmar.">
+  <meta name="keywords" content="Kontakta GlorifyTC, AI-konsult, Data Science kontakt, Webbutveckling, Järfälla, Stockholm">
+  <meta name="author" content="GlorifyTC">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://glorifytc.se/contact.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Contact CSS -->
+  <link rel="stylesheet" href="Contact.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Kontakta GlorifyTC",
+    "description": "Kontakta oss för frågor om AI-lösningar, dataanalys och digital utveckling.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "GlorifyTC",
+      "url": "https://glorifytc.se",
+      "email": "info@glorifytc.se",
+      "telephone": "+46-76-938-57-47",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Flygfältsvägen 131",
+        "addressLocality": "Järfälla",
+        "postalCode": "177 45",
+        "addressCountry": "SE"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION with Enhanced Animated Logo and Email Bot Link ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <span>G</span>
+      </div>
+      <div class="logo-text">GlorifyTC</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="home">Hem</a>
+      <a href="services.html" data-nav="services">Tjänster</a>
+      <a href="about.html" data-nav="about">Om oss</a>
+      <a href="team.html" data-nav="team">Team</a>
+      <a href="blog.html" data-nav="blog">Blogg</a>
+      <a href="emailbot.html" data-nav="emailbot">AI E-postbot</a>
+      <a href="contact.html" class="active" data-nav="contact">Kontakt</a>
+    </div>
+    
+    <div class="nav-right">
+      <div class="language-selector">
+        <button class="language-btn" id="languageBtn">
+          <i class="fas fa-globe"></i>
+          <span id="currentLang">SV</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="language-dropdown" id="languageDropdown">
+          <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
+          <button class="language-option" data-lang="en">🇬🇧 English</button>
+          <button class="language-option" data-lang="no">🇳🇴 Norsk</button>
+          <button class="language-option" data-lang="fi">🇫🇮 Suomi</button>
+          <button class="language-option" data-lang="da">🇩🇰 Dansk</button>
+          <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
+        </div>
+      </div>
+      
+      <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
+    </div>
+  </nav>
+
+  <!-- ===== CONTACT HEADER ===== -->
+  <section class="contact-header">
+    <div class="max-width">
+      <div class="header-content">
+        <div class="tag">
+          <span class="tag-dot"></span>
+          <span class="tag-text" data-contact="tag">Kontakta oss</span>
+        </div>
+        <h1 class="hero-title"><span data-contact="title">Kontakta</span> <span class="cyan" data-contact="titleSpan">oss</span></h1>
+        <p class="hero-description" data-contact="description">
+          Har du ett projekt i åtanke eller vill bara säga hej? Vi vill gärna höra från dig.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT MAIN: FORM + INFO + GOOGLE MAP ===== -->
+  <section class="contact-main">
+    <div class="max-width">
+      <div class="contact-grid">
+        
+        <!-- LEFT COLUMN: CONTACT FORM -->
+        <div class="form-column">
+          <!-- success state (hidden by default) -->
+          <div id="successMessage" class="success-card" style="display: none;">
+            <div class="success-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="success-title" data-contact="successTitle">Meddelande skickat!</h3>
+            <p class="success-text" data-contact="successText">Tack för att du kontaktade oss. Vi återkommer så snart som möjligt.</p>
+            <button id="sendAnotherBtn" class="outline-btn" data-contact="sendAnother">Skicka ett nytt meddelande</button>
+          </div>
+
+          <!-- contact form -->
+          <form id="contactForm" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label data-contact="name">Ditt namn</label>
+                <input type="text" name="name" placeholder="John Doe" required class="form-input" data-contact="namePlaceholder">
+              </div>
+              <div class="form-group">
+                <label data-contact="email">Din e-post</label>
+                <input type="email" name="email" placeholder="john@example.com" required class="form-input" data-contact="emailPlaceholder">
+              </div>
+            </div>
+            <div class="form-group">
+              <label data-contact="subject">Ämne</label>
+              <input type="text" name="subject" placeholder="Hur kan vi hjälpa?" required class="form-input" data-contact="subjectPlaceholder">
+            </div>
+            <div class="form-group">
+              <label data-contact="message">Ditt meddelande</label>
+              <textarea name="message" placeholder="Berätta om ditt projekt..." rows="6" required class="form-textarea" data-contact="messagePlaceholder"></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="submit-btn">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> <span data-contact="send">Skicka meddelande</span></span>
+              <span class="btn-loading" style="display: none;"><i class="fas fa-spinner fa-spin"></i> <span data-contact="sending">Skickar...</span></span>
+            </button>
+          </form>
+        </div>
+
+        <!-- RIGHT COLUMN: CONTACT INFO & MAP -->
+        <div class="info-column">
+          <h3 class="info-heading" data-contact="infoHeading">Kontaktinformation</h3>
+          <p class="info-description" data-contact="infoDesc">
+            Kontakta oss gärna via någon av kanalerna nedan. Vi svarar vanligtvis inom 24 timmar.
+          </p>
+
+          <div class="info-cards">
+            <!-- EMAIL -->
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-detail">
+                <h4 data-contact="emailLabel">E-post</h4>
+                <a href="mailto:info@glorifytc.se">info@glorifytc.se</a>
+              </div>
+            </div>
+            <!-- PHONE -->
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="info-detail">
+                <h4 data-contact="phoneLabel">Telefon</h4>
+                <a href="tel:+46769385747">+46 (76) 938 57 47</a>
+              </div>
+            </div>
+            <!-- LOCATION -->
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-detail">
+                <h4 data-contact="locationLabel">Plats</h4>
+                <p>Flygfältsvägen 131<br>177 45 Järfälla, Sverige</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- GOOGLE MAP -->
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.7487336484495!2d17.8451034!3d59.4045185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9f1a9a1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sFlygf%C3%A4ltsv%C3%A4gen%20131%2C%20177%2045%20J%C3%A4rf%C3%A4lla%2C%20Sweden!5e0!3m2!1sen!2sse!4v1700000000000!5m2!1sen!2sse" 
+              width="100%" 
+              height="240" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="GlorifyTC office location in Järfälla"
+            ></iframe>
+          </div>
+          <p class="map-caption" data-footer="address">Flygfältsvägen 131, 177 45 Järfälla, Sverige</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAT BUTTON ===== -->
+  <button class="chat-button" id="chatButton"></button>
+
+  <!-- ===== CHAT MODAL ===== -->
+  <div class="chat-modal" id="chatModal">
+    <div class="chat-header">
+      <div class="chat-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="chat-title">
+        <h3 data-chat="title">GlorifyTC Assistent</h3>
+        <p data-chat="subtitle">AI-driven support</p>
+      </div>
+      <button class="chat-close" id="chatClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message assistant" data-chat="welcome">
+        Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Fråga vad som helst..." data-chat="placeholder">
+      <button id="sendButton" disabled>
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER with Enhanced Animated Logo ===== -->
+  <footer class="footer">
+    <div class="max-width">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="display: inline-flex;">
+          <div class="logo-icon">
+            <span>G</span>
+          </div>
+          <div class="logo-text">GlorifyTC</div>
+        </a>
+        <p class="footer-tagline" data-footer="tagline">Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer grid: Quick Links, Services, Contact -->
+      <div class="footer-grid">
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h3 data-footer="quickLinks">Snabblänkar</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" data-nav="home">Hem</a></li>
+            <li><a href="services.html" data-nav="services">Tjänster</a></li>
+            <li><a href="about.html" data-nav="about">Om oss</a></li>
+            <li><a href="team.html" data-nav="team">Team</a></li>
+            <li><a href="blog.html" data-nav="blog">Blogg</a></li>
+            <li><a href="emailbot.html" data-nav="emailbot">AI E-postbot</a></li>
+            <li><a href="contact.html" data-nav="contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <!-- Services -->
+        <div class="footer-col">
+          <h3 data-footer="services">Tjänster</h3>
+          <ul class="footer-links">
+            <li><a href="#">AI-modellutveckling</a></li>
+            <li><a href="#">Dataanalys</a></li>
+            <li><a href="#">Webbapplikationer</a></li>
+            <li><a href="#">Mobilappar</a></li>
+            <li><a href="emailbot.html">AI E-postbot</a></li>
+            <li><a href="#">ML-konsulting</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div class="footer-col">
+          <h3 data-footer="contact">Kontakt</h3>
+          <ul class="footer-links contact-links">
+            <li><a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a></li>
+            <li><a href="tel:+46769385747"><i class="fas fa-phone-alt"></i> +46 (76) 938 57 47</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 131, 177 45 Järfälla</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom copyright & legal -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 GlorifyTC. <span data-footer="rights">Alla rättigheter förbehållna.</span></p>
+        <div class="legal-links">
+          <a href="#" data-footer="privacy">Integritetspolicy</a>
+          <span class="separator">|</span>
+          <a href="#" data-footer="terms">Användarvillkor</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Complete JavaScript with ALL 6 Languages and emailbot -->
+  <script>
+    // Complete translations for ALL 6 languages with emailbot
+    const translations = {
+      // Swedish
+      sv: {
+        nav: {
+          home: "Hem",
+          services: "Tjänster",
+          about: "Om oss",
+          team: "Team",
+          blog: "Blogg",
+          emailbot: "AI E-postbot",
+          contact: "Kontakt",
+          getStarted: "Kom igång"
+        },
+        footer: {
+          tagline: "Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.",
+          quickLinks: "Snabblänkar",
+          services: "Tjänster",
+          contact: "Kontakt",
+          rights: "Alla rättigheter förbehållna.",
+          privacy: "Integritetspolicy",
+          terms: "Användarvillkor",
+          address: "Flygfältsvägen 131, 177 45 Järfälla, Sverige"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "AI-driven support",
+          placeholder: "Fråga vad som helst...",
+          welcome: "Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?"
+        },
+        contact: {
+          tag: "Kontakta oss",
+          title: "Kontakta",
+          titleSpan: "oss",
+          description: "Har du ett projekt i åtanke eller vill bara säga hej? Vi vill gärna höra från dig.",
+          name: "Ditt namn",
+          namePlaceholder: "John Doe",
+          email: "Din e-post",
+          emailPlaceholder: "john@example.com",
+          subject: "Ämne",
+          subjectPlaceholder: "Hur kan vi hjälpa?",
+          message: "Ditt meddelande",
+          messagePlaceholder: "Berätta om ditt projekt...",
+          send: "Skicka meddelande",
+          sending: "Skickar...",
+          successTitle: "Meddelande skickat!",
+          successText: "Tack för att du kontaktade oss. Vi återkommer så snart som möjligt.",
+          sendAnother: "Skicka ett nytt meddelande",
+          infoHeading: "Kontaktinformation",
+          infoDesc: "Kontakta oss gärna via någon av kanalerna nedan. Vi svarar vanligtvis inom 24 timmar.",
+          emailLabel: "E-post",
+          phoneLabel: "Telefon",
+          locationLabel: "Plats"
+        }
+      },
+      // English
+      en: {
+        nav: {
+          home: "Home",
+          services: "Services",
+          about: "About",
+          team: "Team",
+          blog: "Blog",
+          emailbot: "AI Email Bot",
+          contact: "Contact",
+          getStarted: "Get Started"
+        },
+        footer: {
+          tagline: "Advanced AI, Data Science & Modern Digital Development. Building intelligent solutions that matter.",
+          quickLinks: "Quick Links",
+          services: "Services",
+          contact: "Contact",
+          rights: "All rights reserved.",
+          privacy: "Privacy Policy",
+          terms: "Terms of Service",
+          address: "Flygfältsvägen 131, 177 45 Järfälla, Sweden"
+        },
+        chat: {
+          title: "GlorifyTC Assistant",
+          subtitle: "AI-Powered Support",
+          placeholder: "Ask anything...",
+          welcome: "Hello! I'm GlorifyTC's AI assistant. I can help you learn about our services, answer questions about AI and data science, or assist with any inquiries. How can I help you today?"
+        },
+        contact: {
+          tag: "Get in Touch",
+          title: "Contact",
+          titleSpan: "Us",
+          description: "Have a project in mind or just want to say hello? We'd love to hear from you.",
+          name: "Your Name",
+          namePlaceholder: "John Doe",
+          email: "Your Email",
+          emailPlaceholder: "john@example.com",
+          subject: "Subject",
+          subjectPlaceholder: "How can we help?",
+          message: "Your Message",
+          messagePlaceholder: "Tell us about your project...",
+          send: "Send Message",
+          sending: "Sending...",
+          successTitle: "Message Sent!",
+          successText: "Thank you for reaching out. We'll get back to you as soon as possible.",
+          sendAnother: "Send Another Message",
+          infoHeading: "Contact Information",
+          infoDesc: "Feel free to reach out through any of the channels below. We typically respond within 24 hours.",
+          emailLabel: "Email",
+          phoneLabel: "Phone",
+          locationLabel: "Location"
+        }
+      },
+      // Norwegian
+      no: {
+        nav: {
+          home: "Hjem",
+          services: "Tjenester",
+          about: "Om oss",
+          team: "Team",
+          blog: "Blogg",
+          emailbot: "AI E-postbot",
+          contact: "Kontakt",
+          getStarted: "Kom i gang"
+        },
+        footer: {
+          tagline: "Avansert AI, Data Science & Moderne Digital Utvikling. Bygger intelligente løsninger som betyr noe.",
+          quickLinks: "Hurtiglenker",
+          services: "Tjenester",
+          contact: "Kontakt",
+          rights: "Alle rettigheter forbeholdt.",
+          privacy: "Personvernerklæring",
+          terms: "Bruksvilkår",
+          address: "Flygfältsvägen 131, 177 45 Järfälla, Sverige"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "AI-drevet support",
+          placeholder: "Spør om hva som helst...",
+          welcome: "Hei! Jeg er GlorifyTCs AI-assistent. Jeg kan hjelpe deg med informasjon om våre tjenester, svare på spørsmål om AI og datavitenskap, eller hjelpe med andre henvendelser. Hvordan kan jeg hjelpe deg i dag?"
+        },
+        contact: {
+          tag: "Ta kontakt",
+          title: "Kontakt",
+          titleSpan: "oss",
+          description: "Har du et prosjekt i tankene eller bare vil si hei? Vi vil gjerne høre fra deg.",
+          name: "Ditt navn",
+          namePlaceholder: "Ola Nordmann",
+          email: "Din e-post",
+          emailPlaceholder: "ola@example.no",
+          subject: "Emne",
+          subjectPlaceholder: "Hvordan kan vi hjelpe?",
+          message: "Din melding",
+          messagePlaceholder: "Fortell om prosjektet ditt...",
+          send: "Send melding",
+          sending: "Sender...",
+          successTitle: "Melding sendt!",
+          successText: "Takk for at du tok kontakt. Vi svarer så snart som mulig.",
+          sendAnother: "Send en ny melding",
+          infoHeading: "Kontaktinformasjon",
+          infoDesc: "Ta gjerne kontakt via en av kanalene nedenfor. Vi svarer vanligvis innen 24 timer.",
+          emailLabel: "E-post",
+          phoneLabel: "Telefon",
+          locationLabel: "Sted"
+        }
+      },
+      // Finnish
+      fi: {
+        nav: {
+          home: "Koti",
+          services: "Palvelut",
+          about: "Tietoa meistä",
+          team: "Tiimi",
+          blog: "Blogi",
+          emailbot: "AI Sähköpostibotti",
+          contact: "Yhteystiedot",
+          getStarted: "Aloita"
+        },
+        footer: {
+          tagline: "Edistynyt tekoäly, datatiede ja moderni digitaalinen kehitys. Rakennamme älykkäitä ratkaisuja, joilla on merkitystä.",
+          quickLinks: "Pikalinkit",
+          services: "Palvelut",
+          contact: "Yhteystiedot",
+          rights: "Kaikki oikeudet pidätetään.",
+          privacy: "Tietosuojakäytäntö",
+          terms: "Käyttöehdot",
+          address: "Flygfältsvägen 131, 177 45 Järfälla, Ruotsi"
+        },
+        chat: {
+          title: "GlorifyTC Avustaja",
+          subtitle: "Tekoälypohjainen tuki",
+          placeholder: "Kysy mitä tahansa...",
+          welcome: "Hei! Olen GlorifyTC:n tekoälyavustaja. Voin auttaa sinua palveluihimme liittyvissä kysymyksissä, vastata tekoälyä ja datatiedettä koskeviin kysymyksiin tai auttaa muissa tiedusteluissa. Kuinka voin auttaa sinua tänään?"
+        },
+        contact: {
+          tag: "Ota yhteyttä",
+          title: "Ota",
+          titleSpan: "yhteyttä",
+          description: "Onko sinulla projekti mielessä tai haluatko vain sanoa hei? Kuulemme mielellämme sinusta.",
+          name: "Nimesi",
+          namePlaceholder: "Matti Meikäläinen",
+          email: "Sähköpostisi",
+          emailPlaceholder: "matti@example.fi",
+          subject: "Aihe",
+          subjectPlaceholder: "Miten voimme auttaa?",
+          message: "Viestisi",
+          messagePlaceholder: "Kerro projektistasi...",
+          send: "Lähetä viesti",
+          sending: "Lähetetään...",
+          successTitle: "Viesti lähetetty!",
+          successText: "Kiitos yhteydenotostasi. Palaamme asiaan mahdollisimman pian.",
+          sendAnother: "Lähetä toinen viesti",
+          infoHeading: "Yhteystiedot",
+          infoDesc: "Ota rohkeasti yhteyttä alla olevien kanavien kautta. Vastaamme yleensä 24 tunnin kuluessa.",
+          emailLabel: "Sähköposti",
+          phoneLabel: "Puhelin",
+          locationLabel: "Sijainti"
+        }
+      },
+      // Danish
+      da: {
+        nav: {
+          home: "Hjem",
+          services: "Tjenester",
+          about: "Om os",
+          team: "Team",
+          blog: "Blog",
+          emailbot: "AI E-mailbot",
+          contact: "Kontakt",
+          getStarted: "Kom i gang"
+        },
+        footer: {
+          tagline: "Avanceret AI, Data Science & Moderne Digital Udvikling. Bygger intelligente løsninger, der gør en forskel.",
+          quickLinks: "Hurtige links",
+          services: "Tjenester",
+          contact: "Kontakt",
+          rights: "Alle rettigheder forbeholdes.",
+          privacy: "Privatlivspolitik",
+          terms: "Servicevilkår",
+          address: "Flygfältsvägen 131, 177 45 Järfälla, Sverige"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "AI-drevet support",
+          placeholder: "Spørg om hvad som helst...",
+          welcome: "Hej! Jeg er GlorifyTC's AI-assistent. Jeg kan hjælpe dig med information om vores tjenester, besvare spørgsmål om AI og datavidenskab eller hjælpe med andre forespørgsler. Hvordan kan jeg hjælpe dig i dag?"
+        },
+        contact: {
+          tag: "Kontakt os",
+          title: "Kontakt",
+          titleSpan: "os",
+          description: "Har du et projekt i tankerne eller bare lyst til at sige hej? Vi vil gerne høre fra dig.",
+          name: "Dit navn",
+          namePlaceholder: "John Doe",
+          email: "Din e-mail",
+          emailPlaceholder: "john@example.dk",
+          subject: "Emne",
+          subjectPlaceholder: "Hvordan kan vi hjælpe?",
+          message: "Din besked",
+          messagePlaceholder: "Fortæl om dit projekt...",
+          send: "Send besked",
+          sending: "Sender...",
+          successTitle: "Besked sendt!",
+          successText: "Tak for din henvendelse. Vi vender tilbage hurtigst muligt.",
+          sendAnother: "Send en anden besked",
+          infoHeading: "Kontaktoplysninger",
+          infoDesc: "Du er velkommen til at kontakte os via en af kanalerne nedenfor. Vi svarer normalt inden for 24 timer.",
+          emailLabel: "E-mail",
+          phoneLabel: "Telefon",
+          locationLabel: "Sted"
+        }
+      },
+      // German
+      de: {
+        nav: {
+          home: "Startseite",
+          services: "Dienstleistungen",
+          about: "Über uns",
+          team: "Team",
+          blog: "Blog",
+          emailbot: "KI E-Mail-Bot",
+          contact: "Kontakt",
+          getStarted: "Loslegen"
+        },
+        footer: {
+          tagline: "Fortschrittliche KI, Datenwissenschaft & Moderne Digitale Entwicklung. Wir entwickeln intelligente Lösungen, die einen Unterschied machen.",
+          quickLinks: "Schnelllinks",
+          services: "Dienstleistungen",
+          contact: "Kontakt",
+          rights: "Alle Rechte vorbehalten.",
+          privacy: "Datenschutzrichtlinie",
+          terms: "Nutzungsbedingungen",
+          address: "Flygfältsvägen 131, 177 45 Järfälla, Schweden"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "KI-gestützter Support",
+          placeholder: "Fragen Sie alles...",
+          welcome: "Hallo! Ich bin der KI-Assistent von GlorifyTC. Ich kann Ihnen Informationen über unsere Dienstleistungen geben, Fragen zu KI und Datenwissenschaft beantworten oder bei anderen Anliegen helfen. Wie kann ich Ihnen heute helfen?"
+        },
+        contact: {
+          tag: "Kontaktieren Sie uns",
+          title: "Kontakt",
+          titleSpan: "aufnehmen",
+          description: "Haben Sie ein Projekt im Sinn oder möchten Sie einfach Hallo sagen? Wir freuen uns, von Ihnen zu hören.",
+          name: "Ihr Name",
+          namePlaceholder: "Max Mustermann",
+          email: "Ihre E-Mail",
+          emailPlaceholder: "max@example.de",
+          subject: "Betreff",
+          subjectPlaceholder: "Wie können wir helfen?",
+          message: "Ihre Nachricht",
+          messagePlaceholder: "Erzählen Sie uns von Ihrem Projekt...",
+          send: "Nachricht senden",
+          sending: "Senden...",
+          successTitle: "Nachricht gesendet!",
+          successText: "Vielen Dank für Ihre Kontaktaufnahme. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+          sendAnother: "Eine weitere Nachricht senden",
+          infoHeading: "Kontaktinformationen",
+          infoDesc: "Kontaktieren Sie uns gerne über einen der untenstehenden Kanäle. Wir antworten in der Regel innerhalb von 24 Stunden.",
+          emailLabel: "E-Mail",
+          phoneLabel: "Telefon",
+          locationLabel: "Standort"
+        }
+      }
+    };
+
+    // Language Manager
+    const LanguageManager = {
+      currentLang: localStorage.getItem('glorifytc_lang') || 'sv',
+      
+      init() {
+        this.loadLanguage(this.currentLang);
+        this.setupLanguageSelector();
+        this.updateCurrentLangDisplay();
+        this.highlightActiveLanguage();
+      },
+      
+      loadLanguage(lang) {
+        const t = translations[lang];
+        if (!t) return;
+        
+        // Update navigation
+        document.querySelectorAll('[data-nav]').forEach(el => {
+          const key = el.dataset.nav;
+          if (t.nav && t.nav[key]) el.textContent = t.nav[key];
+        });
+        
+        // Update footer
+        document.querySelectorAll('[data-footer]').forEach(el => {
+          const key = el.dataset.footer;
+          if (t.footer && t.footer[key]) {
+            if (el.tagName === 'H3') el.textContent = t.footer[key];
+            else el.textContent = t.footer[key];
+          }
+        });
+        
+        // Update chat
+        document.querySelectorAll('[data-chat]').forEach(el => {
+          const key = el.dataset.chat;
+          if (t.chat && t.chat[key]) {
+            if (el.tagName === 'INPUT') el.placeholder = t.chat[key];
+            else el.textContent = t.chat[key];
+          }
+        });
+        
+        // Update contact page
+        document.querySelectorAll('[data-contact]').forEach(el => {
+          const key = el.dataset.contact;
+          if (t.contact && t.contact[key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+              el.placeholder = t.contact[key];
+            } else if (el.tagName === 'LABEL') {
+              el.textContent = t.contact[key];
+            } else {
+              el.textContent = t.contact[key];
+            }
+          }
+        });
+        
+        // Update map caption (uses footer address)
+        const mapCaption = document.querySelector('.map-caption');
+        if (mapCaption && t.footer && t.footer.address) {
+          mapCaption.textContent = t.footer.address;
+        }
+        
+        localStorage.setItem('glorifytc_lang', lang);
+      },
+      
+      setupLanguageSelector() {
+        const btn = document.getElementById('languageBtn');
+        const dropdown = document.getElementById('languageDropdown');
+        
+        if (!btn || !dropdown) return;
+        
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle('show');
+        });
+        
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target)) dropdown.classList.remove('show');
+        });
+        
+        document.querySelectorAll('.language-option').forEach(option => {
+          option.addEventListener('click', () => {
+            const lang = option.dataset.lang;
+            if (lang === this.currentLang) {
+              dropdown.classList.remove('show');
+              return;
+            }
+            
+            this.currentLang = lang;
+            this.loadLanguage(lang);
+            this.updateCurrentLangDisplay();
+            this.highlightActiveLanguage();
+            dropdown.classList.remove('show');
+          });
+        });
+      },
+      
+      updateCurrentLangDisplay() {
+        const span = document.getElementById('currentLang');
+        if (span) span.textContent = this.currentLang.toUpperCase();
+      },
+      
+      highlightActiveLanguage() {
+        document.querySelectorAll('.language-option').forEach(option => {
+          option.classList.remove('active-lang');
+          if (option.dataset.lang === this.currentLang) option.classList.add('active-lang');
+        });
+      }
+    };
+
+    // Chat functionality
+    function initChat() {
+      const chatModal = document.getElementById('chatModal');
+      const chatButton = document.getElementById('chatButton');
+      const chatClose = document.getElementById('chatClose');
+      const chatInput = document.getElementById('chatInput');
+      const sendButton = document.getElementById('sendButton');
+      const chatMessages = document.getElementById('chatMessages');
+      
+      if (!chatModal) return;
+      
+      function toggleChat() {
+        chatModal.classList.toggle('open');
+        if (chatModal.classList.contains('open')) chatInput.focus();
+      }
+      
+      chatButton.addEventListener('click', toggleChat);
+      chatClose.addEventListener('click', toggleChat);
+      
+      chatModal.addEventListener('click', (e) => {
+        if (e.target === chatModal) toggleChat();
+      });
+      
+      function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message) return;
+        
+        const userDiv = document.createElement('div');
+        userDiv.classList.add('message', 'user');
+        userDiv.textContent = message;
+        chatMessages.appendChild(userDiv);
+        chatInput.value = '';
+        sendButton.disabled = true;
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        setTimeout(() => {
+          const responses = [
+            "Tack för ditt meddelande! Jag hjälper dig gärna.",
+            "Vi specialiserar oss på AI-modeller och datalösningar. Hur kan jag hjälpa dig?",
+            "Vårt team har lång erfarenhet inom AI-utveckling. Vad vill du veta mer om?",
+            "Berätta gärna mer om dina behov så diskuterar vi hur AI kan transformera din verksamhet."
+          ];
+          
+          const assistantDiv = document.createElement('div');
+          assistantDiv.classList.add('message', 'assistant');
+          assistantDiv.textContent = responses[Math.floor(Math.random() * responses.length)];
+          chatMessages.appendChild(assistantDiv);
+          sendButton.disabled = false;
+          chatInput.focus();
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 1000);
+      }
+      
+      chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+      });
+      
+      sendButton.addEventListener('click', sendMessage);
+      
+      chatInput.addEventListener('input', () => {
+        sendButton.disabled = !chatInput.value.trim();
+      });
+    }
+
+    // Contact form functionality
+    function initContactForm() {
+      const contactForm = document.getElementById('contactForm');
+      const successMessage = document.getElementById('successMessage');
+      const submitBtn = document.getElementById('submitBtn');
+      const sendAnotherBtn = document.getElementById('sendAnotherBtn');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          submitBtn.querySelector('.btn-text').style.display = 'none';
+          submitBtn.querySelector('.btn-loading').style.display = 'inline-flex';
+          submitBtn.disabled = true;
+          
+          setTimeout(() => {
+            contactForm.style.display = 'none';
+            successMessage.style.display = 'block';
+            
+            submitBtn.querySelector('.btn-text').style.display = 'inline-flex';
+            submitBtn.querySelector('.btn-loading').style.display = 'none';
+            submitBtn.disabled = false;
+            
+            contactForm.reset();
+          }, 1500);
+        });
+      }
+      
+      if (sendAnotherBtn) {
+        sendAnotherBtn.addEventListener('click', () => {
+          successMessage.style.display = 'none';
+          contactForm.style.display = 'block';
+        });
+      }
+    }
+
+    // Navbar scroll effect
+    function initNavbar() {
+      window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', () => {
+      LanguageManager.init();
+      initChat();
+      initContactForm();
+      initNavbar();
+    });
+  </script>
+</body>
+</html>

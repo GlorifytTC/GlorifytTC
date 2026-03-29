@@ -1,0 +1,7 @@
+# robots.txt for GlorifyTC.se
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Disallow: /admin/
+
+Sitemap: https://glorifytc.se/sitemap.xml

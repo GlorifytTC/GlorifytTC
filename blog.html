@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlorifyTC – Blogg & Artiklar | AI, Data Science & Teknikinsikter</title>
+  <meta name="description" content="Utforska GlorifyTCs blogg med insikter, handledningar och tankar om AI, datavetenskap, maskininlärning och modern webbutveckling.">
+  <meta name="keywords" content="AI blogg, Data Science artiklar, Machine Learning, Webbutveckling, Teknikblogg, GlorifyTC">
+  <meta name="author" content="GlorifyTC">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://glorifytc.se/blog.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Blog CSS -->
+  <link rel="stylesheet" href="Blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "GlorifyTC Blogg",
+    "description": "Insikter, handledningar och tankar om AI, datavetenskap och modern utveckling.",
+    "url": "https://glorifytc.se/blog.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "GlorifyTC",
+      "url": "https://glorifytc.se"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== NAVIGATION with Enhanced Animated Logo and Email Bot Link ===== -->
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">
+      <span>G</span>
+    </div>
+    <div class="logo-text">GlorifyTC</div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" data-nav="home">Hem</a>
+    <a href="services.html" data-nav="services">Tjänster</a>
+    <a href="about.html" data-nav="about">Om oss</a>
+    <a href="team.html" data-nav="team">Team</a>
+    <a href="blog.html" class="active" data-nav="blog">Blogg</a>
+    <a href="emailbot.html" data-nav="emailbot">AI E-postbot</a>
+    <a href="contact.html" data-nav="contact">Kontakt</a>
+  </div>
+  
+  <div class="nav-right">
+    <div class="language-selector">
+      <button class="language-btn" id="languageBtn">
+        <i class="fas fa-globe"></i>
+        <span id="currentLang">SV</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="language-dropdown" id="languageDropdown">
+        <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
+        <button class="language-option" data-lang="en">🇬🇧 English</button>
+        <button class="language-option" data-lang="no">🇳🇴 Norsk</button>
+        <button class="language-option" data-lang="fi">🇫🇮 Suomi</button>
+        <button class="language-option" data-lang="da">🇩🇰 Dansk</button>
+        <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
+      </div>
+    </div>
+    
+    <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
+  </div>
+</nav>
+
+  <!-- ===== BLOG HEADER ===== -->
+  <section class="blog-header">
+    <div class="max-width">
+      <div class="header-content">
+        <div class="tag">
+          <span class="tag-dot"></span>
+          <span class="tag-text" data-blog="tag">Våra insikter</span>
+        </div>
+        <h1 class="hero-title"><span data-blog="title">Blogg &</span> <span class="cyan" data-blog="titleSpan">Artiklar</span></h1>
+        <p class="hero-description" data-blog="description">
+          Insikter, handledningar och tankar om AI, datavetenskap och modern utveckling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEARCH & CATEGORY FILTERS ===== -->
+  <section class="blog-filters">
+    <div class="max-width">
+      <div class="filter-layout">
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="search-input" placeholder="Sök artiklar..." id="blogSearch" data-blog="search">
+        </div>
+        <div class="filter-container" id="categoryFilter">
+          <button class="filter-btn active" data-category="all" data-blog="all">Alla</button>
+          <button class="filter-btn" data-category="ai" data-blog="aiMl">AI & Machine Learning</button>
+          <button class="filter-btn" data-category="datascience" data-blog="dataScience">Data Science</button>
+          <button class="filter-btn" data-category="webdev" data-blog="webDev">Webbutveckling</button>
+          <button class="filter-btn" data-category="ethics" data-blog="ethics">Etik & Ansvar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED POSTS ===== -->
+  <section class="featured-posts">
+    <div class="max-width">
+      <div class="featured-grid">
+        <article class="featured-card" data-category="ai">
+          <div class="featured-image">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop" alt="AI future">
+          </div>
+          <div class="featured-overlay"></div>
+          <div class="featured-content">
+            <div class="featured-meta">
+              <span class="featured-badge" data-blog="featured">Utvald</span>
+              <span class="category-label" data-blog="aiMl">AI & Machine Learning</span>
+            </div>
+            <h2 class="featured-title">Framtiden för AI inom Data Science</h2>
+            <p class="featured-excerpt">Som dataforskare utforskar jag hur AI revolutionerar industrier. Från generativa modeller till automatiserade arbetsflöden — upptäck de senaste insikterna och trenderna som formar vårt område.</p>
+            <div class="post-meta">
+              <span><i class="far fa-calendar-alt"></i> 15 Dec, 2024</span>
+              <span><i class="far fa-clock"></i> 8 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="featured-card" data-category="ethics">
+          <div class="featured-image">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=500&fit=crop" alt="Ethical AI">
+          </div>
+          <div class="featured-overlay"></div>
+          <div class="featured-content">
+            <div class="featured-meta">
+              <span class="featured-badge" data-blog="featured">Utvald</span>
+              <span class="category-label" data-blog="ethics">Etik & Ansvar</span>
+            </div>
+            <h2 class="featured-title">Att bygga etiska AI-modeller</h2>
+            <p class="featured-excerpt">Bästa praxis för att utveckla ansvarsfulla, transparenta och opartiska AI-lösningar som gynnar alla. Lär dig hur du integrerar etik i din AI-utvecklingslivscykel.</p>
+            <div class="post-meta">
+              <span><i class="far fa-calendar-alt"></i> 10 Dec, 2024</span>
+              <span><i class="far fa-clock"></i> 6 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGULAR POSTS GRID ===== -->
+  <section class="regular-posts">
+    <div class="max-width">
+      <div class="posts-grid" id="postsContainer">
+        <article class="post-card" data-category="webdev">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop" alt="Web Dev">
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <i class="fas fa-tag"></i>
+              <span data-blog="webDev">Webbutveckling</span>
+            </div>
+            <h3 class="card-title">Modern webbutveckling med AI-integration</h3>
+            <p class="card-excerpt">Hur du sömlöst integrerar AI-funktioner i dina webbapplikationer för förbättrade användarupplevelser och intelligent automatisering.</p>
+            <div class="card-footer">
+              <span><i class="far fa-calendar-alt"></i> 5 Dec, 2024</span>
+              <span><i class="far fa-clock"></i> 5 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="post-card" data-category="datascience">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" alt="Data Viz">
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <i class="fas fa-tag"></i>
+              <span data-blog="dataScience">Data Science</span>
+            </div>
+            <h3 class="card-title">Bästa praxis för datavisualisering</h3>
+            <p class="card-excerpt">Skapa övertygande och insiktsfulla datavisualiseringar som berättar en historia. Från dashboards till interaktiva diagram.</p>
+            <div class="card-footer">
+              <span><i class="far fa-calendar-alt"></i> 28 Nov, 2024</span>
+              <span><i class="far fa-clock"></i> 7 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="post-card" data-category="ai">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop" alt="ML Scale">
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <i class="fas fa-tag"></i>
+              <span data-blog="aiMl">AI & Machine Learning</span>
+            </div>
+            <h3 class="card-title">Skala maskininlärningsmodeller i produktion</h3>
+            <p class="card-excerpt">Strategier för att driftsätta och underhålla ML-modeller i stor skala. Infrastruktur, övervakning och kontinuerlig förbättring.</p>
+            <div class="card-footer">
+              <span><i class="far fa-calendar-alt"></i> 20 Nov, 2024</span>
+              <span><i class="far fa-clock"></i> 10 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="post-card" data-category="ai">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1696446701796-da61225697cc?w=800&h=500&fit=crop" alt="Generative AI">
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <i class="fas fa-tag"></i>
+              <span data-blog="aiMl">AI & Machine Learning</span>
+            </div>
+            <h3 class="card-title">Generativ AI:s framväxt</h3>
+            <p class="card-excerpt">Utforska kapaciteten och tillämpningarna av generativa AI-modeller. Från text till bilder och vidare.</p>
+            <div class="card-footer">
+              <span><i class="far fa-calendar-alt"></i> 15 Nov, 2024</span>
+              <span><i class="far fa-clock"></i> 6 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="post-card" data-category="webdev">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=500&fit=crop" alt="Web Dev API">
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <i class="fas fa-tag"></i>
+              <span data-blog="webDev">Webbutveckling</span>
+            </div>
+            <h3 class="card-title">Bygga AI-drivna API:er</h3>
+            <p class="card-excerpt">En praktisk guide till att skapa och driftsätta API:er som serverar maskininlärningsmodeller med låg latens.</p>
+            <div class="card-footer">
+              <span><i class="far fa-calendar-alt"></i> 10 Nov, 2024</span>
+              <span><i class="far fa-clock"></i> 8 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="post-card" data-category="datascience">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="MLOps">
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <i class="fas fa-tag"></i>
+              <span data-blog="dataScience">Data Science</span>
+            </div>
+            <h3 class="card-title">MLOps: Att överbrygga klyftan</h3>
+            <p class="card-excerpt">Hur man effektiviserar livscykeln för maskininlärningsmodeller från utveckling till produktion.</p>
+            <div class="card-footer">
+              <span><i class="far fa-calendar-alt"></i> 5 Nov, 2024</span>
+              <span><i class="far fa-clock"></i> 7 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div id="noResults" class="no-results" style="display: none;">
+        <p data-blog="noResults">Inga artiklar matchar din sökning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER SECTION ===== -->
+  <section class="newsletter-section">
+    <div class="max-width">
+      <div class="newsletter-container">
+        <p class="newsletter-text" data-blog="newsletter">Prenumerera på vårt nyhetsbrev för de senaste insikterna om AI, datavetenskap och teknologi.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Ange din e-post" class="newsletter-input" required data-blog="emailPlaceholder">
+          <button type="submit" class="subscribe-btn" data-blog="subscribe">Prenumerera</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAT BUTTON ===== -->
+  <button class="chat-button" id="chatButton"></button>
+
+  <!-- ===== CHAT MODAL ===== -->
+  <div class="chat-modal" id="chatModal">
+    <div class="chat-header">
+      <div class="chat-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="chat-title">
+        <h3 data-chat="title">GlorifyTC Assistent</h3>
+        <p data-chat="subtitle">AI-driven support</p>
+      </div>
+      <button class="chat-close" id="chatClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message assistant" data-chat="welcome">
+        Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Fråga vad som helst..." data-chat="placeholder">
+      <button id="sendButton" disabled>
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER with Enhanced Animated Logo ===== -->
+  <footer class="footer">
+    <div class="max-width">
+      <!-- Logo and brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="display: inline-flex;">
+          <div class="logo-icon">
+            <span>G</span>
+          </div>
+          <div class="logo-text">GlorifyTC</div>
+        </a>
+        <p class="footer-tagline" data-footer="tagline">Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <!-- Footer grid -->
+      <div class="footer-grid">
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h3 data-footer="quickLinks">Snabblänkar</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" data-nav="home">Hem</a></li>
+            <li><a href="services.html" data-nav="services">Tjänster</a></li>
+            <li><a href="about.html" data-nav="about">Om oss</a></li>
+            <li><a href="team.html" data-nav="team">Team</a></li>
+            <li><a href="blog.html" data-nav="blog">Blogg</a></li>
+            <li><a href="emailbot.html" data-nav="emailbot">AI E-postbot</a></li>
+            <li><a href="contact.html" data-nav="contact">Kontakt</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div class="footer-col">
+          <h3 data-footer="services">Tjänster</h3>
+          <ul class="footer-links">
+            <li><a href="#">AI-modellutveckling</a></li>
+            <li><a href="#">Dataanalys</a></li>
+            <li><a href="#">Webbapplikationer</a></li>
+            <li><a href="#">Mobilappar</a></li>
+            <li><a href="emailbot.html">AI E-postbot</a></li>
+            <li><a href="#">ML-konsulting</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div class="footer-col">
+          <h3 data-footer="contact">Kontakt</h3>
+          <ul class="footer-links contact-links">
+            <li><a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a></li>
+            <li><a href="tel:+46769385747"><i class="fas fa-phone-alt"></i> +46 (76) 938 57 47</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 131, 177 45 Järfälla</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Bottom copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 GlorifyTC. <span data-footer="rights">Alla rättigheter förbehållna.</span></p>
+        <div class="legal-links">
+          <a href="#" data-footer="privacy">Integritetspolicy</a>
+          <span class="separator">|</span>
+          <a href="#" data-footer="terms">Användarvillkor</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Complete JavaScript with ALL 6 Languages and emailbot -->
+  <script>
+    // Complete translations for ALL 6 languages with emailbot
+    const translations = {
+      // Swedish
+      sv: {
+        nav: {
+          home: "Hem",
+          services: "Tjänster",
+          about: "Om oss",
+          team: "Team",
+          blog: "Blogg",
+          emailbot: "AI E-postbot",
+          contact: "Kontakt",
+          getStarted: "Kom igång"
+        },
+        footer: {
+          tagline: "Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.",
+          quickLinks: "Snabblänkar",
+          services: "Tjänster",
+          contact: "Kontakt",
+          rights: "Alla rättigheter förbehållna.",
+          privacy: "Integritetspolicy",
+          terms: "Användarvillkor"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "AI-driven support",
+          placeholder: "Fråga vad som helst...",
+          welcome: "Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?"
+        },
+        blog: {
+          tag: "Våra insikter",
+          title: "Blogg &",
+          titleSpan: "Artiklar",
+          description: "Insikter, handledningar och tankar om AI, datavetenskap och modern utveckling.",
+          search: "Sök artiklar...",
+          all: "Alla",
+          aiMl: "AI & Machine Learning",
+          dataScience: "Data Science",
+          webDev: "Webbutveckling",
+          ethics: "Etik & Ansvar",
+          featured: "Utvald",
+          readMore: "min läsning",
+          noResults: "Inga artiklar matchar din sökning.",
+          newsletter: "Prenumerera på vårt nyhetsbrev för de senaste insikterna om AI, datavetenskap och teknologi.",
+          subscribe: "Prenumerera",
+          emailPlaceholder: "Ange din e-post"
+        }
+      },
+      // English
+      en: {
+        nav: {
+          home: "Home",
+          services: "Services",
+          about: "About",
+          team: "Team",
+          blog: "Blog",
+          emailbot: "AI Email Bot",
+          contact: "Contact",
+          getStarted: "Get Started"
+        },
+        footer: {
+          tagline: "Advanced AI, Data Science & Modern Digital Development. Building intelligent solutions that matter.",
+          quickLinks: "Quick Links",
+          services: "Services",
+          contact: "Contact",
+          rights: "All rights reserved.",
+          privacy: "Privacy Policy",
+          terms: "Terms of Service"
+        },
+        chat: {
+          title: "GlorifyTC Assistant",
+          subtitle: "AI-Powered Support",
+          placeholder: "Ask anything...",
+          welcome: "Hello! I'm GlorifyTC's AI assistant. I can help you learn about our services, answer questions about AI and data science, or assist with any inquiries. How can I help you today?"
+        },
+        blog: {
+          tag: "Our Insights",
+          title: "Blog &",
+          titleSpan: "Articles",
+          description: "Insights, tutorials, and thoughts on AI, data science, and modern development.",
+          search: "Search articles...",
+          all: "All",
+          aiMl: "AI & Machine Learning",
+          dataScience: "Data Science",
+          webDev: "Web Development",
+          ethics: "Ethics & Responsibility",
+          featured: "Featured",
+          readMore: "min read",
+          noResults: "No articles found matching your criteria.",
+          newsletter: "Subscribe to our newsletter for the latest insights on AI, data science, and technology.",
+          subscribe: "Subscribe",
+          emailPlaceholder: "Enter your email"
+        }
+      },
+      // Norwegian
+      no: {
+        nav: {
+          home: "Hjem",
+          services: "Tjenester",
+          about: "Om oss",
+          team: "Team",
+          blog: "Blogg",
+          emailbot: "AI E-postbot",
+          contact: "Kontakt",
+          getStarted: "Kom i gang"
+        },
+        footer: {
+          tagline: "Avansert AI, Data Science & Moderne Digital Utvikling. Bygger intelligente løsninger som betyr noe.",
+          quickLinks: "Hurtiglenker",
+          services: "Tjenester",
+          contact: "Kontakt",
+          rights: "Alle rettigheter forbeholdt.",
+          privacy: "Personvernerklæring",
+          terms: "Bruksvilkår"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "AI-drevet support",
+          placeholder: "Spør om hva som helst...",
+          welcome: "Hei! Jeg er GlorifyTCs AI-assistent. Jeg kan hjelpe deg med informasjon om våre tjenester, svare på spørsmål om AI og datavitenskap, eller hjelpe med andre henvendelser. Hvordan kan jeg hjelpe deg i dag?"
+        },
+        blog: {
+          tag: "Våre innsikter",
+          title: "Blogg &",
+          titleSpan: "Artikler",
+          description: "Innsikter, veiledninger og tanker om AI, datavitenskap og moderne utvikling.",
+          search: "Søk artikler...",
+          all: "Alle",
+          aiMl: "AI & Maskinlæring",
+          dataScience: "Data Science",
+          webDev: "Nettutvikling",
+          ethics: "Etikk & Ansvar",
+          featured: "Utvalgt",
+          readMore: "min lesing",
+          noResults: "Ingen artikler funnet.",
+          newsletter: "Abonner på vårt nyhetsbrev for de siste innsiktene om AI, datavitenskap og teknologi.",
+          subscribe: "Abonner",
+          emailPlaceholder: "Skriv inn e-post"
+        }
+      },
+      // Finnish
+      fi: {
+        nav: {
+          home: "Koti",
+          services: "Palvelut",
+          about: "Tietoa meistä",
+          team: "Tiimi",
+          blog: "Blogi",
+          emailbot: "AI Sähköpostibotti",
+          contact: "Yhteystiedot",
+          getStarted: "Aloita"
+        },
+        footer: {
+          tagline: "Edistynyt tekoäly, datatiede ja moderni digitaalinen kehitys. Rakennamme älykkäitä ratkaisuja, joilla on merkitystä.",
+          quickLinks: "Pikalinkit",
+          services: "Palvelut",
+          contact: "Yhteystiedot",
+          rights: "Kaikki oikeudet pidätetään.",
+          privacy: "Tietosuojakäytäntö",
+          terms: "Käyttöehdot"
+        },
+        chat: {
+          title: "GlorifyTC Avustaja",
+          subtitle: "Tekoälypohjainen tuki",
+          placeholder: "Kysy mitä tahansa...",
+          welcome: "Hei! Olen GlorifyTC:n tekoälyavustaja. Voin auttaa sinua palveluihimme liittyvissä kysymyksissä, vastata tekoälyä ja datatiedettä koskeviin kysymyksiin tai auttaa muissa tiedusteluissa. Kuinka voin auttaa sinua tänään?"
+        },
+        blog: {
+          tag: "Meidän oivalluksemme",
+          title: "Blogi &",
+          titleSpan: "Artikkelit",
+          description: "Oivalluksia, oppaita ja ajatuksia tekoälystä, datatieteestä ja modernista kehityksestä.",
+          search: "Etsi artikkeleita...",
+          all: "Kaikki",
+          aiMl: "Tekoäly & koneoppiminen",
+          dataScience: "Data Science",
+          webDev: "Web-kehitys",
+          ethics: "Etiikka & vastuu",
+          featured: "Suositeltu",
+          readMore: "min lukuaika",
+          noResults: "Ei artikkeleita.",
+          newsletter: "Tilaa uutiskirjeemme saadaksesi uusimmat oivallukset tekoälystä, datatieteestä ja teknologiasta.",
+          subscribe: "Tilaa",
+          emailPlaceholder: "Syötä sähköposti"
+        }
+      },
+      // Danish
+      da: {
+        nav: {
+          home: "Hjem",
+          services: "Tjenester",
+          about: "Om os",
+          team: "Team",
+          blog: "Blog",
+          emailbot: "AI E-mailbot",
+          contact: "Kontakt",
+          getStarted: "Kom i gang"
+        },
+        footer: {
+          tagline: "Avanceret AI, Data Science & Moderne Digital Udvikling. Bygger intelligente løsninger, der gør en forskel.",
+          quickLinks: "Hurtige links",
+          services: "Tjenester",
+          contact: "Kontakt",
+          rights: "Alle rettigheder forbeholdes.",
+          privacy: "Privatlivspolitik",
+          terms: "Servicevilkår"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "AI-drevet support",
+          placeholder: "Spørg om hvad som helst...",
+          welcome: "Hej! Jeg er GlorifyTC's AI-assistent. Jeg kan hjælpe dig med information om vores tjenester, besvare spørgsmål om AI og datavidenskab eller hjælpe med andre forespørgsler. Hvordan kan jeg hjælpe dig i dag?"
+        },
+        blog: {
+          tag: "Vores indsigter",
+          title: "Blog &",
+          titleSpan: "Artikler",
+          description: "Indsigter, vejledninger og tanker om AI, datavidenskab og moderne udvikling.",
+          search: "Søg artikler...",
+          all: "Alle",
+          aiMl: "AI & Machine Learning",
+          dataScience: "Data Science",
+          webDev: "Webudvikling",
+          ethics: "Etik & ansvar",
+          featured: "Fremhævet",
+          readMore: "min læsning",
+          noResults: "Ingen artikler fundet.",
+          newsletter: "Abonner på vores nyhedsbrev for de seneste indsigter om AI, datavidenskab og teknologi.",
+          subscribe: "Abonner",
+          emailPlaceholder: "Indtast din e-mail"
+        }
+      },
+      // German
+      de: {
+        nav: {
+          home: "Startseite",
+          services: "Dienstleistungen",
+          about: "Über uns",
+          team: "Team",
+          blog: "Blog",
+          emailbot: "KI E-Mail-Bot",
+          contact: "Kontakt",
+          getStarted: "Loslegen"
+        },
+        footer: {
+          tagline: "Fortschrittliche KI, Datenwissenschaft & Moderne Digitale Entwicklung. Wir entwickeln intelligente Lösungen, die einen Unterschied machen.",
+          quickLinks: "Schnelllinks",
+          services: "Dienstleistungen",
+          contact: "Kontakt",
+          rights: "Alle Rechte vorbehalten.",
+          privacy: "Datenschutzrichtlinie",
+          terms: "Nutzungsbedingungen"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "KI-gestützter Support",
+          placeholder: "Fragen Sie alles...",
+          welcome: "Hallo! Ich bin der KI-Assistent von GlorifyTC. Ich kann Ihnen Informationen über unsere Dienstleistungen geben, Fragen zu KI und Datenwissenschaft beantworten oder bei anderen Anliegen helfen. Wie kann ich Ihnen heute helfen?"
+        },
+        blog: {
+          tag: "Unsere Einblicke",
+          title: "Blog &",
+          titleSpan: "Artikel",
+          description: "Einblicke, Tutorials und Gedanken zu KI, Datenwissenschaft und moderner Entwicklung.",
+          search: "Artikel suchen...",
+          all: "Alle",
+          aiMl: "KI & maschinelles Lernen",
+          dataScience: "Data Science",
+          webDev: "Webentwicklung",
+          ethics: "Ethik & Verantwortung",
+          featured: "Vorgestellt",
+          readMore: "Min. Lesen",
+          noResults: "Keine Artikel gefunden.",
+          newsletter: "Abonnieren Sie unseren Newsletter für die neuesten Einblicke in KI, Datenwissenschaft und Technologie.",
+          subscribe: "Abonnieren",
+          emailPlaceholder: "Geben Sie Ihre E-Mail ein"
+        }
+      }
+    };
+
+    // Language Manager
+    const LanguageManager = {
+      currentLang: localStorage.getItem('glorifytc_lang') || 'sv',
+      
+      init() {
+        this.loadLanguage(this.currentLang);
+        this.setupLanguageSelector();
+        this.updateCurrentLangDisplay();
+        this.highlightActiveLanguage();
+      },
+      
+      loadLanguage(lang) {
+        const t = translations[lang];
+        if (!t) return;
+        
+        // Update navigation
+        document.querySelectorAll('[data-nav]').forEach(el => {
+          const key = el.dataset.nav;
+          if (t.nav && t.nav[key]) el.textContent = t.nav[key];
+        });
+        
+        // Update footer
+        document.querySelectorAll('[data-footer]').forEach(el => {
+          const key = el.dataset.footer;
+          if (t.footer && t.footer[key]) {
+            if (el.tagName === 'H3') el.textContent = t.footer[key];
+            else el.textContent = t.footer[key];
+          }
+        });
+        
+        // Update chat
+        document.querySelectorAll('[data-chat]').forEach(el => {
+          const key = el.dataset.chat;
+          if (t.chat && t.chat[key]) {
+            if (el.tagName === 'INPUT') el.placeholder = t.chat[key];
+            else el.textContent = t.chat[key];
+          }
+        });
+        
+        // Update blog page
+        document.querySelectorAll('[data-blog]').forEach(el => {
+          const key = el.dataset.blog;
+          if (t.blog && t.blog[key]) {
+            if (el.tagName === 'INPUT') el.placeholder = t.blog[key];
+            else el.textContent = t.blog[key];
+          }
+        });
+        
+        localStorage.setItem('glorifytc_lang', lang);
+      },
+      
+      setupLanguageSelector() {
+        const btn = document.getElementById('languageBtn');
+        const dropdown = document.getElementById('languageDropdown');
+        
+        if (!btn || !dropdown) return;
+        
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle('show');
+        });
+        
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target)) dropdown.classList.remove('show');
+        });
+        
+        document.querySelectorAll('.language-option').forEach(option => {
+          option.addEventListener('click', () => {
+            const lang = option.dataset.lang;
+            if (lang === this.currentLang) {
+              dropdown.classList.remove('show');
+              return;
+            }
+            
+            this.currentLang = lang;
+            this.loadLanguage(lang);
+            this.updateCurrentLangDisplay();
+            this.highlightActiveLanguage();
+            dropdown.classList.remove('show');
+          });
+        });
+      },
+      
+      updateCurrentLangDisplay() {
+        const span = document.getElementById('currentLang');
+        if (span) span.textContent = this.currentLang.toUpperCase();
+      },
+      
+      highlightActiveLanguage() {
+        document.querySelectorAll('.language-option').forEach(option => {
+          option.classList.remove('active-lang');
+          if (option.dataset.lang === this.currentLang) option.classList.add('active-lang');
+        });
+      }
+    };
+
+    // Chat functionality
+    function initChat() {
+      const chatModal = document.getElementById('chatModal');
+      const chatButton = document.getElementById('chatButton');
+      const chatClose = document.getElementById('chatClose');
+      const chatInput = document.getElementById('chatInput');
+      const sendButton = document.getElementById('sendButton');
+      const chatMessages = document.getElementById('chatMessages');
+      
+      if (!chatModal) return;
+      
+      function toggleChat() {
+        chatModal.classList.toggle('open');
+        if (chatModal.classList.contains('open')) chatInput.focus();
+      }
+      
+      chatButton.addEventListener('click', toggleChat);
+      chatClose.addEventListener('click', toggleChat);
+      
+      chatModal.addEventListener('click', (e) => {
+        if (e.target === chatModal) toggleChat();
+      });
+      
+      function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message) return;
+        
+        const userDiv = document.createElement('div');
+        userDiv.classList.add('message', 'user');
+        userDiv.textContent = message;
+        chatMessages.appendChild(userDiv);
+        chatInput.value = '';
+        sendButton.disabled = true;
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        setTimeout(() => {
+          const responses = [
+            "Tack för ditt meddelande! Jag hjälper dig gärna.",
+            "Vi specialiserar oss på AI-modeller och datalösningar. Hur kan jag hjälpa dig?",
+            "Vårt team har lång erfarenhet inom AI-utveckling. Vad vill du veta mer om?",
+            "Berätta gärna mer om dina behov så diskuterar vi hur AI kan transformera din verksamhet."
+          ];
+          
+          const assistantDiv = document.createElement('div');
+          assistantDiv.classList.add('message', 'assistant');
+          assistantDiv.textContent = responses[Math.floor(Math.random() * responses.length)];
+          chatMessages.appendChild(assistantDiv);
+          sendButton.disabled = false;
+          chatInput.focus();
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 1000);
+      }
+      
+      chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+      });
+      
+      sendButton.addEventListener('click', sendMessage);
+      
+      chatInput.addEventListener('input', () => {
+        sendButton.disabled = !chatInput.value.trim();
+      });
+    }
+
+    // Blog filtering
+    function initBlogFilters() {
+      const searchInput = document.getElementById('blogSearch');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const blogPosts = document.querySelectorAll('.post-card, .featured-card');
+      const noResults = document.getElementById('noResults');
+      
+      let currentFilter = 'all';
+      let currentSearch = '';
+      
+      function filterPosts() {
+        let visibleCount = 0;
+        
+        blogPosts.forEach(post => {
+          const category = post.dataset.category;
+          const title = post.querySelector('.card-title, .featured-title')?.textContent.toLowerCase() || '';
+          const excerpt = post.querySelector('.card-excerpt, .featured-excerpt')?.textContent.toLowerCase() || '';
+          
+          const matchesFilter = currentFilter === 'all' || category === currentFilter;
+          const matchesSearch = currentSearch === '' || 
+            title.includes(currentSearch.toLowerCase()) || 
+            excerpt.includes(currentSearch.toLowerCase());
+          
+          if (matchesFilter && matchesSearch) {
+            post.style.display = 'block';
+            visibleCount++;
+          } else {
+            post.style.display = 'none';
+          }
+        });
+        
+        if (noResults) {
+          noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+      
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value;
+          filterPosts();
+        });
+      }
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          currentFilter = button.dataset.category;
+          filterPosts();
+        });
+      });
+      
+      // Newsletter form
+      const newsletterForm = document.getElementById('newsletterForm');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = newsletterForm.querySelector('input[type="email"]').value;
+          alert(`Tack för din prenumeration med: ${email}`);
+          newsletterForm.reset();
+        });
+      }
+    }
+
+    // Navbar scroll effect
+    function initNavbar() {
+      window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', () => {
+      LanguageManager.init();
+      initChat();
+      initBlogFilters();
+      initNavbar();
+    });
+  </script>
+</body>
+</html>

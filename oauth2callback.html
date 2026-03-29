@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecting Gmail...</title>
+    <style>
+        body {
+            background: #0a0e1a;
+            color: #e8eaf0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .loader {
+            text-align: center;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0,212,255,0.3);
+            border-top-color: #00d4ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .success {
+            color: #00ffaa;
+        }
+        .error {
+            color: #ff4d6d;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <h2>Ansluter till Gmail...</h2>
+        <p>Vänligen vänta medan vi slutför anslutningen.</p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const state = urlParams.get('state');
+        const error = urlParams.get('error');
+
+        if (error) {
+            document.querySelector('.loader').innerHTML = `
+                <h2 class="error">❌ Anslutning misslyckades</h2>
+                <p>Fel: ${error}</p>
+                <a href="/dashboard.html" style="color:#00d4ff;">Gå tillbaka till instrumentpanelen</a>
+            `;
+        } else if (code && state) {
+            fetch(`http://localhost:8000/api/gmail/callback?code=${code}&state=${state}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.querySelector('.loader').innerHTML = `
+                            <h2 class="success">✅ Gmail ansluten!</h2>
+                            <p>Din Gmail är nu ansluten till AI-boten.</p>
+                            <p><a href="/dashboard.html" style="color:#00d4ff;">Gå till instrumentpanelen →</a></p>
+                        `;
+                        setTimeout(() => {
+                            window.location.href = '/dashboard.html?gmail=connected';
+                        }, 2000);
+                    } else {
+                        throw new Error(data.message || 'Connection failed');
+                    }
+                })
+                .catch(err => {
+                    console.error('Error:', err);
+                    document.querySelector('.loader').innerHTML = `
+                        <h2 class="error">❌ Anslutning misslyckades</h2>
+                        <p>Kunde inte ansluta till Gmail. Försök igen.</p>
+                        <a href="/dashboard.html" style="color:#00d4ff;">Gå tillbaka till instrumentpanelen</a>
+                    `;
+                });
+        } else {
+            document.querySelector('.loader').innerHTML = `
+                <h2 class="error">❌ Ingen auktoriseringskod mottagen</h2>
+                <a href="/dashboard.html" style="color:#00d4ff;">Gå tillbaka och försök igen</a>
+            `;
+        }
+    </script>
+</body>
+</html>

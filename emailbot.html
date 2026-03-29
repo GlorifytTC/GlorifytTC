@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlorifyTC - AI E-postbot | Automatisera din inkorg med AI</title>
+    <meta name="description" content="Anslut din Gmail, ladda upp dina dokument och låt AI besvara, filtrera och arkivera dina e-postmeddelanden automatiskt. Starta gratis provperiod idag!">
+    <meta name="keywords" content="AI E-postbot, Gmail automation, automatisk e-posthantering, AI-assistent, e-postfiltrering, GlorifyTC">
+    <meta name="author" content="GlorifyTC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://glorifytc.se/emailbot.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="emailbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Payment Banner -->
+<div class="payment-banner" id="paymentBanner" style="display: none;"></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <div class="logo-icon">
+            <span>G</span>
+        </div>
+        <div class="logo-text">GlorifyTC</div>
+    </a>
+    <div class="nav-links">
+        <a href="index.html" data-nav="home">Hem</a>
+        <a href="services.html" data-nav="services">Tjänster</a>
+        <a href="about.html" data-nav="about">Om oss</a>
+        <a href="team.html" data-nav="team">Team</a>
+        <a href="blog.html" data-nav="blog">Blogg</a>
+        <a href="emailbot.html" class="active" data-nav="emailbot">AI E-postbot</a>
+        <a href="contact.html" data-nav="contact">Kontakt</a>
+    </div>
+    <div class="nav-right">
+        <div class="language-selector">
+            <button class="language-btn" id="languageBtn">
+                <i class="fas fa-globe"></i>
+                <span id="currentLangLabel">SV</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown" id="languageDropdown">
+                <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
+                <button class="language-option" data-lang="en">🇬🇧 English</button>
+                <button class="language-option" data-lang="no">🇳🇴 Norsk</button>
+                <button class="language-option" data-lang="fi">🇫🇮 Suomi</button>
+                <button class="language-option" data-lang="da">🇩🇰 Dansk</button>
+                <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
+            </div>
+        </div>
+        <a href="contact.html" class="cta-button" id="navCta" data-nav="getStarted">Kom igång</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="emailbot-hero">
+    <div class="max-width">
+        <div class="hero-content">
+            <div class="tag">
+                <span class="tag-dot"></span>
+                <span class="tag-text" data-bot="heroTag">AI E-postautomation</span>
+            </div>
+            <h1 class="hero-title">Din inkorg,<br><span class="cyan">hanterad av AI</span></h1>
+            <p class="hero-description" data-bot="heroDesc">Anslut din Gmail, ladda upp dina dokument och låt AI besvara, filtrera och arkivera dina e-postmeddelanden — automatiskt.</p>
+            <div class="hero-buttons">
+                <button class="cta-button large" onclick="openModal('register')"><span data-bot="heroBtn1">Starta gratis provperiod</span> <i class="fas fa-arrow-right"></i></button>
+                <a href="#features" class="cta-button large outline"><span data-bot="heroBtn2">Se hur det fungerar</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="emailbot-features" id="features">
+    <div class="max-width">
+        <div class="section-header">
+            <h2 class="section-title"><span data-bot="featTitle">Vad vi</span> <span class="cyan" data-bot="featSpan">bygger</span></h2>
+            <p class="section-description" data-bot="featDesc">Intelligenta lösningar som löser verkliga inkorgsproblem och levererar mätbart värde.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-envelope-open-text"></i></div>
+                <h3 class="feature-title" data-bot="f1t">Smart e-postläsning</h3>
+                <p class="feature-description" data-bot="f1d">Ansluter till din Gmail och läser inkommande e-post i realtid. Bearbetar varje meddelande automatiskt.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="feature-title" data-bot="f2t">Skräppostfiltrering</h3>
+                <p class="feature-description" data-bot="f2d">AI identifierar och arkiverar skräppost innan det når dig. Sluta slösa tid på onödiga mejl.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                <h3 class="feature-title" data-bot="f3t">Dokumentträning</h3>
+                <p class="feature-description" data-bot="f3d">Ladda upp dina PDF-filer och Word-dokument. AI lär sig av dem för att besvara kundförfrågningar korrekt.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <h3 class="feature-title" data-bot="f4t">Automatiska svar</h3>
+                <p class="feature-description" data-bot="f4d">Prisfrågor, vanliga frågor och enkla förfrågningar besvaras omedelbart — utan mänsklig inblandning.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                <h3 class="feature-title" data-bot="f5t">Utkastgodkännande</h3>
+                <p class="feature-description" data-bot="f5d">Känsliga e-postmeddelanden som mötesbokning skapas som utkast och skickas till dig för granskning.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-archive"></i></div>
+                <h3 class="feature-title" data-bot="f6t">Automatisk arkivering</h3>
+                <p class="feature-description" data-bot="f6d">E-post kategoriseras och arkiveras automatiskt. Hitta allt direkt.</p>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="#pricing" data-bot="viewPricing">Se priser <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="emailbot-stats">
+    <div class="max-width">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                <div class="stat-title" data-bot="s1t">Sparar timmar</div>
+                <div class="stat-subtitle" data-bot="s1s">Varje vecka per kund</div>
+                <span class="badge" data-bot="s1b">AUTOMATISERAT</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-robot"></i></div>
+                <div class="stat-title" data-bot="s2t">AI-driven</div>
+                <div class="stat-subtitle" data-bot="s2s">Lokal Llama-modell</div>
+                <span class="badge" data-bot="s2b">PRIVAT & SÄKER</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="stat-title" data-bot="s3t">Krypterat</div>
+                <div class="stat-subtitle" data-bot="s3s">Dina data är skyddade</div>
+                <span class="badge" data-bot="s3b">GDPR-SÄKERT</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                <div class="stat-title" data-bot="s4t">Redo att börja</div>
+                <div class="stat-subtitle" data-bot="s4s">Kontakta oss idag</div>
+                <span class="badge" data-bot="s4b">READY TO START</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="emailbot-pricing" id="pricing">
+    <div class="max-width">
+        <div class="section-header">
+            <h2 class="section-title"><span data-bot="priceTitle">Enkel, transparent</span> <span class="cyan" data-bot="priceSpan">prissättning</span></h2>
+            <p class="section-description" data-bot="priceDesc">Inga dolda avgifter. Avsluta när som helst.</p>
+        </div>
+        <div class="pricing-grid">
+            <!-- Small Plan -->
+            <div class="pricing-card">
+                <div class="plan-name" data-bot="planSmall">Liten</div>
+                <div class="plan-price"><span id="priceSmall">500</span> <small data-bot="currencySmall">kr/mån</small></div>
+                <div class="plan-desc" data-bot="planSmallDesc">Perfekt för små företag</div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i><span data-bot="p1f1">500 e-postmeddelanden/mån</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p1f2">Upp till 10 dokument</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p1f3">Skräppostfiltrering</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p1f4">Automatiska svar</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p1f5">E-postsupport</span></li>
+                </ul>
+                <button class="cta-button pricing-btn" onclick="startCheckout('small')"><span data-bot="btnGetStarted">Kom igång</span> <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <!-- Medium Plan - Popular -->
+            <div class="pricing-card popular">
+                <div class="popular-badge" data-bot="mostPopular">MEST POPULÄR</div>
+                <div class="plan-name" data-bot="planMedium">Medel</div>
+                <div class="plan-price"><span id="priceMedium">1 500</span> <small data-bot="currencyMedium">kr/mån</small></div>
+                <div class="plan-desc" data-bot="planMediumDesc">För växande företag</div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i><span data-bot="p2f1">2 000 e-postmeddelanden/mån</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p2f2">Upp till 50 dokument</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p2f3">Skräppostfiltrering</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p2f4">Auto-svar + utkast</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p2f5">Prioriterad support</span></li>
+                </ul>
+                <button class="cta-button pricing-btn" onclick="startCheckout('medium')"><span data-bot="btnGetStarted">Kom igång</span> <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <!-- Large Plan -->
+            <div class="pricing-card">
+                <div class="plan-name" data-bot="planLarge">Stor</div>
+                <div class="plan-price"><span id="priceLarge">4 000</span> <small data-bot="currencyLarge">kr/mån</small></div>
+                <div class="plan-desc" data-bot="planLargeDesc">Obegränsad kapacitet</div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i><span data-bot="p3f1">Obegränsade e-postmeddelanden</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p3f2">Obegränsade dokument</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p3f3">Skräppostfiltrering</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p3f4">Auto-svar + utkast</span></li>
+                    <li><i class="fas fa-check"></i><span data-bot="p3f5">Dedikerad support</span></li>
+                </ul>
+                <button class="cta-button pricing-btn" onclick="startCheckout('large')"><span data-bot="btnGetStarted">Kom igång</span> <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="emailbot-cta">
+    <div class="max-width">
+        <div class="cta-container">
+            <h2 class="cta-title"><span data-bot="ctaTitle">Redo att automatisera din</span> <span class="cyan" data-bot="ctaSpan">inkorg</span>?</h2>
+            <p class="cta-description" data-bot="ctaDesc">Låt oss diskutera hur AI kan transformera ditt företags e-postkommunikation.</p>
+            <button class="cta-button large" onclick="openModal('register')"><span data-bot="ctaBtn">Starta en konversation</span> <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Chat Button -->
+<button class="chat-button" id="chatButton"></button>
+
+<!-- Chat Modal -->
+<div class="chat-modal" id="chatModal">
+    <div class="chat-header">
+        <div class="chat-avatar">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chat-title">
+            <h3 data-chat="title">GlorifyTC Assistent</h3>
+            <p data-chat="subtitle">AI-driven support</p>
+        </div>
+        <button class="chat-close" id="chatClose">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <div class="message assistant" data-chat="welcome">
+            Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?
+        </div>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Fråga vad som helst..." data-chat="placeholder">
+        <button id="sendButton" disabled>
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="max-width">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
+                    <div class="logo-icon">
+                        <span>G</span>
+                    </div>
+                    <div class="logo-text">GlorifyTC</div>
+                </a>
+                <p data-footer="tagline">Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 data-footer="quickLinks">Snabblänkar</h3>
+                <div class="footer-links">
+                    <a href="index.html" data-nav="home">Hem</a>
+                    <a href="services.html" data-nav="services">Tjänster</a>
+                    <a href="about.html" data-nav="about">Om oss</a>
+                    <a href="team.html" data-nav="team">Team</a>
+                    <a href="blog.html" data-nav="blog">Blogg</a>
+                    <a href="emailbot.html" data-nav="emailbot">AI E-postbot</a>
+                    <a href="contact.html" data-nav="contact">Kontakt</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 data-footer="services">Tjänster</h3>
+                <div class="footer-links">
+                    <a href="#">AI-modellutveckling</a>
+                    <a href="#">Dataanalys</a>
+                    <a href="#">Webbapplikationer</a>
+                    <a href="#">Mobilappar</a>
+                    <a href="emailbot.html">AI E-postbot</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 data-footer="contact">Kontakt</h3>
+                <div class="footer-links">
+                    <a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a>
+                    <a href="tel:+46769385747"><i class="fas fa-phone-alt"></i> +46 (76) 938 57 47</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 131, 177 45 Järfälla</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GlorifyTC. <span data-footer="rights">Alla rättigheter förbehållna.</span></p>
+            <div>
+                <a href="#" data-footer="privacy">Integritetspolicy</a>
+                <a href="#" style="margin-left: 1.5rem;" data-footer="terms">Användarvillkor</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Auth Modal -->
+<div class="modal-overlay" id="authModal">
+    <div class="eb-modal">
+        <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+        
+        <!-- Login View -->
+        <div id="loginView">
+            <h2 data-bot="loginTitle">Välkommen tillbaka</h2>
+            <p class="sub" data-bot="loginSub">Logga in på din instrumentpanel</p>
+            <div class="mfg">
+                <label data-bot="labelEmail">E-post</label>
+                <input type="email" id="loginEmail" placeholder="du@foretag.com">
+                <div class="form-error" id="loginEmailErr"></div>
+            </div>
+            <div class="mfg">
+                <label data-bot="labelPassword">Lösenord</label>
+                <input type="password" id="loginPassword" placeholder="••••••••">
+                <div class="form-error" id="loginPassErr"></div>
+            </div>
+            <button class="cta-button full" id="loginBtn" onclick="handleLogin()"><span data-bot="btnLogin">Logga in</span></button>
+            <div class="modal-switch" data-bot="switchToRegister">Inget konto? <a onclick="switchView('register')" data-bot="createFree">Skapa ett gratis</a></div>
+        </div>
+        
+        <!-- Register View -->
+        <div id="registerView" style="display:none;">
+            <h2 data-bot="registerTitle">Skapa konto</h2>
+            <p class="sub" data-bot="registerSub">Börja automatisera din inkorg idag</p>
+            <div id="planBadge" class="plan-badge" style="display:none;">
+                <span data-bot="selectedPlan">Valt paket</span>
+                <strong id="planBadgeText"></strong>
+            </div>
+            <div class="mfg">
+                <label data-bot="labelCompany">Företagsnamn</label>
+                <input type="text" id="regCompany" placeholder="Acme AB">
+                <div class="form-error" id="regCompanyErr"></div>
+            </div>
+            <div class="mfg">
+                <label data-bot="labelEmail">E-post</label>
+                <input type="email" id="regEmail" placeholder="du@foretag.com">
+                <div class="form-error" id="regEmailErr"></div>
+            </div>
+            
+            <div class="mfg">
+                <label data-bot="labelPassword">Lösenord</label>
+                <input type="password" id="regPassword" placeholder="Minst 8 tecken">
+                <div class="form-error" id="regPassErr"></div>
+            </div>
+            <div class="mfg">
+                <label data-bot="labelConfirm">Bekräfta lösenord</label>
+                <input type="password" id="regConfirm" placeholder="Upprepa lösenord">
+                <div class="form-error" id="regConfirmErr"></div>
+            </div>
+            <button class="cta-button full" id="registerBtn" onclick="handleRegister()"><span data-bot="btnRegister">Skapa konto</span></button>
+            <p style="text-align:center;font-size:.76rem;color:var(--muted);margin-top:.75rem;" data-bot="paymentAfter">Betalning sätts upp efter kontoregistrering</p>
+            <div class="modal-switch"><span data-bot="switchToLogin">Har redan konto?</span> <a onclick="switchView('login')" data-bot="signIn">Logga in</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast notification -->
+<div class="eb-toast" id="ebToast"></div>
+
+<script src="emailbot.js"></script>
+</body>
+</html>
