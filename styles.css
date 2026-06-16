@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
     background-color: #000;
@@ -273,6 +277,29 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+/* Mobile hamburger toggle — hidden on desktop, revealed under 768px */
+.nav-toggle {
+    display: none;
+    width: 2.7rem;
+    height: 2.7rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--white-5);
+    border: 1px solid var(--white-10);
+    border-radius: 0.7rem;
+    color: var(--white-90);
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1300;
+}
+
+.nav-toggle:hover {
+    border-color: var(--cyan-400);
+    color: var(--cyan-400);
 }
 
 .language-selector {
@@ -1386,11 +1413,56 @@ body {
     .navbar.scrolled {
         padding: 0.6rem 1.2rem;
     }
-    
-    .nav-links {
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    /* Free up room in the bar for the hamburger — the inline CTA's
+       destination (Kontakt) is available inside the drawer. */
+    .navbar .nav-right .cta-button {
         display: none;
     }
-    
+
+    /* Slide-in mobile menu panel */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(80vw, 320px);
+        padding: 5.5rem 1.75rem 2rem;
+        background: rgba(0, 0, 0, 0.97);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-left: 1px solid var(--white-10);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1200;
+        overflow-y: auto;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 0.85rem 0;
+        font-size: 1.05rem;
+        border-bottom: 1px solid var(--white-5);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+
     .logo-icon {
         width: 3rem;
         height: 3rem;

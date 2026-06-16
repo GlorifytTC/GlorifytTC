@@ -36,9 +36,33 @@
     z-index: 0;
 }
 
+/* Override the shared two-column .hero-content grid (meant for the
+   homepage text+robot layout) so the email-bot hero is a single,
+   centered column instead of a broken 2x2 grid on desktop. */
 .emailbot-hero .hero-content {
     position: relative;
     z-index: 1;
+    display: block;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.emailbot-hero .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 100;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.emailbot-hero .hero-description {
+    font-size: 1.2rem;
+    color: var(--white-70);
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .hero-buttons {
@@ -302,11 +326,27 @@
     .emailbot-hero {
         padding: 6rem 1.5rem 3rem;
     }
-    
-    .hero-title {
-        font-size: 2rem;
+
+    .emailbot-features,
+    .emailbot-stats,
+    .emailbot-pricing,
+    .emailbot-cta {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
-    
+
+    .max-width {
+        padding: 0 1.25rem;
+    }
+
+    .emailbot-hero .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .emailbot-hero .hero-description {
+        font-size: 1.05rem;
+    }
+
     .features-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -336,13 +376,17 @@
     .stats-grid {
         grid-template-columns: 1fr;
     }
-    
-    .hero-title {
-        font-size: 1.8rem;
+
+    .emailbot-hero .hero-title {
+        font-size: 2rem;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
+    }
+
+    .hero-buttons .cta-button.large {
+        width: 100%;
     }
 }/* Fix the tag styling - make it match main site with higher specificity */
 .emailbot-hero .tag,

@@ -8,6 +8,7 @@ let authToken = localStorage.getItem('gt_token') || null;
 const botTranslations = {
     sv: {
         heroTag: "AI E-postautomation",
+        heroTitle1: "Din inkorg,", heroTitle2: "hanterad av AI",
         heroDesc: "Anslut din Gmail, ladda upp dina dokument och låt AI besvara, filtrera och arkivera dina e-postmeddelanden — automatiskt.",
         heroBtn1: "Starta gratis provperiod",
         heroBtn2: "Se hur det fungerar",
@@ -30,7 +31,7 @@ const botTranslations = {
         s1t: "Sparar timmar", s1s: "Varje vecka per kund", s1b: "AUTOMATISERAT",
         s2t: "AI-driven", s2s: "Lokal Llama-modell", s2b: "PRIVAT & SÄKER",
         s3t: "Krypterat", s3s: "Dina data är skyddade", s3b: "GDPR-SÄKERT",
-        s4t: "Redo att börja", s4s: "Kontakta oss idag", s4b: "READY TO START",
+        s4t: "Redo att börja", s4s: "Kontakta oss idag", s4b: "REDO ATT BÖRJA",
         priceTitle: "Enkel, transparent", priceSpan: "prissättning", priceDesc: "Inga dolda avgifter. Avsluta när som helst.",
         mostPopular: "MEST POPULÄR",
         planSmall: "Liten", planSmallDesc: "Perfekt för små företag",
@@ -55,6 +56,7 @@ const botTranslations = {
     },
     en: {
         heroTag: "AI Email Automation",
+        heroTitle1: "Your inbox,", heroTitle2: "handled by AI",
         heroDesc: "Connect your Gmail, upload your documents and let AI answer, filter and archive your emails — automatically.",
         heroBtn1: "Start free trial", heroBtn2: "See how it works",
         featTitle: "What we", featSpan: "build", featDesc: "Intelligent solutions that solve real inbox problems and deliver measurable value.",
@@ -69,6 +71,7 @@ const botTranslations = {
         s2t: "AI-Powered", s2s: "Local Llama model", s2b: "PRIVATE & SECURE",
         s3t: "Encrypted", s3s: "Your data is protected", s3b: "GDPR COMPLIANT",
         s4t: "Ready to Start", s4s: "Contact us today", s4b: "READY TO START",
+        // (s4b kept in English for the English locale)
         priceTitle: "Simple, transparent", priceSpan: "pricing", priceDesc: "No hidden fees. Cancel anytime.",
         mostPopular: "MOST POPULAR",
         planSmall: "Small", planSmallDesc: "Perfect for small businesses",
@@ -93,6 +96,7 @@ const botTranslations = {
     },
     no: {
         heroTag: "AI E-postautomatisering",
+        heroTitle1: "Innboksen din,", heroTitle2: "håndtert av AI",
         heroDesc: "Koble til Gmail, last opp dokumenter og la AI svare, filtrere og arkivere e-postene dine — automatisk.",
         heroBtn1: "Start gratis prøveperiode", heroBtn2: "Se hvordan det fungerer",
         featTitle: "Hva vi", featSpan: "bygger", featDesc: "Intelligente løsninger som løser virkelige innboksproblemer.",
@@ -106,7 +110,7 @@ const botTranslations = {
         s1t: "Sparer timer", s1s: "Hver uke per kunde", s1b: "AUTOMATISERT",
         s2t: "AI-drevet", s2s: "Lokal Llama-modell", s2b: "PRIVAT & SIKKER",
         s3t: "Kryptert", s3s: "Dataene dine er beskyttet", s3b: "GDPR-SIKKERT",
-        s4t: "Klar til å starte", s4s: "Kontakt oss i dag", s4b: "READY TO START",
+        s4t: "Klar til å starte", s4s: "Kontakt oss i dag", s4b: "KLAR TIL Å STARTE",
         priceTitle: "Enkel, transparent", priceSpan: "prissetting", priceDesc: "Ingen skjulte avgifter. Avslutt når som helst.",
         mostPopular: "MEST POPULÆR",
         planSmall: "Liten", planSmallDesc: "Perfekt for små bedrifter",
@@ -131,6 +135,7 @@ const botTranslations = {
     },
     fi: {
         heroTag: "AI-sähköpostiautomaatio",
+        heroTitle1: "Postilaatikkosi,", heroTitle2: "tekoälyn hoitamana",
         heroDesc: "Yhdistä Gmail, lataa dokumenttisi ja anna tekoälyn vastata, suodattaa ja arkistoida sähköpostisi — automaattisesti.",
         heroBtn1: "Aloita ilmainen kokeilu", heroBtn2: "Katso miten se toimii",
         featTitle: "Mitä me", featSpan: "rakennamme", featDesc: "Älykkäitä ratkaisuja, jotka ratkaisevat todellisia saapuneet-kansion ongelmia.",
@@ -144,7 +149,7 @@ const botTranslations = {
         s1t: "Säästää tunteja", s1s: "Joka viikko per asiakas", s1b: "AUTOMATISOITU",
         s2t: "Tekoälypohjainen", s2s: "Paikallinen Llama-malli", s2b: "YKSITYINEN & TURVALLINEN",
         s3t: "Salattu", s3s: "Tietosi ovat suojattuja", s3b: "GDPR-YHTEENSOPIVA",
-        s4t: "Valmis aloittamaan", s4s: "Ota meihin yhteyttä", s4b: "READY TO START",
+        s4t: "Valmis aloittamaan", s4s: "Ota meihin yhteyttä", s4b: "VALMIS ALOITTAMAAN",
         priceTitle: "Yksinkertainen, läpinäkyvä", priceSpan: "hinnoittelu", priceDesc: "Ei piilomaksuja. Peruuta milloin tahansa.",
         mostPopular: "SUOSITUIN",
         planSmall: "Pieni", planSmallDesc: "Täydellinen pienyrityksille",
@@ -169,6 +174,7 @@ const botTranslations = {
     },
     da: {
         heroTag: "AI E-mailautomatisering",
+        heroTitle1: "Din indbakke,", heroTitle2: "håndteret af AI",
         heroDesc: "Forbind din Gmail, upload dokumenter og lad AI besvare, filtrere og arkivere dine e-mails — automatisk.",
         heroBtn1: "Start gratis prøveperiode", heroBtn2: "Se hvordan det virker",
         featTitle: "Hvad vi", featSpan: "bygger", featDesc: "Intelligente løsninger der løser virkelige indbakkeproblemer.",
@@ -182,7 +188,7 @@ const botTranslations = {
         s1t: "Sparer timer", s1s: "Hver uge per kunde", s1b: "AUTOMATISERET",
         s2t: "AI-drevet", s2s: "Lokal Llama-model", s2b: "PRIVAT & SIKKER",
         s3t: "Krypteret", s3s: "Dine data er beskyttet", s3b: "GDPR-SIKKERT",
-        s4t: "Klar til at starte", s4s: "Kontakt os i dag", s4b: "READY TO START",
+        s4t: "Klar til at starte", s4s: "Kontakt os i dag", s4b: "KLAR TIL START",
         priceTitle: "Enkel, transparent", priceSpan: "prissætning", priceDesc: "Ingen skjulte gebyrer. Opsig når som helst.",
         mostPopular: "MEST POPULÆR",
         planSmall: "Lille", planSmallDesc: "Perfekt til små virksomheder",
@@ -207,6 +213,7 @@ const botTranslations = {
     },
     de: {
         heroTag: "KI-E-Mail-Automatisierung",
+        heroTitle1: "Ihr Posteingang,", heroTitle2: "von KI verwaltet",
         heroDesc: "Gmail verbinden, Dokumente hochladen und KI Ihre E-Mails beantworten, filtern und archivieren lassen — automatisch.",
         heroBtn1: "Kostenlose Testphase starten", heroBtn2: "Wie es funktioniert",
         featTitle: "Was wir", featSpan: "bauen", featDesc: "Intelligente Lösungen für reale Posteingang-Probleme.",
@@ -220,7 +227,7 @@ const botTranslations = {
         s1t: "Spart Stunden", s1s: "Jede Woche pro Kunde", s1b: "AUTOMATISIERT",
         s2t: "KI-gestützt", s2s: "Lokales Llama-Modell", s2b: "PRIVAT & SICHER",
         s3t: "Verschlüsselt", s3s: "Ihre Daten sind geschützt", s3b: "DSGVO-KONFORM",
-        s4t: "Bereit zu starten", s4s: "Kontaktieren Sie uns", s4b: "READY TO START",
+        s4t: "Bereit zu starten", s4s: "Kontaktieren Sie uns", s4b: "BEREIT ZU STARTEN",
         priceTitle: "Einfache, transparente", priceSpan: "Preisgestaltung", priceDesc: "Keine versteckten Gebühren. Jederzeit kündbar.",
         mostPopular: "AM BELIEBTESTEN",
         planSmall: "Klein", planSmallDesc: "Perfekt für kleine Unternehmen",
@@ -231,7 +238,7 @@ const botTranslations = {
         p2f1: "2.000 E-Mails/Monat", p2f2: "Bis zu 50 Dokumente", p2f3: "Spam-Filterung", p2f4: "Auto-Antworten + Entwürfe", p2f5: "Prioritäts-Support",
         p3f1: "Unbegrenzte E-Mails", p3f2: "Unbegrenzte Dokumente", p3f3: "Spam-Filterung", p3f4: "Auto-Antworten + Entwürfe", p3f5: "Dedizierter Support",
         btnGetStarted: "Loslegen",
-        ctaTitle: "Bereit Ihren Posteingang zu automatisieren?", ctaSpan: "Posteingang", ctaDesc: "Lassen Sie uns besprechen wie KI Ihre E-Mail-Kommunikation transformieren kann.", ctaBtn: "Gespräch starten",
+        ctaTitle: "Bereit, Ihren Posteingang zu", ctaSpan: "automatisieren", ctaDesc: "Lassen Sie uns besprechen wie KI Ihre E-Mail-Kommunikation transformieren kann.", ctaBtn: "Gespräch starten",
         loginTitle: "Willkommen zurück", loginSub: "In Ihr Dashboard einloggen",
         labelEmail: "E-Mail", labelPassword: "Passwort", labelCompany: "Firmenname", labelConfirm: "Passwort bestätigen",
         btnLogin: "Einloggen", btnRegister: "Konto erstellen",
@@ -390,6 +397,22 @@ function toast(msg, type = '') {
     }
 }
 
+// Localized message shown when the backend API can't be reached
+const NETWORK_ERR = {
+    sv: 'Tjänsten är inte tillgänglig just nu. Försök igen senare.',
+    en: 'Service is currently unavailable. Please try again later.',
+    no: 'Tjenesten er ikke tilgjengelig akkurat nå. Prøv igjen senere.',
+    fi: 'Palvelu ei ole juuri nyt käytettävissä. Yritä myöhemmin uudelleen.',
+    da: 'Tjenesten er ikke tilgængelig lige nu. Prøv igen senere.',
+    de: 'Der Dienst ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.'
+};
+
+function friendlyError(e) {
+    const isNetwork = (e instanceof TypeError) || /failed to fetch|networkerror|load failed/i.test(e && e.message || '');
+    if (isNetwork) return NETWORK_ERR[currentLang] || NETWORK_ERR.en;
+    return (e && e.message) || NETWORK_ERR[currentLang] || NETWORK_ERR.en;
+}
+
 // ── REGISTER ──
 async function handleRegister() {
     const t = botTranslations[currentLang];
@@ -441,7 +464,7 @@ async function handleRegister() {
             setTimeout(() => window.location.href = 'dashboard.html', 1200);
         }
     } catch (e) {
-        toast(e.message, 'error');
+        toast(friendlyError(e), 'error');
     } finally {
         setLoading('registerBtn', false);
     }
@@ -487,7 +510,7 @@ async function handleLogin() {
             window.location.href = 'dashboard.html';
         }
     } catch (e) {
-        toast(e.message, 'error');
+        toast(friendlyError(e), 'error');
     } finally {
         setLoading('loginBtn', false);
     }
@@ -517,7 +540,7 @@ async function doCheckout(plan) {
         if (!res.ok) throw new Error(data.detail || 'Checkout failed');
         window.location.href = data.checkout_url;
     } catch (e) {
-        toast(e.message, 'error');
+        toast(friendlyError(e), 'error');
     }
 }
 
@@ -623,6 +646,39 @@ if (langBtn && langDropdown) {
     });
 }
 
+// Mobile hamburger menu
+function initMobileMenu() {
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (!navToggle || !navLinks) return;
+
+    const setOpen = (open) => {
+        navLinks.classList.toggle('open', open);
+        navToggle.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        navToggle.setAttribute('aria-expanded', open);
+    };
+
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setOpen(!navLinks.classList.contains('open'));
+    });
+
+    // Close when a link is tapped
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+
+    // Close when tapping outside the panel
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+            setOpen(false);
+        }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+    });
+}
+
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -645,6 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(currentLang);
     fetchRates();
     initChat();
+    initMobileMenu();
     checkPaymentResult();
 
     // Check if already logged in → show dashboard link in nav
