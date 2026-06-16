@@ -65,7 +65,7 @@
                 <a href="about.html" data-nav="about">Om oss</a>
                 <a href="team.html" data-nav="team">Team</a>
                 <a href="blog.html" data-nav="blog">Blogg</a>
-                <a href="emailbot.html" data-nav="emailbot">AI E-postbot</a>
+                <a href="projects.html" data-nav="projects">Våra Projekt</a>
                 <a href="contact.html" data-nav="contact">Kontakt</a>
             </div>
             <div class="nav-right">
@@ -78,10 +78,6 @@
                     <div class="language-dropdown" id="languageDropdown">
                         <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
                         <button class="language-option" data-lang="en">🇬🇧 English</button>
-                        <button class="language-option" data-lang="no">🇳🇴 Norsk</button>
-                        <button class="language-option" data-lang="fi">🇫🇮 Suomi</button>
-                        <button class="language-option" data-lang="da">🇩🇰 Dansk</button>
-                        <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
                     </div>
                 </div>
                 <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
@@ -105,7 +101,6 @@
                 <p data-home="description">Vi bygger intelligenta, moderna digitala produkter från AI-drivna system till responsiva webbplatser och mobilapplikationer.</p>
                 <div class="hero-buttons">
                     <a href="services.html" class="cta-button"><span data-home="explore">Utforska tjänster</span> <i class="fas fa-arrow-right"></i></a>
-                    <a href="emailbot.html" class="cta-button outline"><span>AI E-postbot</span> <i class="fas fa-robot"></i></a>
                 </div>
             </div>
             
@@ -183,24 +178,6 @@
         </div>
     </section>
 
-    <!-- AI Email Bot Promo Section -->
-    <section class="email-bot-promo">
-        <div class="promo-container">
-            <div class="promo-content">
-                <div class="promo-badge">
-                    <i class="fas fa-robot"></i>
-                    <span>Nyhet!</span>
-                </div>
-                <h2>AI E-postbot <span class="cyan">– Din inkorg hanterad av AI</span></h2>
-                <p>Anslut din Gmail, ladda upp dina dokument och låt AI besvara, filtrera och arkivera dina e-postmeddelanden automatiskt.</p>
-                <a href="emailbot.html" class="cta-button">Prova AI E-postboten <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="promo-icon">
-                <i class="fas fa-envelope-open-text"></i>
-                <i class="fas fa-brain"></i>
-            </div>
-        </div>
-    </section>
 
     <!-- Stats Section -->
     <section class="stats">
@@ -305,7 +282,7 @@
                     <a href="about.html" data-nav="about">Om oss</a>
                     <a href="team.html" data-nav="team">Team</a>
                     <a href="blog.html" data-nav="blog">Blogg</a>
-                    <a href="emailbot.html" data-nav="emailbot">AI E-postbot</a>
+                    <a href="projects.html" data-nav="projects">Våra Projekt</a>
                     <a href="contact.html" data-nav="contact">Kontakt</a>
                 </div>
             </div>
@@ -317,7 +294,6 @@
                     <a href="#">Dataanalys</a>
                     <a href="#">Webbapplikationer</a>
                     <a href="#">Mobilappar</a>
-                    <a href="emailbot.html">AI E-postbot</a>
                 </div>
             </div>
             
@@ -340,128 +316,6 @@
         </div>
     </footer>
 
-    <style>
-    /* Email Bot Promo Section */
-    .email-bot-promo {
-        padding: 4rem 2rem;
-        background: linear-gradient(135deg, rgba(0, 209, 255, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    
-    .promo-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 3rem;
-        flex-wrap: wrap;
-    }
-    
-    .promo-content {
-        flex: 1;
-    }
-    
-    .promo-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: rgba(0, 209, 255, 0.15);
-        border: 1px solid var(--cyan-400);
-        border-radius: 50px;
-        padding: 0.4rem 1rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .promo-badge i {
-        color: var(--cyan-400);
-        font-size: 0.9rem;
-    }
-    
-    .promo-badge span {
-        color: var(--cyan-400);
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-    
-    .promo-content h2 {
-        font-size: 2rem;
-        font-weight: 100;
-        color: white;
-        margin-bottom: 1rem;
-    }
-    
-    .promo-content h2 .cyan {
-        background: linear-gradient(to right, var(--cyan-400), var(--cyan-300));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-    
-    .promo-content p {
-        color: var(--white-70);
-        font-size: 1.1rem;
-        line-height: 1.7;
-        margin-bottom: 2rem;
-        max-width: 500px;
-    }
-    
-    .promo-icon {
-        display: flex;
-        gap: 2rem;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 2rem;
-        padding: 2rem;
-    }
-    
-    .promo-icon i {
-        font-size: 4rem;
-        color: var(--cyan-400);
-    }
-    
-    .promo-icon i:first-child {
-        animation: float 3s ease-in-out infinite;
-    }
-    
-    .promo-icon i:last-child {
-        animation: float 3s ease-in-out infinite reverse;
-    }
-    
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    
-    .cta-button.outline {
-        background: transparent;
-        border: 1px solid var(--cyan-400);
-        color: var(--cyan-400);
-        box-shadow: none;
-    }
-    
-    .cta-button.outline:hover {
-        background: rgba(0, 209, 255, 0.1);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 768px) {
-        .promo-container {
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        .promo-content p {
-            max-width: 100%;
-        }
-        
-        .promo-icon {
-            display: none;
-        }
-    }
-    </style>
 
     <!-- Complete Translations with Email Bot Nav Added -->
     <script>
@@ -474,7 +328,7 @@
                     about: "Om oss",
                     team: "Team",
                     blog: "Blogg",
-                    emailbot: "AI E-postbot",
+                    projects: "Våra Projekt",
                     contact: "Kontakt",
                     getStarted: "Kom igång"
                 },
@@ -526,7 +380,7 @@
                     about: "About",
                     team: "Team",
                     blog: "Blog",
-                    emailbot: "AI Email Bot",
+                    projects: "Our Projects",
                     contact: "Contact",
                     getStarted: "Get Started"
                 },
@@ -571,219 +425,11 @@
                     ctaButton: "Start a Conversation"
                 }
             },
-            no: {
-                nav: {
-                    home: "Hjem",
-                    services: "Tjenester",
-                    about: "Om oss",
-                    team: "Team",
-                    blog: "Blogg",
-                    emailbot: "AI E-postbot",
-                    contact: "Kontakt",
-                    getStarted: "Kom i gang"
-                },
-                footer: {
-                    tagline: "Avansert AI, Data Science & Moderne Digital Utvikling. Bygger intelligente løsninger som betyr noe.",
-                    quickLinks: "Hurtiglenker",
-                    services: "Tjenester",
-                    contact: "Kontakt",
-                    rights: "Alle rettigheter forbeholdt.",
-                    privacy: "Personvernerklæring",
-                    terms: "Bruksvilkår"
-                },
-                chat: {
-                    title: "GlorifyTC Assistent",
-                    subtitle: "AI-drevet support",
-                    placeholder: "Spør om hva som helst...",
-                    welcome: "Hei! Jeg er GlorifyTCs AI-assistent. Jeg kan hjelpe deg med informasjon om våre tjenester, svare på spørsmål om AI og datavitenskap, eller hjelpe med andre henvendelser. Hvordan kan jeg hjelpe deg i dag?"
-                },
-                home: {
-                    tag: "Avanserte AI-løsninger",
-                    title: "Forherligende",
-                    titleSpan: "Teknologi",
-                    description: "Vi bygger intelligente, moderne digitale produkter fra AI-drevne systemer til responsive nettsteder og mobilapplikasjoner.",
-                    explore: "Utforsk tjenester",
-                    servicesTitle: "Hva vi",
-                    servicesSpan: "bygger",
-                    servicesDesc: "Intelligente løsninger som løser reelle problemer og leverer målbar verdi.",
-                    aiModel: "AI-modellutvikling",
-                    aiModelDesc: "Tilpassede AI-modeller for prediksjon, klassifisering og automatisering.",
-                    dataAnalysis: "Dataanalyse",
-                    dataAnalysisDesc: "Avansert analyse og innsiktsfulle visualiseringer.",
-                    webApps: "Nettapplikasjoner",
-                    webAppsDesc: "Raske, moderne, responsive nettsteder og SaaS-plattformer.",
-                    viewAll: "Vis alle tjenester",
-                    projects: "Kommer snart",
-                    satisfaction: "Nystartet selskap",
-                    models: "Innovative løsninger",
-                    support: "Klar til å starte",
-                    ctaTitle: "Klar til å bygge noe",
-                    ctaSpan: "ekstraordinært",
-                    ctaDesc: "La oss diskutere hvordan AI og datavitenskap kan transformere din bedrift.",
-                    ctaButton: "Start en samtale"
-                }
-            },
-            fi: {
-                nav: {
-                    home: "Koti",
-                    services: "Palvelut",
-                    about: "Tietoa meistä",
-                    team: "Tiimi",
-                    blog: "Blogi",
-                    emailbot: "AI Sähköpostibotti",
-                    contact: "Yhteystiedot",
-                    getStarted: "Aloita"
-                },
-                footer: {
-                    tagline: "Edistynyt tekoäly, datatiede ja moderni digitaalinen kehitys. Rakennamme älykkäitä ratkaisuja, joilla on merkitystä.",
-                    quickLinks: "Pikalinkit",
-                    services: "Palvelut",
-                    contact: "Yhteystiedot",
-                    rights: "Kaikki oikeudet pidätetään.",
-                    privacy: "Tietosuojakäytäntö",
-                    terms: "Käyttöehdot"
-                },
-                chat: {
-                    title: "GlorifyTC Avustaja",
-                    subtitle: "Tekoälypohjainen tuki",
-                    placeholder: "Kysy mitä tahansa...",
-                    welcome: "Hei! Olen GlorifyTC:n tekoälyavustaja. Voin auttaa sinua palveluihimme liittyvissä kysymyksissä, vastata tekoälyä ja datatiedettä koskeviin kysymyksiin tai auttaa muissa tiedusteluissa. Kuinka voin auttaa sinua tänään?"
-                },
-                home: {
-                    tag: "Edistyneet tekoälyratkaisut",
-                    title: "Kunnioittaen",
-                    titleSpan: "Teknologiaa",
-                    description: "Rakennamme älykkäitä, moderneja digitaalisia tuotteita tekoälypohjaisista järjestelmistä responsiivisiin verkkosivustoihin ja mobiilisovelluksiin.",
-                    explore: "Tutustu palveluihin",
-                    servicesTitle: "Mitä me",
-                    servicesSpan: "rakennamme",
-                    servicesDesc: "Älykkäitä ratkaisuja, jotka ratkaisevat todellisia ongelmia ja tuottavat mitattavaa arvoa.",
-                    aiModel: "Tekoälymallien kehitys",
-                    aiModelDesc: "Mukautetut tekoälymallit ennustamiseen, luokitteluun ja automaatioon.",
-                    dataAnalysis: "Data-analyysi",
-                    dataAnalysisDesc: "Edistynyt analytiikka ja oivaltavat visualisoinnit.",
-                    webApps: "Verkkosovellukset",
-                    webAppsDesc: "Nopeat, modernit, responsiiviset verkkosivustot ja SaaS-alustat.",
-                    viewAll: "Näytä kaikki palvelut",
-                    projects: "Tulossa pian",
-                    satisfaction: "Uusi yritys",
-                    models: "Innovatiiviset ratkaisut",
-                    support: "Valmis aloittamaan",
-                    ctaTitle: "Valmis rakentamaan jotain",
-                    ctaSpan: "erityistä",
-                    ctaDesc: "Keskustellaan kuinka tekoäly ja datatiede voivat muuttaa liiketoimintaasi.",
-                    ctaButton: "Aloita keskustelu"
-                }
-            },
-            da: {
-                nav: {
-                    home: "Hjem",
-                    services: "Tjenester",
-                    about: "Om os",
-                    team: "Team",
-                    blog: "Blog",
-                    emailbot: "AI E-mailbot",
-                    contact: "Kontakt",
-                    getStarted: "Kom i gang"
-                },
-                footer: {
-                    tagline: "Avanceret AI, Data Science & Moderne Digital Udvikling. Bygger intelligente løsninger, der gør en forskel.",
-                    quickLinks: "Hurtige links",
-                    services: "Tjenester",
-                    contact: "Kontakt",
-                    rights: "Alle rettigheder forbeholdes.",
-                    privacy: "Privatlivspolitik",
-                    terms: "Servicevilkår"
-                },
-                chat: {
-                    title: "GlorifyTC Assistent",
-                    subtitle: "AI-drevet support",
-                    placeholder: "Spørg om hvad som helst...",
-                    welcome: "Hej! Jeg er GlorifyTC's AI-assistent. Jeg kan hjælpe dig med information om vores tjenester, besvare spørgsmål om AI og datavidenskab eller hjælpe med andre forespørgsler. Hvordan kan jeg hjælpe dig i dag?"
-                },
-                home: {
-                    tag: "Avancerede AI-løsninger",
-                    title: "Forherligende",
-                    titleSpan: "Teknologi",
-                    description: "Vi bygger intelligente, moderne digitale produkter fra AI-drevne systemer til responsive hjemmesider og mobilapplikationer.",
-                    explore: "Udforsk tjenester",
-                    servicesTitle: "Hvad vi",
-                    servicesSpan: "bygger",
-                    servicesDesc: "Intelligente løsninger, der løser reelle problemer og leverer målbar værdi.",
-                    aiModel: "AI-modeludvikling",
-                    aiModelDesc: "Brugerdefinerede AI-modeller til forudsigelse, klassificering og automatisering.",
-                    dataAnalysis: "Dataanalyse",
-                    dataAnalysisDesc: "Avanceret analyse og indsigtsfulde visualiseringer.",
-                    webApps: "Webapplikationer",
-                    webAppsDesc: "Hurtige, moderne, responsive hjemmesider og SaaS-platforme.",
-                    viewAll: "Se alle tjenester",
-                    projects: "Kommer snart",
-                    satisfaction: "Nystartet virksomhed",
-                    models: "Innovative løsninger",
-                    support: "Klar til at starte",
-                    ctaTitle: "Klar til at bygge noget",
-                    ctaSpan: "ekstraordinært",
-                    ctaDesc: "Lad os diskutere, hvordan AI og datavidenskab kan transformere din virksomhed.",
-                    ctaButton: "Start en samtale"
-                }
-            },
-            de: {
-                nav: {
-                    home: "Startseite",
-                    services: "Dienstleistungen",
-                    about: "Über uns",
-                    team: "Team",
-                    blog: "Blog",
-                    emailbot: "KI E-Mail-Bot",
-                    contact: "Kontakt",
-                    getStarted: "Loslegen"
-                },
-                footer: {
-                    tagline: "Fortschrittliche KI, Datenwissenschaft & Moderne Digitale Entwicklung. Wir entwickeln intelligente Lösungen, die einen Unterschied machen.",
-                    quickLinks: "Schnelllinks",
-                    services: "Dienstleistungen",
-                    contact: "Kontakt",
-                    rights: "Alle Rechte vorbehalten.",
-                    privacy: "Datenschutzrichtlinie",
-                    terms: "Nutzungsbedingungen"
-                },
-                chat: {
-                    title: "GlorifyTC Assistent",
-                    subtitle: "KI-gestützter Support",
-                    placeholder: "Fragen Sie alles...",
-                    welcome: "Hallo! Ich bin der KI-Assistent von GlorifyTC. Ich kann Ihnen Informationen über unsere Dienstleistungen geben, Fragen zu KI und Datenwissenschaft beantworten oder bei anderen Anliegen helfen. Wie kann ich Ihnen heute helfen?"
-                },
-                home: {
-                    tag: "Fortschrittliche KI-Lösungen",
-                    title: "Verherrlichende",
-                    titleSpan: "Technologie",
-                    description: "Wir bauen intelligente, moderne digitale Produkte von KI-gesteuerten Systemen bis hin zu responsiven Websites und mobilen Anwendungen.",
-                    explore: "Dienstleistungen erkunden",
-                    servicesTitle: "Was wir",
-                    servicesSpan: "bauen",
-                    servicesDesc: "Intelligente Lösungen, die echte Probleme lösen und messbaren Wert liefern.",
-                    aiModel: "KI-Modellentwicklung",
-                    aiModelDesc: "Maßgeschneiderte KI-Modelle für Vorhersage, Klassifizierung und Automatisierung.",
-                    dataAnalysis: "Datenanalyse",
-                    dataAnalysisDesc: "Fortschrittliche Analytik und aufschlussreiche Visualisierungen.",
-                    webApps: "Webanwendungen",
-                    webAppsDesc: "Schnelle, moderne, responsive Websites und SaaS-Plattformen.",
-                    viewAll: "Alle Dienstleistungen anzeigen",
-                    projects: "Demnächst",
-                    satisfaction: "Neues Unternehmen",
-                    models: "Innovative Lösungen",
-                    support: "Bereit zu starten",
-                    ctaTitle: "Bereit, etwas",
-                    ctaSpan: "Außergewöhnliches",
-                    ctaDesc: "Lassen Sie uns besprechen, wie KI und Datenwissenschaft Ihr Unternehmen transformieren können.",
-                    ctaButton: "Starten Sie ein Gespräch"
-                }
-            }
         };
 
         // Language Manager - persists across all pages
         const LanguageManager = {
-            currentLang: localStorage.getItem('glorifytc_lang') || 'sv',
+            currentLang: (['sv','en'].includes(localStorage.getItem('glorifytc_lang')) ? localStorage.getItem('glorifytc_lang') : 'sv'),
             
             init() {
                 this.loadLanguage(this.currentLang);

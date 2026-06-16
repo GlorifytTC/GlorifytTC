@@ -15,7 +15,7 @@
   <!-- Google Font: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Blog CSS -->
-  <link rel="stylesheet" href="Blog.css">
+  <link rel="stylesheet" href="blog.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,7 +47,7 @@
     <a href="about.html" data-nav="about">Om oss</a>
     <a href="team.html" data-nav="team">Team</a>
     <a href="blog.html" class="active" data-nav="blog">Blogg</a>
-    <a href="emailbot.html" data-nav="emailbot">AI E-postbot</a>
+    <a href="projects.html" data-nav="projects">Våra Projekt</a>
     <a href="contact.html" data-nav="contact">Kontakt</a>
   </div>
   
@@ -61,10 +61,6 @@
       <div class="language-dropdown" id="languageDropdown">
         <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
         <button class="language-option" data-lang="en">🇬🇧 English</button>
-        <button class="language-option" data-lang="no">🇳🇴 Norsk</button>
-        <button class="language-option" data-lang="fi">🇫🇮 Suomi</button>
-        <button class="language-option" data-lang="da">🇩🇰 Dansk</button>
-        <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
       </div>
     </div>
     
@@ -337,7 +333,7 @@
             <li><a href="about.html" data-nav="about">Om oss</a></li>
             <li><a href="team.html" data-nav="team">Team</a></li>
             <li><a href="blog.html" data-nav="blog">Blogg</a></li>
-            <li><a href="emailbot.html" data-nav="emailbot">AI E-postbot</a></li>
+            <li><a href="projects.html" data-nav="projects">Våra Projekt</a></li>
             <li><a href="contact.html" data-nav="contact">Kontakt</a></li>
           </ul>
         </div>
@@ -350,7 +346,6 @@
             <li><a href="#">Dataanalys</a></li>
             <li><a href="#">Webbapplikationer</a></li>
             <li><a href="#">Mobilappar</a></li>
-            <li><a href="emailbot.html">AI E-postbot</a></li>
             <li><a href="#">ML-konsulting</a></li>
           </ul>
         </div>
@@ -390,7 +385,7 @@
           about: "Om oss",
           team: "Team",
           blog: "Blogg",
-          emailbot: "AI E-postbot",
+          projects: "Våra Projekt",
           contact: "Kontakt",
           getStarted: "Kom igång"
         },
@@ -436,7 +431,7 @@
           about: "About",
           team: "Team",
           blog: "Blog",
-          emailbot: "AI Email Bot",
+          projects: "Our Projects",
           contact: "Contact",
           getStarted: "Get Started"
         },
@@ -475,194 +470,14 @@
         }
       },
       // Norwegian
-      no: {
-        nav: {
-          home: "Hjem",
-          services: "Tjenester",
-          about: "Om oss",
-          team: "Team",
-          blog: "Blogg",
-          emailbot: "AI E-postbot",
-          contact: "Kontakt",
-          getStarted: "Kom i gang"
-        },
-        footer: {
-          tagline: "Avansert AI, Data Science & Moderne Digital Utvikling. Bygger intelligente løsninger som betyr noe.",
-          quickLinks: "Hurtiglenker",
-          services: "Tjenester",
-          contact: "Kontakt",
-          rights: "Alle rettigheter forbeholdt.",
-          privacy: "Personvernerklæring",
-          terms: "Bruksvilkår"
-        },
-        chat: {
-          title: "GlorifyTC Assistent",
-          subtitle: "AI-drevet support",
-          placeholder: "Spør om hva som helst...",
-          welcome: "Hei! Jeg er GlorifyTCs AI-assistent. Jeg kan hjelpe deg med informasjon om våre tjenester, svare på spørsmål om AI og datavitenskap, eller hjelpe med andre henvendelser. Hvordan kan jeg hjelpe deg i dag?"
-        },
-        blog: {
-          tag: "Våre innsikter",
-          title: "Blogg &",
-          titleSpan: "Artikler",
-          description: "Innsikter, veiledninger og tanker om AI, datavitenskap og moderne utvikling.",
-          search: "Søk artikler...",
-          all: "Alle",
-          aiMl: "AI & Maskinlæring",
-          dataScience: "Data Science",
-          webDev: "Nettutvikling",
-          ethics: "Etikk & Ansvar",
-          featured: "Utvalgt",
-          readMore: "min lesing",
-          noResults: "Ingen artikler funnet.",
-          newsletter: "Abonner på vårt nyhetsbrev for de siste innsiktene om AI, datavitenskap og teknologi.",
-          subscribe: "Abonner",
-          emailPlaceholder: "Skriv inn e-post"
-        }
-      },
       // Finnish
-      fi: {
-        nav: {
-          home: "Koti",
-          services: "Palvelut",
-          about: "Tietoa meistä",
-          team: "Tiimi",
-          blog: "Blogi",
-          emailbot: "AI Sähköpostibotti",
-          contact: "Yhteystiedot",
-          getStarted: "Aloita"
-        },
-        footer: {
-          tagline: "Edistynyt tekoäly, datatiede ja moderni digitaalinen kehitys. Rakennamme älykkäitä ratkaisuja, joilla on merkitystä.",
-          quickLinks: "Pikalinkit",
-          services: "Palvelut",
-          contact: "Yhteystiedot",
-          rights: "Kaikki oikeudet pidätetään.",
-          privacy: "Tietosuojakäytäntö",
-          terms: "Käyttöehdot"
-        },
-        chat: {
-          title: "GlorifyTC Avustaja",
-          subtitle: "Tekoälypohjainen tuki",
-          placeholder: "Kysy mitä tahansa...",
-          welcome: "Hei! Olen GlorifyTC:n tekoälyavustaja. Voin auttaa sinua palveluihimme liittyvissä kysymyksissä, vastata tekoälyä ja datatiedettä koskeviin kysymyksiin tai auttaa muissa tiedusteluissa. Kuinka voin auttaa sinua tänään?"
-        },
-        blog: {
-          tag: "Meidän oivalluksemme",
-          title: "Blogi &",
-          titleSpan: "Artikkelit",
-          description: "Oivalluksia, oppaita ja ajatuksia tekoälystä, datatieteestä ja modernista kehityksestä.",
-          search: "Etsi artikkeleita...",
-          all: "Kaikki",
-          aiMl: "Tekoäly & koneoppiminen",
-          dataScience: "Data Science",
-          webDev: "Web-kehitys",
-          ethics: "Etiikka & vastuu",
-          featured: "Suositeltu",
-          readMore: "min lukuaika",
-          noResults: "Ei artikkeleita.",
-          newsletter: "Tilaa uutiskirjeemme saadaksesi uusimmat oivallukset tekoälystä, datatieteestä ja teknologiasta.",
-          subscribe: "Tilaa",
-          emailPlaceholder: "Syötä sähköposti"
-        }
-      },
       // Danish
-      da: {
-        nav: {
-          home: "Hjem",
-          services: "Tjenester",
-          about: "Om os",
-          team: "Team",
-          blog: "Blog",
-          emailbot: "AI E-mailbot",
-          contact: "Kontakt",
-          getStarted: "Kom i gang"
-        },
-        footer: {
-          tagline: "Avanceret AI, Data Science & Moderne Digital Udvikling. Bygger intelligente løsninger, der gør en forskel.",
-          quickLinks: "Hurtige links",
-          services: "Tjenester",
-          contact: "Kontakt",
-          rights: "Alle rettigheder forbeholdes.",
-          privacy: "Privatlivspolitik",
-          terms: "Servicevilkår"
-        },
-        chat: {
-          title: "GlorifyTC Assistent",
-          subtitle: "AI-drevet support",
-          placeholder: "Spørg om hvad som helst...",
-          welcome: "Hej! Jeg er GlorifyTC's AI-assistent. Jeg kan hjælpe dig med information om vores tjenester, besvare spørgsmål om AI og datavidenskab eller hjælpe med andre forespørgsler. Hvordan kan jeg hjælpe dig i dag?"
-        },
-        blog: {
-          tag: "Vores indsigter",
-          title: "Blog &",
-          titleSpan: "Artikler",
-          description: "Indsigter, vejledninger og tanker om AI, datavidenskab og moderne udvikling.",
-          search: "Søg artikler...",
-          all: "Alle",
-          aiMl: "AI & Machine Learning",
-          dataScience: "Data Science",
-          webDev: "Webudvikling",
-          ethics: "Etik & ansvar",
-          featured: "Fremhævet",
-          readMore: "min læsning",
-          noResults: "Ingen artikler fundet.",
-          newsletter: "Abonner på vores nyhedsbrev for de seneste indsigter om AI, datavidenskab og teknologi.",
-          subscribe: "Abonner",
-          emailPlaceholder: "Indtast din e-mail"
-        }
-      },
       // German
-      de: {
-        nav: {
-          home: "Startseite",
-          services: "Dienstleistungen",
-          about: "Über uns",
-          team: "Team",
-          blog: "Blog",
-          emailbot: "KI E-Mail-Bot",
-          contact: "Kontakt",
-          getStarted: "Loslegen"
-        },
-        footer: {
-          tagline: "Fortschrittliche KI, Datenwissenschaft & Moderne Digitale Entwicklung. Wir entwickeln intelligente Lösungen, die einen Unterschied machen.",
-          quickLinks: "Schnelllinks",
-          services: "Dienstleistungen",
-          contact: "Kontakt",
-          rights: "Alle Rechte vorbehalten.",
-          privacy: "Datenschutzrichtlinie",
-          terms: "Nutzungsbedingungen"
-        },
-        chat: {
-          title: "GlorifyTC Assistent",
-          subtitle: "KI-gestützter Support",
-          placeholder: "Fragen Sie alles...",
-          welcome: "Hallo! Ich bin der KI-Assistent von GlorifyTC. Ich kann Ihnen Informationen über unsere Dienstleistungen geben, Fragen zu KI und Datenwissenschaft beantworten oder bei anderen Anliegen helfen. Wie kann ich Ihnen heute helfen?"
-        },
-        blog: {
-          tag: "Unsere Einblicke",
-          title: "Blog &",
-          titleSpan: "Artikel",
-          description: "Einblicke, Tutorials und Gedanken zu KI, Datenwissenschaft und moderner Entwicklung.",
-          search: "Artikel suchen...",
-          all: "Alle",
-          aiMl: "KI & maschinelles Lernen",
-          dataScience: "Data Science",
-          webDev: "Webentwicklung",
-          ethics: "Ethik & Verantwortung",
-          featured: "Vorgestellt",
-          readMore: "Min. Lesen",
-          noResults: "Keine Artikel gefunden.",
-          newsletter: "Abonnieren Sie unseren Newsletter für die neuesten Einblicke in KI, Datenwissenschaft und Technologie.",
-          subscribe: "Abonnieren",
-          emailPlaceholder: "Geben Sie Ihre E-Mail ein"
-        }
-      }
     };
 
     // Language Manager
     const LanguageManager = {
-      currentLang: localStorage.getItem('glorifytc_lang') || 'sv',
+      currentLang: (['sv','en'].includes(localStorage.getItem('glorifytc_lang')) ? localStorage.getItem('glorifytc_lang') : 'sv'),
       
       init() {
         this.loadLanguage(this.currentLang);

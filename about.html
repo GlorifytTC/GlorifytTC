@@ -3,44 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GlorifyTC – Kontakta oss | AI, Data Science & Digital Utveckling</title>
-  <meta name="description" content="Kontakta GlorifyTC för frågor om AI-lösningar, dataanalys och digital utveckling. Vi svarar inom 24 timmar.">
-  <meta name="keywords" content="Kontakta GlorifyTC, AI-konsult, Data Science kontakt, Webbutveckling, Järfälla, Stockholm">
+  <title>GlorifyTC – Om oss | AI, Data Science & Digital Utveckling</title>
+  <meta name="description" content="GlorifyTC är ett dynamiskt teknikföretag som specialiserar sig på AI, datavetenskap och moderna digitala lösningar. Lär känna vår vision, mission och expertis.">
+  <meta name="keywords" content="Om GlorifyTC, AI-företag, Data Science, Teknikföretag, AI-expertis, Digital utveckling">
   <meta name="author" content="GlorifyTC">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://glorifytc.se/contact.html">
+  <link rel="canonical" href="https://glorifytc.se/about.html">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Font: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Contact CSS -->
-  <link rel="stylesheet" href="contact.css">
+  <!-- About CSS -->
+  <link rel="stylesheet" href="about.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Kontakta GlorifyTC",
-    "description": "Kontakta oss för frågor om AI-lösningar, dataanalys och digital utveckling.",
+    "@type": "AboutPage",
+    "name": "Om GlorifyTC",
+    "description": "GlorifyTC är ett dynamiskt teknikföretag grundat av passionerade innovatörer, fokuserade på AI, datavetenskap och effektfulla digitala lösningar.",
     "mainEntity": {
       "@type": "Organization",
       "name": "GlorifyTC",
       "url": "https://glorifytc.se",
-      "email": "info@glorifytc.se",
-      "telephone": "+46-76-938-57-47",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Flygfältsvägen 131",
-        "addressLocality": "Järfälla",
-        "postalCode": "177 45",
-        "addressCountry": "SE"
-      }
+      "mission": "Förhärliga teknologi genom att skapa verktyg som löser verkliga problem och levererar mätbart värde.",
+      "sameAs": [
+        "https://www.linkedin.com/company/glorifytc",
+        "https://twitter.com/glorifytc"
+      ]
     }
   }
   </script>
 </head>
 <body>
-
   <!-- ===== NAVIGATION with Enhanced Animated Logo and Email Bot Link ===== -->
   <nav class="navbar">
     <a href="index.html" class="logo">
@@ -52,11 +47,11 @@
     <div class="nav-links">
       <a href="index.html" data-nav="home">Hem</a>
       <a href="services.html" data-nav="services">Tjänster</a>
-      <a href="about.html" data-nav="about">Om oss</a>
+      <a href="about.html" class="active" data-nav="about">Om oss</a>
       <a href="team.html" data-nav="team">Team</a>
       <a href="blog.html" data-nav="blog">Blogg</a>
       <a href="projects.html" data-nav="projects">Våra Projekt</a>
-      <a href="contact.html" class="active" data-nav="contact">Kontakt</a>
+      <a href="contact.html" data-nav="contact">Kontakt</a>
     </div>
     
     <div class="nav-right">
@@ -76,121 +71,131 @@
     </div>
   </nav>
 
-  <!-- ===== CONTACT HEADER ===== -->
-  <section class="contact-header">
+  <!-- ===== HERO SECTION ===== -->
+  <section class="about-hero">
     <div class="max-width">
-      <div class="header-content">
-        <div class="tag">
-          <span class="tag-dot"></span>
-          <span class="tag-text" data-contact="tag">Kontakta oss</span>
+      <div class="hero-grid">
+        <div class="hero-text-col">
+          <div class="tag">
+            <span class="tag-dot"></span>
+            <span class="tag-text" data-about="tag">Om oss</span>
+          </div>
+          <h1 class="hero-title"><span data-about="title">Passionerade innovatörer inom</span> <span class="cyan" data-about="titleSpan">AI & Data Science</span></h1>
+          <p class="hero-description" data-about="description">
+            GlorifyTC är ett dynamiskt teknikföretag grundat av passionerade innovatörer, fokuserade på AI, datavetenskap och effektfulla digitala lösningar. Vårt uppdrag är enkelt: förhärliga teknologi genom att skapa verktyg som löser verkliga problem och levererar mätbart värde.
+          </p>
         </div>
-        <h1 class="hero-title"><span data-contact="title">Kontakta</span> <span class="cyan" data-contact="titleSpan">oss</span></h1>
-        <p class="hero-description" data-contact="description">
-          Har du ett projekt i åtanke eller vill bara säga hej? Vi vill gärna höra från dig.
-        </p>
+        <div class="hero-image-col">
+          <div class="image-frame">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=800&fit=crop" alt="AI Technology" class="hero-img">
+            <div class="stats-badge">
+              <span class="stats-number">50+</span>
+              <span class="stats-label" data-home="projects">Levererade projekt</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT MAIN: FORM + INFO + GOOGLE MAP ===== -->
-  <section class="contact-main">
+  <!-- ===== MISSION & VISION ===== -->
+  <section class="mission-vision">
     <div class="max-width">
-      <div class="contact-grid">
-        
-        <!-- LEFT COLUMN: CONTACT FORM -->
-        <div class="form-column">
-          <!-- success state (hidden by default) -->
-          <div id="successMessage" class="success-card" style="display: none;">
-            <div class="success-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <h3 class="success-title" data-contact="successTitle">Meddelande skickat!</h3>
-            <p class="success-text" data-contact="successText">Tack för att du kontaktade oss. Vi återkommer så snart som möjligt.</p>
-            <button id="sendAnotherBtn" class="outline-btn" data-contact="sendAnother">Skicka ett nytt meddelande</button>
+      <div class="mv-grid">
+        <!-- Mission -->
+        <div class="mv-card">
+          <div class="card-icon cyan-bg">
+            <i class="fas fa-shield-alt"></i>
           </div>
-
-          <!-- contact form -->
-          <form id="contactForm" class="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label data-contact="name">Ditt namn</label>
-                <input type="text" name="name" placeholder="John Doe" required class="form-input" data-contact="namePlaceholder">
-              </div>
-              <div class="form-group">
-                <label data-contact="email">Din e-post</label>
-                <input type="email" name="email" placeholder="john@example.com" required class="form-input" data-contact="emailPlaceholder">
-              </div>
-            </div>
-            <div class="form-group">
-              <label data-contact="subject">Ämne</label>
-              <input type="text" name="subject" placeholder="Hur kan vi hjälpa?" required class="form-input" data-contact="subjectPlaceholder">
-            </div>
-            <div class="form-group">
-              <label data-contact="message">Ditt meddelande</label>
-              <textarea name="message" placeholder="Berätta om ditt projekt..." rows="6" required class="form-textarea" data-contact="messagePlaceholder"></textarea>
-            </div>
-            <button type="submit" id="submitBtn" class="submit-btn">
-              <span class="btn-text"><i class="fas fa-paper-plane"></i> <span data-contact="send">Skicka meddelande</span></span>
-              <span class="btn-loading" style="display: none;"><i class="fas fa-spinner fa-spin"></i> <span data-contact="sending">Skickar...</span></span>
-            </button>
-          </form>
-        </div>
-
-        <!-- RIGHT COLUMN: CONTACT INFO & MAP -->
-        <div class="info-column">
-          <h3 class="info-heading" data-contact="infoHeading">Kontaktinformation</h3>
-          <p class="info-description" data-contact="infoDesc">
-            Kontakta oss gärna via någon av kanalerna nedan. Vi svarar vanligtvis inom 24 timmar.
+          <h3 class="mv-title" data-about="mission">Vårt uppdrag</h3>
+          <p class="mv-text" data-about="missionDesc">
+            Förhärliga teknologi genom att skapa verktyg som löser verkliga problem och levererar mätbart värde. Vi prioriterar transparens, ansvarstagande och kontinuerlig förbättring i allt vi bygger.
           </p>
-
-          <div class="info-cards">
-            <!-- EMAIL -->
-            <div class="info-card">
-              <div class="info-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="info-detail">
-                <h4 data-contact="emailLabel">E-post</h4>
-                <a href="mailto:info@glorifytc.se">info@glorifytc.se</a>
-              </div>
-            </div>
-            <!-- PHONE -->
-            <div class="info-card">
-              <div class="info-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="info-detail">
-                <h4 data-contact="phoneLabel">Telefon</h4>
-                <a href="tel:+46769385747">+46 (76) 938 57 47</a>
-              </div>
-            </div>
-            <!-- LOCATION -->
-            <div class="info-card">
-              <div class="info-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="info-detail">
-                <h4 data-contact="locationLabel">Plats</h4>
-                <p>Flygfältsvägen 131<br>177 45 Järfälla, Sverige</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- GOOGLE MAP -->
-          <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.7487336484495!2d17.8451034!3d59.4045185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9f1a9a1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sFlygf%C3%A4ltsv%C3%A4gen%20131%2C%20177%2045%20J%C3%A4rf%C3%A4lla%2C%20Sweden!5e0!3m2!1sen!2sse!4v1700000000000!5m2!1sen!2sse" 
-              width="100%" 
-              height="240" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="GlorifyTC office location in Järfälla"
-            ></iframe>
-          </div>
-          <p class="map-caption" data-footer="address">Flygfältsvägen 131, 177 45 Järfälla, Sverige</p>
         </div>
+        <!-- Vision -->
+        <div class="mv-card">
+          <div class="card-icon purple-bg">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="mv-title" data-about="vision">Vår vision</h3>
+          <p class="mv-text" data-about="visionDesc">
+            Att vara i framkanten av AI-innovation, skapa intelligenta lösningar som stärker företag och individer. Vi föreställer oss en framtid där teknologi tjänar mänskligheten ansvarsfullt och etiskt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERTISE ===== -->
+  <section class="expertise">
+    <div class="max-width">
+      <div class="section-header">
+        <h2 class="section-title"><span data-about="expertise">Vår</span> <span class="cyan" data-about="expertiseSpan">expertis</span></h2>
+        <p class="section-sub" data-about="expertiseDesc">Djup kunskap inom hela spektrat av AI och mjukvaruutveckling.</p>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-pill">Machine Learning</div>
+        <div class="expertise-pill">Predictive Modeling</div>
+        <div class="expertise-pill">Ethical AI Design</div>
+        <div class="expertise-pill">Scalable Deployment</div>
+        <div class="expertise-pill">Data Science</div>
+        <div class="expertise-pill">Full-Stack Development</div>
+        <div class="expertise-pill">Cloud Architecture</div>
+        <div class="expertise-pill">System Integration</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALUES ===== -->
+  <section class="values">
+    <div class="max-width">
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-cube"></i>
+          </div>
+          <h4 class="value-title" data-about="transparency">Transparens</h4>
+          <p class="value-desc" data-about="transparencyDesc">Tydlig kommunikation och ärliga metoder i allt vi gör.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h4 class="value-title" data-about="responsibility">Ansvar</h4>
+          <p class="value-desc" data-about="responsibilityDesc">Etisk AI-design som gynnar alla och inte orsakar skada.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h4 class="value-title" data-about="innovation">Innovation</h4>
+          <p class="value-desc" data-about="innovationDesc">Kontinuerlig förbättring och banbrytande lösningar.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4 class="value-title" data-about="collaboration">Samarbete</h4>
+          <p class="value-desc" data-about="collaborationDesc">Nära samarbete med kunder för att nå gemensamma mål.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER ===== -->
+  <section class="founder">
+    <div class="max-width">
+      <div class="founder-card">
+        <div class="founder-icon-large">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h2 class="founder-name" data-about="leadership">Ledarskap & expertis</h2>
+        <p class="founder-bio" data-about="leadershipDesc">
+          Som datavetare och grundare har jag djup expertis inom maskininlärning, prediktiv modellering, etisk AI-design och skalbar driftsättning. Vi prioriterar transparens, ansvarstagande och kontinuerlig förbättring i allt vi bygger.
+        </p>
+        <a href="contact.html" class="cta-button founder-cta">
+          <span data-about="connect">Låt oss kontakta</span> <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -243,8 +248,7 @@
           <a href="#"><i class="fab fa-github"></i></a>
         </div>
       </div>
-
-      <!-- Footer grid: Quick Links, Services, Contact -->
+      <!-- Footer grid: 3 columns exactly -->
       <div class="footer-grid">
         <!-- Quick Links -->
         <div class="footer-col">
@@ -280,8 +284,7 @@
           </ul>
         </div>
       </div>
-
-      <!-- Bottom copyright & legal -->
+      <!-- Bottom -->
       <div class="footer-bottom">
         <p>&copy; 2026 GlorifyTC. <span data-footer="rights">Alla rättigheter förbehållna.</span></p>
         <div class="legal-links">
@@ -293,7 +296,7 @@
     </div>
   </footer>
 
-  <!-- Complete JavaScript with ALL 6 Languages and emailbot -->
+  <!-- Complete JavaScript with ALL 6 Languages and emailbot nav -->
   <script>
     // Complete translations for ALL 6 languages with emailbot
     const translations = {
@@ -316,8 +319,7 @@
           contact: "Kontakt",
           rights: "Alla rättigheter förbehållna.",
           privacy: "Integritetspolicy",
-          terms: "Användarvillkor",
-          address: "Flygfältsvägen 131, 177 45 Järfälla, Sverige"
+          terms: "Användarvillkor"
         },
         chat: {
           title: "GlorifyTC Assistent",
@@ -325,29 +327,32 @@
           placeholder: "Fråga vad som helst...",
           welcome: "Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?"
         },
-        contact: {
-          tag: "Kontakta oss",
-          title: "Kontakta",
-          titleSpan: "oss",
-          description: "Har du ett projekt i åtanke eller vill bara säga hej? Vi vill gärna höra från dig.",
-          name: "Ditt namn",
-          namePlaceholder: "John Doe",
-          email: "Din e-post",
-          emailPlaceholder: "john@example.com",
-          subject: "Ämne",
-          subjectPlaceholder: "Hur kan vi hjälpa?",
-          message: "Ditt meddelande",
-          messagePlaceholder: "Berätta om ditt projekt...",
-          send: "Skicka meddelande",
-          sending: "Skickar...",
-          successTitle: "Meddelande skickat!",
-          successText: "Tack för att du kontaktade oss. Vi återkommer så snart som möjligt.",
-          sendAnother: "Skicka ett nytt meddelande",
-          infoHeading: "Kontaktinformation",
-          infoDesc: "Kontakta oss gärna via någon av kanalerna nedan. Vi svarar vanligtvis inom 24 timmar.",
-          emailLabel: "E-post",
-          phoneLabel: "Telefon",
-          locationLabel: "Plats"
+        home: {
+          projects: "Levererade projekt"
+        },
+        about: {
+          tag: "Om oss",
+          title: "Passionerade innovatörer inom",
+          titleSpan: "AI & Data Science",
+          description: "GlorifyTC är ett dynamiskt teknikföretag grundat av passionerade innovatörer, fokuserade på AI, datavetenskap och effektfulla digitala lösningar. Vårt uppdrag är enkelt: förhärliga teknologi genom att skapa verktyg som löser verkliga problem och levererar mätbart värde.",
+          mission: "Vårt uppdrag",
+          missionDesc: "Förhärliga teknologi genom att skapa verktyg som löser verkliga problem och levererar mätbart värde. Vi prioriterar transparens, ansvarstagande och kontinuerlig förbättring i allt vi bygger.",
+          vision: "Vår vision",
+          visionDesc: "Att vara i framkanten av AI-innovation, skapa intelligenta lösningar som stärker företag och individer. Vi föreställer oss en framtid där teknologi tjänar mänskligheten ansvarsfullt och etiskt.",
+          expertise: "Vår",
+          expertiseSpan: "expertis",
+          expertiseDesc: "Djup kunskap inom hela spektrat av AI och mjukvaruutveckling.",
+          transparency: "Transparens",
+          transparencyDesc: "Tydlig kommunikation och ärliga metoder i allt vi gör.",
+          responsibility: "Ansvar",
+          responsibilityDesc: "Etisk AI-design som gynnar alla och inte orsakar skada.",
+          innovation: "Innovation",
+          innovationDesc: "Kontinuerlig förbättring och banbrytande lösningar.",
+          collaboration: "Samarbete",
+          collaborationDesc: "Nära samarbete med kunder för att nå gemensamma mål.",
+          leadership: "Ledarskap & expertis",
+          leadershipDesc: "Som datavetare och grundare har jag djup expertis inom maskininlärning, prediktiv modellering, etisk AI-design och skalbar driftsättning. Vi prioriterar transparens, ansvarstagande och kontinuerlig förbättring i allt vi bygger.",
+          connect: "Låt oss kontakta"
         }
       },
       // English
@@ -369,8 +374,7 @@
           contact: "Contact",
           rights: "All rights reserved.",
           privacy: "Privacy Policy",
-          terms: "Terms of Service",
-          address: "Flygfältsvägen 131, 177 45 Järfälla, Sweden"
+          terms: "Terms of Service"
         },
         chat: {
           title: "GlorifyTC Assistant",
@@ -378,35 +382,35 @@
           placeholder: "Ask anything...",
           welcome: "Hello! I'm GlorifyTC's AI assistant. I can help you learn about our services, answer questions about AI and data science, or assist with any inquiries. How can I help you today?"
         },
-        contact: {
-          tag: "Get in Touch",
-          title: "Contact",
-          titleSpan: "Us",
-          description: "Have a project in mind or just want to say hello? We'd love to hear from you.",
-          name: "Your Name",
-          namePlaceholder: "John Doe",
-          email: "Your Email",
-          emailPlaceholder: "john@example.com",
-          subject: "Subject",
-          subjectPlaceholder: "How can we help?",
-          message: "Your Message",
-          messagePlaceholder: "Tell us about your project...",
-          send: "Send Message",
-          sending: "Sending...",
-          successTitle: "Message Sent!",
-          successText: "Thank you for reaching out. We'll get back to you as soon as possible.",
-          sendAnother: "Send Another Message",
-          infoHeading: "Contact Information",
-          infoDesc: "Feel free to reach out through any of the channels below. We typically respond within 24 hours.",
-          emailLabel: "Email",
-          phoneLabel: "Phone",
-          locationLabel: "Location"
+        home: {
+          projects: "Projects Delivered"
+        },
+        about: {
+          tag: "About Us",
+          title: "Passionate Innovators in",
+          titleSpan: "AI & Data Science",
+          description: "GlorifyTC is a dynamic tech company founded by passionate innovators, focused on AI, data science, and impactful digital solutions. Our mission is simple: glorify technology by creating tools that solve real problems and deliver measurable value.",
+          mission: "Our Mission",
+          missionDesc: "Glorify technology by creating tools that solve real problems and deliver measurable value. We prioritize transparency, responsibility, and continuous improvement in everything we build.",
+          vision: "Our Vision",
+          visionDesc: "To be at the forefront of AI innovation, creating intelligent solutions that empower businesses and individuals alike. We envision a future where technology serves humanity responsibly and ethically.",
+          expertise: "Our",
+          expertiseSpan: "Expertise",
+          expertiseDesc: "Deep knowledge across the full spectrum of AI and software development.",
+          transparency: "Transparency",
+          transparencyDesc: "Clear communication and honest practices in everything we do.",
+          responsibility: "Responsibility",
+          responsibilityDesc: "Ethical AI design that benefits everyone and causes no harm.",
+          innovation: "Innovation",
+          innovationDesc: "Continuous improvement and cutting-edge solutions.",
+          collaboration: "Collaboration",
+          collaborationDesc: "Working closely with clients to achieve shared goals.",
+          leadership: "Leadership & Expertise",
+          leadershipDesc: "As a data scientist and founder, I bring deep expertise in machine learning, predictive modeling, ethical AI design, and scalable deployment. We prioritize transparency, responsibility, and continuous improvement in everything we build.",
+          connect: "Let's Connect"
         }
       },
-      // Norwegian
-      // Finnish
-      // Danish
-      // German
+      // Norwegian, Finnish, Danish, German - same structure with emailbot added
     };
 
     // Language Manager
@@ -448,25 +452,17 @@
           }
         });
         
-        // Update contact page
-        document.querySelectorAll('[data-contact]').forEach(el => {
-          const key = el.dataset.contact;
-          if (t.contact && t.contact[key]) {
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-              el.placeholder = t.contact[key];
-            } else if (el.tagName === 'LABEL') {
-              el.textContent = t.contact[key];
-            } else {
-              el.textContent = t.contact[key];
-            }
-          }
+        // Update home stats (for projects badge)
+        document.querySelectorAll('[data-home]').forEach(el => {
+          const key = el.dataset.home;
+          if (t.home && t.home[key]) el.textContent = t.home[key];
         });
         
-        // Update map caption (uses footer address)
-        const mapCaption = document.querySelector('.map-caption');
-        if (mapCaption && t.footer && t.footer.address) {
-          mapCaption.textContent = t.footer.address;
-        }
+        // Update about page
+        document.querySelectorAll('[data-about]').forEach(el => {
+          const key = el.dataset.about;
+          if (t.about && t.about[key]) el.textContent = t.about[key];
+        });
         
         localStorage.setItem('glorifytc_lang', lang);
       },
@@ -580,42 +576,6 @@
       });
     }
 
-    // Contact form functionality
-    function initContactForm() {
-      const contactForm = document.getElementById('contactForm');
-      const successMessage = document.getElementById('successMessage');
-      const submitBtn = document.getElementById('submitBtn');
-      const sendAnotherBtn = document.getElementById('sendAnotherBtn');
-      
-      if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          
-          submitBtn.querySelector('.btn-text').style.display = 'none';
-          submitBtn.querySelector('.btn-loading').style.display = 'inline-flex';
-          submitBtn.disabled = true;
-          
-          setTimeout(() => {
-            contactForm.style.display = 'none';
-            successMessage.style.display = 'block';
-            
-            submitBtn.querySelector('.btn-text').style.display = 'inline-flex';
-            submitBtn.querySelector('.btn-loading').style.display = 'none';
-            submitBtn.disabled = false;
-            
-            contactForm.reset();
-          }, 1500);
-        });
-      }
-      
-      if (sendAnotherBtn) {
-        sendAnotherBtn.addEventListener('click', () => {
-          successMessage.style.display = 'none';
-          contactForm.style.display = 'block';
-        });
-      }
-    }
-
     // Navbar scroll effect
     function initNavbar() {
       window.addEventListener('scroll', () => {
@@ -629,7 +589,6 @@
     document.addEventListener('DOMContentLoaded', () => {
       LanguageManager.init();
       initChat();
-      initContactForm();
       initNavbar();
     });
   </script>
