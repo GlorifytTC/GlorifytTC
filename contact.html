@@ -2,6 +2,17 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <style>html:not(.lang-ready) body{visibility:hidden}</style>
+    <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlorifyTC – Kontakta oss | AI, Data Science & Digital Utveckling</title>
   <meta name="description" content="Kontakta GlorifyTC för frågor om AI-lösningar, dataanalys och digital utveckling. Vi svarar inom 24 timmar.">
@@ -9,7 +20,10 @@
   <meta name="author" content="GlorifyTC">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://glorifytc.se/contact.html">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Font: Inter -->
@@ -30,7 +44,7 @@
       "telephone": "+46-76-938-57-47",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Flygfältsvägen 131",
+        "streetAddress": "Flygfältsvägen 13",
         "addressLocality": "Järfälla",
         "postalCode": "177 45",
         "addressCountry": "SE"
@@ -171,7 +185,7 @@
               </div>
               <div class="info-detail">
                 <h4 data-contact="locationLabel">Plats</h4>
-                <p>Flygfältsvägen 131<br>177 45 Järfälla, Sverige</p>
+                <p>Flygfältsvägen 13<br>177 45 Järfälla, Sverige</p>
               </div>
             </div>
           </div>
@@ -189,7 +203,7 @@
               title="GlorifyTC office location in Järfälla"
             ></iframe>
           </div>
-          <p class="map-caption" data-footer="address">Flygfältsvägen 131, 177 45 Järfälla, Sverige</p>
+          <p class="map-caption" data-footer="address">Flygfältsvägen 13, 177 45 Järfälla, Sverige</p>
         </div>
       </div>
     </div>
@@ -276,7 +290,7 @@
           <ul class="footer-links contact-links">
             <li><a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a></li>
             <li><a href="tel:+46769385747"><i class="fas fa-phone-alt"></i> +46 (76) 938 57 47</a></li>
-            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 131, 177 45 Järfälla</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 13, 177 45 Järfälla</a></li>
           </ul>
         </div>
       </div>
@@ -317,7 +331,7 @@
           rights: "Alla rättigheter förbehållna.",
           privacy: "Integritetspolicy",
           terms: "Användarvillkor",
-          address: "Flygfältsvägen 131, 177 45 Järfälla, Sverige"
+          address: "Flygfältsvägen 13, 177 45 Järfälla, Sverige"
         },
         chat: {
           title: "GlorifyTC Assistent",
@@ -370,7 +384,7 @@
           rights: "All rights reserved.",
           privacy: "Privacy Policy",
           terms: "Terms of Service",
-          address: "Flygfältsvägen 131, 177 45 Järfälla, Sweden"
+          address: "Flygfältsvägen 13, 177 45 Järfälla, Sweden"
         },
         chat: {
           title: "GlorifyTC Assistant",
@@ -628,12 +642,14 @@
     // Initialize everything
     document.addEventListener('DOMContentLoaded', () => {
       LanguageManager.init();
+      document.documentElement.classList.add('lang-ready');
       initChat();
       initContactForm();
       initNavbar();
     });
   </script>
 <script src="nav-menu.js"></script>
+<script src="cookie-consent.js"></script>
 <script src="scroll-fx.js"></script>
 <script src="space-bg.js"></script>
 </body>

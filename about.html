@@ -2,6 +2,17 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <style>html:not(.lang-ready) body{visibility:hidden}</style>
+    <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlorifyTC – Om oss | AI, Data Science & Digital Utveckling</title>
   <meta name="description" content="GlorifyTC är ett dynamiskt teknikföretag som specialiserar sig på AI, datavetenskap och moderna digitala lösningar. Lär känna vår vision, mission och expertis.">
@@ -9,7 +20,10 @@
   <meta name="author" content="GlorifyTC">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://glorifytc.se/about.html">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Font: Inter -->
@@ -280,7 +294,7 @@
           <ul class="footer-links contact-links">
             <li><a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a></li>
             <li><a href="tel:+46769385747"><i class="fas fa-phone-alt"></i> +46 (76) 938 57 47</a></li>
-            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 131, 177 45 Järfälla</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 13, 177 45 Järfälla</a></li>
           </ul>
         </div>
       </div>
@@ -588,11 +602,13 @@
     // Initialize everything
     document.addEventListener('DOMContentLoaded', () => {
       LanguageManager.init();
+      document.documentElement.classList.add('lang-ready');
       initChat();
       initNavbar();
     });
   </script>
 <script src="nav-menu.js"></script>
+<script src="cookie-consent.js"></script>
 <script src="scroll-fx.js"></script>
 <script src="space-bg.js"></script>
 </body>

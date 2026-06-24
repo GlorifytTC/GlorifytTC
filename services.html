@@ -2,6 +2,17 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <style>html:not(.lang-ready) body{visibility:hidden}</style>
+    <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GlorifyTC - Våra tjänster | AI, Data Science & Digital Utveckling</title>
     <meta name="description" content="Utforska GlorifyTCs tjänster: AI-modellutveckling, dataanalys, webbapplikationer, mobilappar, ML-konsulting och AI-integration.">
@@ -9,7 +20,10 @@
     <meta name="author" content="GlorifyTC">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://glorifytc.se/services.html">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -62,6 +76,22 @@
             <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
         </div>
     </nav>
+
+    <!-- ===== SERVICES HEADER ===== -->
+    <section class="services-header">
+        <div class="max-width">
+            <div class="header-content">
+                <div class="tag">
+                    <span class="tag-dot"></span>
+                    <span class="tag-text" data-services="tag">Våra tjänster</span>
+                </div>
+                <h1 class="hero-title"><span data-services="title">Lösningar som</span> <span class="cyan" data-services="titleSpan">levererar resultat</span></h1>
+                <p class="hero-description" data-services="heroDescription">
+                    Från AI-modeller till webbapplikationer — vi bygger skräddarsydda digitala lösningar som hjälper svenska företag att växa.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- Main Content -->
     <div class="main-content">
@@ -509,7 +539,7 @@
                     <div class="footer-links">
                         <a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a>
                         <a href="tel:+46769385747"><i class="fas fa-phone-alt"></i> +46 (76) 938 57 47</a>
-                        <a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 131, 177 45 Järfälla</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 13, 177 45 Järfälla</a>
                     </div>
                 </div>
             </div>
@@ -554,6 +584,10 @@
                     welcome: "Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?"
                 },
                 services: {
+                    tag: "Våra tjänster",
+                    title: "Lösningar som",
+                    titleSpan: "levererar resultat",
+                    heroDescription: "Från AI-modeller till webbapplikationer — vi bygger skräddarsydda digitala lösningar som hjälper svenska företag att växa.",
                     aiModel: "AI-modellutveckling",
                     aiModelDesc: "Anpassade AI-modeller för prediktion, klassificering, generering, automatisering — hela vägen från data till driftsättning.",
                     dataAnalysis: "Dataanalys & Visualisering",
@@ -605,6 +639,10 @@
                     welcome: "Hello! I'm GlorifyTC's AI assistant. I can help you learn about our services, answer questions about AI and data science, or assist with any inquiries. How can I help you today?"
                 },
                 services: {
+                    tag: "Our Services",
+                    title: "Solutions that",
+                    titleSpan: "deliver results",
+                    heroDescription: "From AI models to web applications — we build custom digital solutions that help businesses grow.",
                     aiModel: "AI Model Development",
                     aiModelDesc: "Custom AI models for prediction, classification, generation, automation — full pipeline from data to deployment.",
                     dataAnalysis: "Data Analysis & Visualization",
@@ -798,11 +836,13 @@
         // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
             LanguageManager.init();
+            document.documentElement.classList.add('lang-ready');
             initChat();
             initNavbar();
         });
     </script>
 <script src="nav-menu.js"></script>
+<script src="cookie-consent.js"></script>
 <script src="scroll-fx.js"></script>
 <script src="space-bg.js"></script>
 </body>

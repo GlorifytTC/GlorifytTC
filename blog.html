@@ -2,6 +2,17 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <style>html:not(.lang-ready) body{visibility:hidden}</style>
+    <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlorifyTC – Blogg & Artiklar | AI, Data Science & Teknikinsikter</title>
   <meta name="description" content="Utforska GlorifyTCs blogg med insikter, handledningar och tankar om AI, datavetenskap, maskininlärning och modern webbutveckling.">
@@ -9,7 +20,10 @@
   <meta name="author" content="GlorifyTC">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://glorifytc.se/blog.html">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Font: Inter -->
@@ -30,6 +44,47 @@
     }
   }
   </script>
+    <style>
+    .blog-filters { padding: 1.5rem 0 2.5rem; }
+    .filter-layout { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+    .search-wrapper { position: relative; flex: 1 1 280px; max-width: 360px; }
+    .search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--white-50); font-size: 0.9rem; }
+    .search-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--white-10); border-radius: 50px; padding: 0.7rem 1rem 0.7rem 2.6rem; color: white; font-size: 0.9rem; font-family: inherit; }
+    .search-input::placeholder { color: var(--white-50); }
+    .search-input:focus { outline: none; border-color: var(--cyan-400); }
+    .filter-container { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .filter-btn { background: rgba(255,255,255,0.04); border: 1px solid var(--white-10); color: var(--white-70); padding: 0.55rem 1.1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 500; cursor: pointer; font-family: inherit; transition: all 0.25s ease; }
+    .filter-btn:hover { background: rgba(255,255,255,0.08); color: white; }
+    .filter-btn.active { background: linear-gradient(to right, var(--cyan-500), var(--cyan-600)); border-color: transparent; color: white; }
+
+    .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .featured-card { position: relative; display: block; border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--white-10); background: rgba(255,255,255,0.03); transition: transform 0.3s ease, border-color 0.3s ease; }
+    .featured-card:hover { transform: translateY(-4px); border-color: var(--cyan-400); }
+    .featured-image { height: 220px; overflow: hidden; }
+    .featured-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .featured-content { padding: 1.5rem; }
+    .featured-meta { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.8rem; }
+    .featured-badge { background: var(--cyan-400); color: #04141a; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .category-label { color: var(--cyan-400); font-size: 0.8rem; font-weight: 600; }
+    .featured-title { color: white; font-size: 1.3rem; font-weight: 600; margin-bottom: 0.6rem; line-height: 1.3; }
+    .featured-excerpt { color: var(--white-70); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; }
+    .post-meta, .card-footer { display: flex; gap: 1.2rem; color: var(--white-50); font-size: 0.8rem; }
+
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .post-card { display: block; border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--white-10); background: rgba(255,255,255,0.03); transition: transform 0.3s ease, border-color 0.3s ease; }
+    .post-card:hover { transform: translateY(-4px); border-color: var(--cyan-400); }
+    .card-image { height: 180px; overflow: hidden; }
+    .card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card-content { padding: 1.4rem; }
+    .card-category { display: flex; align-items: center; gap: 0.4rem; color: var(--cyan-400); font-size: 0.78rem; font-weight: 600; margin-bottom: 0.7rem; }
+    .card-title { color: white; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; line-height: 1.3; }
+    .card-excerpt { color: var(--white-70); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; }
+    .no-results { text-align: center; color: var(--white-50); padding: 2rem 0; }
+    @media (max-width: 600px) {
+        .filter-layout { flex-direction: column; align-items: stretch; }
+        .search-wrapper { max-width: none; }
+    }
+    </style>
 </head>
 <body>
 
@@ -95,9 +150,7 @@
         <div class="filter-container" id="categoryFilter">
           <button class="filter-btn active" data-category="all" data-blog="all">Alla</button>
           <button class="filter-btn" data-category="ai" data-blog="aiMl">AI & Machine Learning</button>
-          <button class="filter-btn" data-category="datascience" data-blog="dataScience">Data Science</button>
-          <button class="filter-btn" data-category="webdev" data-blog="webDev">Webbutveckling</button>
-          <button class="filter-btn" data-category="ethics" data-blog="ethics">Etik & Ansvar</button>
+          <button class="filter-btn" data-category="business" data-blog="business">Affärsverksamhet</button>
         </div>
       </div>
     </div>
@@ -107,42 +160,42 @@
   <section class="featured-posts">
     <div class="max-width">
       <div class="featured-grid">
-        <article class="featured-card" data-category="ai">
+        <a href="blog-ai-kostnad-smaforetag.html" class="featured-card" data-category="business" style="text-decoration:none;">
           <div class="featured-image">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop" alt="AI future">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" alt="AI kostnad för småföretag">
           </div>
           <div class="featured-overlay"></div>
           <div class="featured-content">
             <div class="featured-meta">
               <span class="featured-badge" data-blog="featured">Utvald</span>
-              <span class="category-label" data-blog="aiMl">AI & Machine Learning</span>
+              <span class="category-label" data-blog="business">Affärsverksamhet</span>
             </div>
-            <h2 class="featured-title">Framtiden för AI inom Data Science</h2>
-            <p class="featured-excerpt">Som dataforskare utforskar jag hur AI revolutionerar industrier. Från generativa modeller till automatiserade arbetsflöden — upptäck de senaste insikterna och trenderna som formar vårt område.</p>
+            <h2 class="featured-title">Vad kostar en AI-lösning för småföretag?</h2>
+            <p class="featured-excerpt">En ärlig genomgång av vad AI-lösningar faktiskt kostar 2026 — från färdiga verktyg till skräddarsydda modeller, och hur du undviker att betala för mycket.</p>
             <div class="post-meta">
-              <span><i class="far fa-calendar-alt"></i> 15 Dec, 2024</span>
-              <span><i class="far fa-clock"></i> 8 <span data-blog="readMore">min läsning</span></span>
+              <span><i class="far fa-calendar-alt"></i> 24 Jun, 2026</span>
+              <span><i class="far fa-clock"></i> 7 <span data-blog="readMore">min läsning</span></span>
             </div>
           </div>
-        </article>
-        <article class="featured-card" data-category="ethics">
+        </a>
+        <a href="blog-schemalaggning-vardpersonal.html" class="featured-card" data-category="business" style="text-decoration:none;">
           <div class="featured-image">
-            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=500&fit=crop" alt="Ethical AI">
+            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop" alt="Schemaläggning vårdpersonal">
           </div>
           <div class="featured-overlay"></div>
           <div class="featured-content">
             <div class="featured-meta">
               <span class="featured-badge" data-blog="featured">Utvald</span>
-              <span class="category-label" data-blog="ethics">Etik & Ansvar</span>
+              <span class="category-label" data-blog="business">Affärsverksamhet</span>
             </div>
-            <h2 class="featured-title">Att bygga etiska AI-modeller</h2>
-            <p class="featured-excerpt">Bästa praxis för att utveckla ansvarsfulla, transparenta och opartiska AI-lösningar som gynnar alla. Lär dig hur du integrerar etik i din AI-utvecklingslivscykel.</p>
+            <h2 class="featured-title">Schemaläggning för vårdpersonal: 5 vanliga problem och lösningar</h2>
+            <p class="featured-excerpt">Dubbelbokade pass, sena ändringar och missade meddelanden. Här är de fem vanligaste problemen inom vård och skola — och hur du löser dem.</p>
             <div class="post-meta">
-              <span><i class="far fa-calendar-alt"></i> 10 Dec, 2024</span>
+              <span><i class="far fa-calendar-alt"></i> 24 Jun, 2026</span>
               <span><i class="far fa-clock"></i> 6 <span data-blog="readMore">min läsning</span></span>
             </div>
           </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
@@ -151,108 +204,23 @@
   <section class="regular-posts">
     <div class="max-width">
       <div class="posts-grid" id="postsContainer">
-        <article class="post-card" data-category="webdev">
+        <a href="blog-ai-vs-automatisering.html" class="post-card" data-category="ai" style="text-decoration:none;">
           <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop" alt="Web Dev">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop" alt="AI vs automatisering">
           </div>
           <div class="card-content">
             <div class="card-category">
               <i class="fas fa-tag"></i>
-              <span data-blog="webDev">Webbutveckling</span>
+              <span data-blog="aiMl">AI & Machine Learning</span>
             </div>
-            <h3 class="card-title">Modern webbutveckling med AI-integration</h3>
-            <p class="card-excerpt">Hur du sömlöst integrerar AI-funktioner i dina webbapplikationer för förbättrade användarupplevelser och intelligent automatisering.</p>
+            <h3 class="card-title">AI vs traditionell automatisering: vad är skillnaden?</h3>
+            <p class="card-excerpt">AI och automatisering blandas ofta ihop, men de löser olika problem. Här är en tydlig genomgång av skillnaden — och hur du vet vilken du behöver.</p>
             <div class="card-footer">
-              <span><i class="far fa-calendar-alt"></i> 5 Dec, 2024</span>
+              <span><i class="far fa-calendar-alt"></i> 24 Jun, 2026</span>
               <span><i class="far fa-clock"></i> 5 <span data-blog="readMore">min läsning</span></span>
             </div>
           </div>
-        </article>
-        <article class="post-card" data-category="datascience">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" alt="Data Viz">
-          </div>
-          <div class="card-content">
-            <div class="card-category">
-              <i class="fas fa-tag"></i>
-              <span data-blog="dataScience">Data Science</span>
-            </div>
-            <h3 class="card-title">Bästa praxis för datavisualisering</h3>
-            <p class="card-excerpt">Skapa övertygande och insiktsfulla datavisualiseringar som berättar en historia. Från dashboards till interaktiva diagram.</p>
-            <div class="card-footer">
-              <span><i class="far fa-calendar-alt"></i> 28 Nov, 2024</span>
-              <span><i class="far fa-clock"></i> 7 <span data-blog="readMore">min läsning</span></span>
-            </div>
-          </div>
-        </article>
-        <article class="post-card" data-category="ai">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop" alt="ML Scale">
-          </div>
-          <div class="card-content">
-            <div class="card-category">
-              <i class="fas fa-tag"></i>
-              <span data-blog="aiMl">AI & Machine Learning</span>
-            </div>
-            <h3 class="card-title">Skala maskininlärningsmodeller i produktion</h3>
-            <p class="card-excerpt">Strategier för att driftsätta och underhålla ML-modeller i stor skala. Infrastruktur, övervakning och kontinuerlig förbättring.</p>
-            <div class="card-footer">
-              <span><i class="far fa-calendar-alt"></i> 20 Nov, 2024</span>
-              <span><i class="far fa-clock"></i> 10 <span data-blog="readMore">min läsning</span></span>
-            </div>
-          </div>
-        </article>
-        <article class="post-card" data-category="ai">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1696446701796-da61225697cc?w=800&h=500&fit=crop" alt="Generative AI">
-          </div>
-          <div class="card-content">
-            <div class="card-category">
-              <i class="fas fa-tag"></i>
-              <span data-blog="aiMl">AI & Machine Learning</span>
-            </div>
-            <h3 class="card-title">Generativ AI:s framväxt</h3>
-            <p class="card-excerpt">Utforska kapaciteten och tillämpningarna av generativa AI-modeller. Från text till bilder och vidare.</p>
-            <div class="card-footer">
-              <span><i class="far fa-calendar-alt"></i> 15 Nov, 2024</span>
-              <span><i class="far fa-clock"></i> 6 <span data-blog="readMore">min läsning</span></span>
-            </div>
-          </div>
-        </article>
-        <article class="post-card" data-category="webdev">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=500&fit=crop" alt="Web Dev API">
-          </div>
-          <div class="card-content">
-            <div class="card-category">
-              <i class="fas fa-tag"></i>
-              <span data-blog="webDev">Webbutveckling</span>
-            </div>
-            <h3 class="card-title">Bygga AI-drivna API:er</h3>
-            <p class="card-excerpt">En praktisk guide till att skapa och driftsätta API:er som serverar maskininlärningsmodeller med låg latens.</p>
-            <div class="card-footer">
-              <span><i class="far fa-calendar-alt"></i> 10 Nov, 2024</span>
-              <span><i class="far fa-clock"></i> 8 <span data-blog="readMore">min läsning</span></span>
-            </div>
-          </div>
-        </article>
-        <article class="post-card" data-category="datascience">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="MLOps">
-          </div>
-          <div class="card-content">
-            <div class="card-category">
-              <i class="fas fa-tag"></i>
-              <span data-blog="dataScience">Data Science</span>
-            </div>
-            <h3 class="card-title">MLOps: Att överbrygga klyftan</h3>
-            <p class="card-excerpt">Hur man effektiviserar livscykeln för maskininlärningsmodeller från utveckling till produktion.</p>
-            <div class="card-footer">
-              <span><i class="far fa-calendar-alt"></i> 5 Nov, 2024</span>
-              <span><i class="far fa-clock"></i> 7 <span data-blog="readMore">min läsning</span></span>
-            </div>
-          </div>
-        </article>
+        </a>
       </div>
       <div id="noResults" class="no-results" style="display: none;">
         <p data-blog="noResults">Inga artiklar matchar din sökning.</p>
@@ -356,7 +324,7 @@
           <ul class="footer-links contact-links">
             <li><a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a></li>
             <li><a href="tel:+46769385747"><i class="fas fa-phone-alt"></i> +46 (76) 938 57 47</a></li>
-            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 131, 177 45 Järfälla</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 13, 177 45 Järfälla</a></li>
           </ul>
         </div>
       </div>
@@ -412,6 +380,7 @@
           search: "Sök artiklar...",
           all: "Alla",
           aiMl: "AI & Machine Learning",
+          business: "Affärsverksamhet",
           dataScience: "Data Science",
           webDev: "Webbutveckling",
           ethics: "Etik & Ansvar",
@@ -458,6 +427,7 @@
           search: "Search articles...",
           all: "All",
           aiMl: "AI & Machine Learning",
+          business: "Business",
           dataScience: "Data Science",
           webDev: "Web Development",
           ethics: "Ethics & Responsibility",
@@ -711,12 +681,14 @@
     // Initialize everything
     document.addEventListener('DOMContentLoaded', () => {
       LanguageManager.init();
+      document.documentElement.classList.add('lang-ready');
       initChat();
       initBlogFilters();
       initNavbar();
     });
   </script>
 <script src="nav-menu.js"></script>
+<script src="cookie-consent.js"></script>
 <script src="scroll-fx.js"></script>
 <script src="space-bg.js"></script>
 </body>

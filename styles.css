@@ -1,4 +1,5 @@
 :root {
+    --cyan-300: #66f9ff;
     --cyan-400: #00f5ff;
     --cyan-500: #00d1ff;
     --cyan-600: #00a8ff;
@@ -10,6 +11,7 @@
     --white-5: rgba(255, 255, 255, 0.05);
     --white-10: rgba(255, 255, 255, 0.1);
     --white-30: rgba(255, 255, 255, 0.3);
+    --white-40: rgba(255, 255, 255, 0.4);
     --white-50: rgba(255, 255, 255, 0.5);
     --white-70: rgba(255, 255, 255, 0.7);
     --white-90: rgba(255, 255, 255, 0.9);
@@ -279,6 +281,14 @@ body {
     gap: 1rem;
 }
 
+/* Navbar CTA — slightly smaller than the hero/footer CTAs so it sits
+   comfortably in the bar instead of dominating it. Scoped to .nav-right
+   only; every other .cta-button on the site keeps its normal size. */
+.nav-right .cta-button {
+    padding: 0.55rem 1.3rem;
+    font-size: 0.82rem;
+}
+
 /* Mobile hamburger toggle — hidden on desktop, revealed under 768px */
 .nav-toggle {
     display: none;
@@ -508,6 +518,17 @@ body {
     border-radius: 50px;
     margin-bottom: 1.5rem;
     animation: pulse 2s infinite;
+}
+
+/* Cyan accent text — used to highlight a word/phrase inside headings
+   across every page (hero titles, section titles, CTAs). This rule was
+   missing, which made the accented word inherit the default heading
+   color and become invisible against the dark background. */
+.cyan {
+    background: linear-gradient(to right, var(--cyan-400), var(--cyan-600));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 @keyframes pulse {
@@ -1057,6 +1078,106 @@ body {
     font-weight: 300;
     max-width: 600px;
     margin: 0 auto 2.5rem;
+}
+
+/* ===== COOKIE CONSENT BANNER ===== */
+.cookie-consent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: rgba(10, 14, 22, 0.97);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--white-10);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.cookie-consent.show {
+    transform: translateY(0);
+}
+
+.cookie-consent-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cookie-consent-text {
+    color: var(--white-70);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1 1 380px;
+}
+
+.cookie-consent-link {
+    color: var(--cyan-400);
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.cookie-consent-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    border-radius: 50px;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.cookie-btn-decline {
+    background: transparent;
+    border: 1px solid var(--white-10);
+    color: var(--white-70);
+}
+
+.cookie-btn-decline:hover {
+    background: var(--white-5);
+    color: white;
+}
+
+.cookie-btn-accept {
+    background: linear-gradient(to right, var(--cyan-500), var(--cyan-600));
+    border: none;
+    color: white;
+    box-shadow: 0 4px 18px rgba(0, 209, 255, 0.25);
+}
+
+.cookie-btn-accept:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(0, 209, 255, 0.35);
+}
+
+@media (max-width: 640px) {
+    .cookie-consent-inner {
+        padding: 1.1rem 1.25rem;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+    }
+    .cookie-consent-actions {
+        justify-content: stretch;
+    }
+    .cookie-btn {
+        flex: 1;
+        text-align: center;
+    }
 }
 
 /* ===== CHAT BUTTON ===== */
