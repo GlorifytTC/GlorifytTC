@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <style>html:not(.lang-ready) body{visibility:hidden}</style>
+    <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlorifyTC – Blogg & Artiklar | AI, Data Science & Teknikinsikter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <meta name="description" content="Utforska GlorifyTCs blogg med insikter, handledningar och tankar om AI, datavetenskap, maskininlärning och modern webbutveckling.">
+  <meta name="keywords" content="AI blogg, Data Science artiklar, Machine Learning, Webbutveckling, Teknikblogg, GlorifyTC">
+  <meta name="author" content="GlorifyTC">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://glorifytc.se/blog.html">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="sv" href="https://glorifytc.se/blog.html">
+  <link rel="alternate" hreflang="en" href="https://glorifytc.se/blog.html">
+  <link rel="alternate" hreflang="x-default" href="https://glorifytc.se/blog.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GlorifyTC">
+  <meta property="og:title" content="GlorifyTC – Blogg | AI, Data Science & Teknikinsikter">
+  <meta property="og:description" content="Artiklar och insikter om AI, datavetenskap, maskininlärning och modern webbutveckling från GlorifyTC.">
+  <meta property="og:url" content="https://glorifytc.se/blog.html">
+  <meta property="og:image" content="https://glorifytc.se/og-image.jpg">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:locale:alternate" content="en_GB">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GlorifyTC – Blogg | AI, Data Science & Teknikinsikter">
+  <meta name="twitter:description" content="Artiklar och insikter om AI, datavetenskap, maskininlärning och modern webbutveckling från GlorifyTC.">
+  <meta name="twitter:image" content="https://glorifytc.se/og-image.jpg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Blog CSS -->
+  <link rel="stylesheet" href="blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "GlorifyTC Blogg",
+    "description": "Insikter, handledningar och tankar om AI, datavetenskap och modern utveckling.",
+    "url": "https://glorifytc.se/blog.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "GlorifyTC",
+      "url": "https://glorifytc.se"
+    }
+  }
+  </script>
+    <style>
+    .blog-filters { padding: 1.5rem 0 2.5rem; }
+    .filter-layout { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+    .search-wrapper { position: relative; flex: 1 1 280px; max-width: 360px; }
+    .search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--white-50); font-size: 0.9rem; }
+    .search-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--white-10); border-radius: 50px; padding: 0.7rem 1rem 0.7rem 2.6rem; color: white; font-size: 0.9rem; font-family: inherit; }
+    .search-input::placeholder { color: var(--white-50); }
+    .search-input:focus { outline: none; border-color: var(--cyan-400); }
+    .filter-container { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .filter-btn { background: rgba(255,255,255,0.04); border: 1px solid var(--white-10); color: var(--white-70); padding: 0.55rem 1.1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 500; cursor: pointer; font-family: inherit; transition: all 0.25s ease; }
+    .filter-btn:hover { background: rgba(255,255,255,0.08); color: white; }
+    .filter-btn.active { background: linear-gradient(to right, var(--cyan-500), var(--cyan-600)); border-color: transparent; color: white; }
+
+    .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .featured-card { position: relative; display: block; border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--white-10); background: rgba(255,255,255,0.03); transition: transform 0.3s ease, border-color 0.3s ease; }
+    .featured-card:hover { transform: translateY(-4px); border-color: var(--cyan-400); }
+    .featured-image { height: 220px; overflow: hidden; }
+    .featured-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .featured-content { padding: 1.5rem; }
+    .featured-meta { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.8rem; }
+    .featured-badge { background: var(--cyan-400); color: #04141a; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .category-label { color: var(--cyan-400); font-size: 0.8rem; font-weight: 600; }
+    .featured-title { color: white; font-size: 1.3rem; font-weight: 600; margin-bottom: 0.6rem; line-height: 1.3; }
+    .featured-excerpt { color: var(--white-70); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; }
+    .post-meta, .card-footer { display: flex; gap: 1.2rem; color: var(--white-50); font-size: 0.8rem; }
+
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .post-card { display: block; border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--white-10); background: rgba(255,255,255,0.03); transition: transform 0.3s ease, border-color 0.3s ease; }
+    .post-card:hover { transform: translateY(-4px); border-color: var(--cyan-400); }
+    .card-image { height: 180px; overflow: hidden; }
+    .card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card-content { padding: 1.4rem; }
+    .card-category { display: flex; align-items: center; gap: 0.4rem; color: var(--cyan-400); font-size: 0.78rem; font-weight: 600; margin-bottom: 0.7rem; }
+    .card-title { color: white; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; line-height: 1.3; }
+    .card-excerpt { color: var(--white-70); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; }
+    .no-results { text-align: center; color: var(--white-50); padding: 2rem 0; }
+    @media (max-width: 600px) {
+        .filter-layout { flex-direction: column; align-items: stretch; }
+        .search-wrapper { max-width: none; }
+    }
+    </style>
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION with Enhanced Animated Logo and Email Bot Link ===== -->
+<nav class="navbar">
+  <a href="https://www.glorifytc.se/" class="logo">
+    <div class="logo-icon">
+      <span>G</span>
+    </div>
+    <div class="logo-text">GlorifyTC</div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" data-nav="home">Hem</a>
+    <a href="services.html" data-nav="services">Tjänster</a>
+    <a href="about.html" data-nav="about">Om oss</a>
+    <a href="team.html" data-nav="team">Team</a>
+    <a href="blog.html" class="active" data-nav="blog">Blogg</a>
+    <a href="projects.html" data-nav="projects">Våra Projekt</a>
+    <a href="contact.html" data-nav="contact">Kontakt</a>
+  </div>
+  
+  <div class="nav-right">
+    <div class="language-selector">
+      <button class="language-btn" id="languageBtn">
+        <i class="fas fa-globe"></i>
+        <span id="currentLang">SV</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="language-dropdown" id="languageDropdown">
+        <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
+        <button class="language-option" data-lang="en">🇬🇧 English</button>
+      </div>
+    </div>
+    
+    <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
+  </div>
+</nav>
+
+  <!-- ===== BLOG HEADER ===== -->
+  <section class="blog-header">
+    <div class="max-width">
+      <div class="header-content">
+        <div class="tag">
+          <span class="tag-dot"></span>
+          <span class="tag-text" data-blog="tag">Våra insikter</span>
+        </div>
+        <h1 class="hero-title"><span data-blog="title">Blogg &</span> <span class="cyan" data-blog="titleSpan">Artiklar</span></h1>
+        <p class="hero-description" data-blog="description">
+          Insikter, handledningar och tankar om AI, datavetenskap och modern utveckling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEARCH & CATEGORY FILTERS ===== -->
+  <section class="blog-filters">
+    <div class="max-width">
+      <div class="filter-layout">
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="search-input" placeholder="Sök artiklar..." id="blogSearch" data-blog="search">
+        </div>
+        <div class="filter-container" id="categoryFilter">
+          <button class="filter-btn active" data-category="all" data-blog="all">Alla</button>
+          <button class="filter-btn" data-category="ai" data-blog="aiMl">AI & Machine Learning</button>
+          <button class="filter-btn" data-category="business" data-blog="business">Affärsverksamhet</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED POSTS ===== -->
+  <section class="featured-posts">
+    <div class="max-width">
+      <div class="featured-grid">
+        <a href="blog-ai-kostnad-smaforetag.html" class="featured-card" data-category="business" style="text-decoration:none;">
+          <div class="featured-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&q=70&auto=format" alt="AI kostnad för småföretag" loading="lazy" decoding="async">
+          </div>
+          <div class="featured-overlay"></div>
+          <div class="featured-content">
+            <div class="featured-meta">
+              <span class="featured-badge" data-blog="featured">Utvald</span>
+              <span class="category-label" data-blog="business">Affärsverksamhet</span>
+            </div>
+            <h2 class="featured-title">Vad kostar en AI-lösning för småföretag?</h2>
+            <p class="featured-excerpt">En ärlig genomgång av vad AI-lösningar faktiskt kostar 2026 — från färdiga verktyg till skräddarsydda modeller, och hur du undviker att betala för mycket.</p>
+            <div class="post-meta">
+              <span><i class="far fa-calendar-alt"></i> 24 Jun, 2026</span>
+              <span><i class="far fa-clock"></i> 7 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </a>
+        <a href="blog-schemalaggning-vardpersonal.html" class="featured-card" data-category="business" style="text-decoration:none;">
+          <div class="featured-image">
+            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop&q=70&auto=format" alt="Schemaläggning vårdpersonal" loading="lazy" decoding="async">
+          </div>
+          <div class="featured-overlay"></div>
+          <div class="featured-content">
+            <div class="featured-meta">
+              <span class="featured-badge" data-blog="featured">Utvald</span>
+              <span class="category-label" data-blog="business">Affärsverksamhet</span>
+            </div>
+            <h2 class="featured-title">Schemaläggning för vårdpersonal: 5 vanliga problem och lösningar</h2>
+            <p class="featured-excerpt">Dubbelbokade pass, sena ändringar och missade meddelanden. Här är de fem vanligaste problemen inom vård och skola — och hur du löser dem.</p>
+            <div class="post-meta">
+              <span><i class="far fa-calendar-alt"></i> 24 Jun, 2026</span>
+              <span><i class="far fa-clock"></i> 6 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGULAR POSTS GRID ===== -->
+  <section class="regular-posts">
+    <div class="max-width">
+      <div class="posts-grid" id="postsContainer">
+        <a href="blog-ai-vs-automatisering.html" class="post-card" data-category="ai" style="text-decoration:none;">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&q=70&auto=format" alt="AI vs automatisering" loading="lazy" decoding="async">
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <i class="fas fa-tag"></i>
+              <span data-blog="aiMl">AI & Machine Learning</span>
+            </div>
+            <h3 class="card-title">AI vs traditionell automatisering: vad är skillnaden?</h3>
+            <p class="card-excerpt">AI och automatisering blandas ofta ihop, men de löser olika problem. Här är en tydlig genomgång av skillnaden — och hur du vet vilken du behöver.</p>
+            <div class="card-footer">
+              <span><i class="far fa-calendar-alt"></i> 24 Jun, 2026</span>
+              <span><i class="far fa-clock"></i> 5 <span data-blog="readMore">min läsning</span></span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div id="noResults" class="no-results" style="display: none;">
+        <p data-blog="noResults">Inga artiklar matchar din sökning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER SECTION ===== -->
+  <section class="newsletter-section">
+    <div class="max-width">
+      <div class="newsletter-container">
+        <p class="newsletter-text" data-blog="newsletter">Prenumerera på vårt nyhetsbrev för de senaste insikterna om AI, datavetenskap och teknologi.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Ange din e-post" class="newsletter-input" required data-blog="emailPlaceholder">
+          <button type="submit" class="subscribe-btn" data-blog="subscribe">Prenumerera</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAT BUTTON ===== -->
+  <button class="chat-button" id="chatButton"></button>
+
+  <!-- ===== CHAT MODAL ===== -->
+  <div class="chat-modal" id="chatModal">
+    <div class="chat-header">
+      <div class="chat-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="chat-title">
+        <h3 data-chat="title">GlorifyTC Assistent</h3>
+        <p data-chat="subtitle">AI-driven support</p>
+      </div>
+      <button class="chat-close" id="chatClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message assistant" data-chat="welcome">
+        Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Fråga vad som helst..." data-chat="placeholder">
+      <button id="sendButton" disabled>
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER with Enhanced Animated Logo ===== -->
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-section">
+            <a href="https://www.glorifytc.se/" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
+                <div class="logo-icon">
+                    <span>G</span>
+                </div>
+                <div class="logo-text">GlorifyTC</div>
+            </a>
+            <p data-footer="tagline">Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/glorifytc/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="quickLinks">Snabblänkar</h3>
+                <div class="footer-links">
+                    <a href="index.html" data-nav="home">Hem</a>
+                    <a href="services.html" data-nav="services">Tjänster</a>
+                    <a href="about.html" data-nav="about">Om oss</a>
+                    <a href="team.html" data-nav="team">Team</a>
+                    <a href="blog.html" data-nav="blog">Blogg</a>
+                    <a href="projects.html" data-nav="projects">Våra Projekt</a>
+                    <a href="contact.html" data-nav="contact">Kontakt</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="services">Tjänster</h3>
+                <div class="footer-links">
+                    <a href="#">AI-modellutveckling</a>
+                    <a href="#">Dataanalys</a>
+                    <a href="#">Webbapplikationer</a>
+                    <a href="#">Mobilappar</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="contact">Kontakt</h3>
+                <div class="footer-links">
+                    <a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 13, 177 45 Järfälla</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 GlorifyTC. <span data-footer="rights">Alla rättigheter förbehållna.</span></p>
+            <div>
+                <a href="#" data-footer="privacy">Integritetspolicy</a>
+                <a href="#" style="margin-left: 1.5rem;" data-footer="terms">Användarvillkor</a>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Complete JavaScript with ALL 6 Languages and emailbot -->
+  <script>
+    // Complete translations for ALL 6 languages with emailbot
+    const translations = {
+      // Swedish
+      sv: {
+        nav: {
+          home: "Hem",
+          services: "Tjänster",
+          about: "Om oss",
+          team: "Team",
+          blog: "Blogg",
+          projects: "Våra Projekt",
+          contact: "Kontakt",
+          getStarted: "Kom igång"
+        },
+        footer: {
+          tagline: "Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.",
+          quickLinks: "Snabblänkar",
+          services: "Tjänster",
+          contact: "Kontakt",
+          rights: "Alla rättigheter förbehållna.",
+          privacy: "Integritetspolicy",
+          terms: "Användarvillkor"
+        },
+        chat: {
+          title: "GlorifyTC Assistent",
+          subtitle: "AI-driven support",
+          placeholder: "Fråga vad som helst...",
+          welcome: "Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?"
+        },
+        blog: {
+          tag: "Våra insikter",
+          title: "Blogg &",
+          titleSpan: "Artiklar",
+          description: "Insikter, handledningar och tankar om AI, datavetenskap och modern utveckling.",
+          search: "Sök artiklar...",
+          all: "Alla",
+          aiMl: "AI & Machine Learning",
+          business: "Affärsverksamhet",
+          dataScience: "Data Science",
+          webDev: "Webbutveckling",
+          ethics: "Etik & Ansvar",
+          featured: "Utvald",
+          readMore: "min läsning",
+          noResults: "Inga artiklar matchar din sökning.",
+          newsletter: "Prenumerera på vårt nyhetsbrev för de senaste insikterna om AI, datavetenskap och teknologi.",
+          subscribe: "Prenumerera",
+          emailPlaceholder: "Ange din e-post"
+        }
+      },
+      // English
+      en: {
+        nav: {
+          home: "Home",
+          services: "Services",
+          about: "About",
+          team: "Team",
+          blog: "Blog",
+          projects: "Our Projects",
+          contact: "Contact",
+          getStarted: "Get Started"
+        },
+        footer: {
+          tagline: "Advanced AI, Data Science & Modern Digital Development. Building intelligent solutions that matter.",
+          quickLinks: "Quick Links",
+          services: "Services",
+          contact: "Contact",
+          rights: "All rights reserved.",
+          privacy: "Privacy Policy",
+          terms: "Terms of Service"
+        },
+        chat: {
+          title: "GlorifyTC Assistant",
+          subtitle: "AI-Powered Support",
+          placeholder: "Ask anything...",
+          welcome: "Hello! I'm GlorifyTC's AI assistant. I can help you learn about our services, answer questions about AI and data science, or assist with any inquiries. How can I help you today?"
+        },
+        blog: {
+          tag: "Our Insights",
+          title: "Blog &",
+          titleSpan: "Articles",
+          description: "Insights, tutorials, and thoughts on AI, data science, and modern development.",
+          search: "Search articles...",
+          all: "All",
+          aiMl: "AI & Machine Learning",
+          business: "Business",
+          dataScience: "Data Science",
+          webDev: "Web Development",
+          ethics: "Ethics & Responsibility",
+          featured: "Featured",
+          readMore: "min read",
+          noResults: "No articles found matching your criteria.",
+          newsletter: "Subscribe to our newsletter for the latest insights on AI, data science, and technology.",
+          subscribe: "Subscribe",
+          emailPlaceholder: "Enter your email"
+        }
+      },
+      // Norwegian
+      // Finnish
+      // Danish
+      // German
+    };
+
+    // Language Manager
+    const LanguageManager = {
+      currentLang: (['sv','en'].includes(localStorage.getItem('glorifytc_lang')) ? localStorage.getItem('glorifytc_lang') : 'sv'),
+      
+      init() {
+        this.loadLanguage(this.currentLang);
+        this.setupLanguageSelector();
+        this.updateCurrentLangDisplay();
+        this.highlightActiveLanguage();
+      },
+      
+      loadLanguage(lang) {
+        const t = translations[lang];
+        if (!t) return;
+        
+        // Update navigation
+        document.querySelectorAll('[data-nav]').forEach(el => {
+          const key = el.dataset.nav;
+          if (t.nav && t.nav[key]) el.textContent = t.nav[key];
+        });
+        
+        // Update footer
+        document.querySelectorAll('[data-footer]').forEach(el => {
+          const key = el.dataset.footer;
+          if (t.footer && t.footer[key]) {
+            if (el.tagName === 'H3') el.textContent = t.footer[key];
+            else el.textContent = t.footer[key];
+          }
+        });
+        
+        // Update chat
+        document.querySelectorAll('[data-chat]').forEach(el => {
+          const key = el.dataset.chat;
+          if (t.chat && t.chat[key]) {
+            if (el.tagName === 'INPUT') el.placeholder = t.chat[key];
+            else el.textContent = t.chat[key];
+          }
+        });
+        
+        // Update blog page
+        document.querySelectorAll('[data-blog]').forEach(el => {
+          const key = el.dataset.blog;
+          if (t.blog && t.blog[key]) {
+            if (el.tagName === 'INPUT') el.placeholder = t.blog[key];
+            else el.textContent = t.blog[key];
+          }
+        });
+        
+        localStorage.setItem('glorifytc_lang', lang);
+      },
+      
+      setupLanguageSelector() {
+        const btn = document.getElementById('languageBtn');
+        const dropdown = document.getElementById('languageDropdown');
+        
+        if (!btn || !dropdown) return;
+        
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle('show');
+        });
+        
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target)) dropdown.classList.remove('show');
+        });
+        
+        document.querySelectorAll('.language-option').forEach(option => {
+          option.addEventListener('click', () => {
+            const lang = option.dataset.lang;
+            if (lang === this.currentLang) {
+              dropdown.classList.remove('show');
+              return;
+            }
+            
+            this.currentLang = lang;
+            this.loadLanguage(lang);
+            this.updateCurrentLangDisplay();
+            this.highlightActiveLanguage();
+            dropdown.classList.remove('show');
+          });
+        });
+      },
+      
+      updateCurrentLangDisplay() {
+        const span = document.getElementById('currentLang');
+        if (span) span.textContent = this.currentLang.toUpperCase();
+      },
+      
+      highlightActiveLanguage() {
+        document.querySelectorAll('.language-option').forEach(option => {
+          option.classList.remove('active-lang');
+          if (option.dataset.lang === this.currentLang) option.classList.add('active-lang');
+        });
+      }
+    };
+    // Chat handled by chatbot.js
+
+    // Blog filtering
+    function initBlogFilters() {
+      const searchInput = document.getElementById('blogSearch');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const blogPosts = document.querySelectorAll('.post-card, .featured-card');
+      const noResults = document.getElementById('noResults');
+      
+      let currentFilter = 'all';
+      let currentSearch = '';
+      
+      function filterPosts() {
+        let visibleCount = 0;
+        
+        blogPosts.forEach(post => {
+          const category = post.dataset.category;
+          const title = post.querySelector('.card-title, .featured-title')?.textContent.toLowerCase() || '';
+          const excerpt = post.querySelector('.card-excerpt, .featured-excerpt')?.textContent.toLowerCase() || '';
+          
+          const matchesFilter = currentFilter === 'all' || category === currentFilter;
+          const matchesSearch = currentSearch === '' || 
+            title.includes(currentSearch.toLowerCase()) || 
+            excerpt.includes(currentSearch.toLowerCase());
+          
+          if (matchesFilter && matchesSearch) {
+            post.style.display = 'block';
+            visibleCount++;
+          } else {
+            post.style.display = 'none';
+          }
+        });
+        
+        if (noResults) {
+          noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+      
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value;
+          filterPosts();
+        });
+      }
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          currentFilter = button.dataset.category;
+          filterPosts();
+        });
+      });
+      
+      // Newsletter form
+      const newsletterForm = document.getElementById('newsletterForm');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = newsletterForm.querySelector('input[type="email"]').value;
+          alert(`Tack för din prenumeration med: ${email}`);
+          newsletterForm.reset();
+        });
+      }
+    }
+
+    // Navbar scroll effect
+    function initNavbar() {
+      window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', () => {
+      LanguageManager.init();
+      document.documentElement.classList.add('lang-ready');
+            initBlogFilters();
+      initNavbar();
+    });
+  </script>
+<script src="chatbot.js" defer></script>
+<script src="nav-menu.js" defer></script>
+<script src="cookie-consent.js" defer></script>
+<script src="scroll-fx.js" defer></script>
+<script src="space-bg.js" defer></script>
+</body>
+</html>

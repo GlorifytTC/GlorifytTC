@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <style>html:not(.lang-ready) body{visibility:hidden}</style>
+    <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vs traditionell automatisering: vad är skillnaden? | GlorifyTC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <meta name="description" content="AI och automatisering blandas ofta ihop, men de löser olika problem. Här är en tydlig genomgång av skillnaden — och hur du vet vilken du faktiskt behöver.">
+    <meta name="keywords" content="AI vs automatisering, skillnad AI automatisering, vad är AI, automatisering företag, AI eller automatisering">
+    <meta name="author" content="GlorifyTC">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://glorifytc.se/blog-ai-vs-automatisering.html">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="sv" href="https://glorifytc.se/blog-ai-vs-automatisering.html">
+  <link rel="alternate" hreflang="en" href="https://glorifytc.se/blog-ai-vs-automatisering.html">
+  <link rel="alternate" hreflang="x-default" href="https://glorifytc.se/blog-ai-vs-automatisering.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GlorifyTC">
+  <meta property="og:title" content="AI vs Automatisering — Vad är skillnaden? | GlorifyTC Blogg">
+  <meta property="og:description" content="Förstå skillnaden mellan AI och traditionell automatisering, och hur de kan användas i din verksamhet.">
+  <meta property="og:url" content="https://glorifytc.se/blog-ai-vs-automatisering.html">
+  <meta property="og:image" content="https://glorifytc.se/og-image.jpg">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:locale:alternate" content="en_GB">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI vs Automatisering — Vad är skillnaden? | GlorifyTC Blogg">
+  <meta name="twitter:description" content="Förstå skillnaden mellan AI och traditionell automatisering, och hur de kan användas i din verksamhet.">
+  <meta name="twitter:image" content="https://glorifytc.se/og-image.jpg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AI vs traditionell automatisering: vad är skillnaden?",
+      "description": "En tydlig genomgång av skillnaden mellan AI och automatisering — och hur du vet vilken du faktiskt behöver.",
+      "author": { "@type": "Organization", "name": "GlorifyTC" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GlorifyTC",
+        "logo": { "@type": "ImageObject", "url": "https://glorifytc.se/logo.png" }
+      },
+      "datePublished": "2026-06-24",
+      "dateModified": "2026-06-24",
+      "mainEntityOfPage": "https://glorifytc.se/blog-ai-vs-automatisering.html"
+    }
+    </script>
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="https://www.glorifytc.se/" class="logo">
+            <div class="logo-icon"><span>G</span></div>
+            <div class="logo-text">GlorifyTC</div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" data-nav="home">Hem</a>
+            <a href="services.html" data-nav="services">Tjänster</a>
+            <a href="about.html" data-nav="about">Om oss</a>
+            <a href="team.html" data-nav="team">Team</a>
+            <a href="blog.html" class="active" data-nav="blog">Blogg</a>
+            <a href="projects.html" data-nav="projects">Våra Projekt</a>
+            <a href="contact.html" data-nav="contact">Kontakt</a>
+        </div>
+        <div class="nav-right">
+            <div class="language-selector">
+                <button class="language-btn" id="languageBtn">
+                    <i class="fas fa-globe"></i>
+                    <span id="currentLang">SV</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
+                    <button class="language-option" data-lang="en">🇬🇧 English</button>
+                </div>
+            </div>
+            <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
+        </div>
+    </nav>
+
+    <style>
+    .article-page { max-width: 760px; margin: 0 auto; padding: 9rem 2rem 5rem; }
+    .article-meta-top { display: flex; align-items: center; gap: 1rem; color: var(--white-50); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .article-meta-top .cat { color: var(--cyan-400); font-weight: 600; }
+    .article-page h1 { font-size: clamp(2rem, 4.5vw, 2.8rem); font-weight: 100; color: white; line-height: 1.15; margin-bottom: 1.5rem; }
+    .article-lead { font-size: 1.2rem; color: var(--white-70); line-height: 1.7; margin-bottom: 2.5rem; }
+    .article-body h2 { font-size: 1.6rem; font-weight: 600; color: white; margin: 2.5rem 0 1rem; }
+    .article-body p { color: var(--white-70); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.2rem; }
+    .article-body ul { color: var(--white-70); line-height: 1.8; font-size: 1.05rem; margin: 0 0 1.4rem 1.4rem; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: white; }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.5rem 0 2rem; }
+    .compare-col { background: rgba(255,255,255,0.03); border: 1px solid var(--white-10); border-radius: 1.25rem; padding: 1.5rem; }
+    .compare-col h4 { color: var(--cyan-400); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.8rem; }
+    .compare-col ul { margin-left: 1.1rem; font-size: 0.95rem; }
+    .callout { background: rgba(0, 209, 255, 0.06); border: 1px solid var(--cyan-400); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; }
+    .callout p { color: var(--white-90); margin-bottom: 0; font-size: 1rem; }
+    .callout p strong { color: var(--cyan-400); }
+    .article-cta { margin-top: 3rem; padding: 2.5rem; border-radius: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid var(--white-10); text-align: center; }
+    .article-cta h3 { font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: 0.6rem; }
+    .article-cta p { color: var(--white-70); margin-bottom: 1.4rem; }
+    .back-to-blog { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--cyan-400); text-decoration: none; font-weight: 600; margin-top: 3rem; }
+    @media (max-width: 600px) {
+        .article-page { padding: 7rem 1.25rem 3rem; }
+        .compare-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <main class="article-page">
+        <div class="article-meta-top">
+            <span class="cat" data-art="category">AI & Strategi</span>
+            <span>·</span>
+            <span data-art="date">24 juni 2026</span>
+            <span>·</span>
+            <span><span data-art="readTime">5</span> <span data-art="minRead">min läsning</span></span>
+        </div>
+
+        <h1 data-art="title">AI vs traditionell automatisering: vad är skillnaden?</h1>
+        <p class="article-lead" data-art="lead">"Vi behöver AI" är ofta fel svar på rätt fråga. I många fall löser enklare, billigare automatisering exakt samma problem — snabbare och mer pålitligt.</p>
+
+        <div class="article-body">
+            <p data-art="p1">Det här är en av de vanligaste missuppfattningarna vi möter: att allt som känns smart eller sparar tid måste vara "AI". I praktiken finns det en tydlig skillnad mellan traditionell automatisering och AI, och att veta vilken du behöver kan spara både tid och pengar.</p>
+
+            <h2 data-art="h1">Den enkla skillnaden</h2>
+            <p data-art="p2">Traditionell automatisering följer regler som en människa har bestämt i förväg: "om X händer, gör Y." AI hanterar situationer där reglerna inte är glasklara i förväg — den lär sig mönster från data och gör bedömningar i gråzoner.</p>
+
+            <div class="compare-grid">
+                <div class="compare-col">
+                    <h4 data-art="autoTitle">Traditionell automatisering</h4>
+                    <ul>
+                        <li data-art="auto1">Följer fasta, tydliga regler</li>
+                        <li data-art="auto2">Samma input ger alltid samma output</li>
+                        <li data-art="auto3">Snabbare och billigare att bygga</li>
+                        <li data-art="auto4">Lätt att felsöka när något går fel</li>
+                    </ul>
+                </div>
+                <div class="compare-col">
+                    <h4 data-art="aiTitle">AI</h4>
+                    <ul>
+                        <li data-art="ai1">Lär sig mönster från data</li>
+                        <li data-art="ai2">Hanterar gråzoner och variation</li>
+                        <li data-art="ai3">Kräver mer data och underhåll</li>
+                        <li data-art="ai4">Svårare att förklara exakt varför ett beslut togs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 data-art="h2title">Konkreta exempel</h2>
+            <p data-art="p3"><strong data-art="ex1strong">Automatisering räcker:</strong> Skicka en bekräftelsemejl när en kund lägger en beställning. Flytta en fil till rätt mapp baserat på filnamn. Skicka en påminnelse tre dagar innan en faktura förfaller. Reglerna är glasklara — det finns inget att "lära sig".</p>
+            <p data-art="p4"><strong data-art="ex2strong">AI behövs:</strong> Sortera inkommande kundmejl efter ämne när de skrivs med fritext och olika formuleringar. Förutsäga vilka kunder som riskerar att lämna baserat på beteendemönster. Förstå och svara på frågor i naturligt språk. Här finns ingen fast regel som täcker alla varianter — systemet måste tolka och bedöma.</p>
+
+            <div class="callout">
+                <p data-art="callout1"><strong>Tumregel:</strong> om du kan skriva ner den exakta regeln på ett papper utan undantag, är det automatisering. Om regeln börjar med "det beror på..." är det troligen AI.</p>
+            </div>
+
+            <h2 data-art="h3title">Varför det spelar roll för din budget</h2>
+            <p data-art="p5">Automatisering är generellt snabbare och billigare att bygga än AI, eftersom logiken är förutbestämd istället för inlärd. Att bygga en AI-lösning för ett problem som egentligen bara behöver fasta regler är ett vanligt sätt att betala för mycket — vi gick igenom det här mer i detalj i vår artikel om <a href="blog-ai-kostnad-smaforetag.html" style="color:var(--cyan-400);">vad en AI-lösning faktiskt kostar</a>.</p>
+            <p data-art="p6">Många av de bästa lösningarna vi bygger kombinerar faktiskt båda: automatisering hanterar de tydliga, repetitiva delarna av ett flöde, medan AI hanterar de delar som kräver bedömning. Det ger lägre kostnad och högre tillförlitlighet än att försöka lösa allt med AI.</p>
+        </div>
+
+        <div class="article-cta">
+            <h3 data-art="ctaTitle">Osäker på vad ditt problem egentligen behöver?</h3>
+            <p data-art="ctaDesc">Beskriv vad du vill lösa — vi hjälper dig avgöra om det är automatisering, AI, eller en kombination.</p>
+            <a href="contact.html" class="cta-button"><span data-art="ctaBtn">Kontakta oss</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <a href="blog.html" class="back-to-blog"><i class="fas fa-arrow-left"></i> <span data-art="backToBlog">Tillbaka till bloggen</span></a>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-section">
+            <a href="https://www.glorifytc.se/" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
+                <div class="logo-icon">
+                    <span>G</span>
+                </div>
+                <div class="logo-text">GlorifyTC</div>
+            </a>
+            <p data-footer="tagline">Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/glorifytc/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="quickLinks">Snabblänkar</h3>
+                <div class="footer-links">
+                    <a href="index.html" data-nav="home">Hem</a>
+                    <a href="services.html" data-nav="services">Tjänster</a>
+                    <a href="about.html" data-nav="about">Om oss</a>
+                    <a href="team.html" data-nav="team">Team</a>
+                    <a href="blog.html" data-nav="blog">Blogg</a>
+                    <a href="projects.html" data-nav="projects">Våra Projekt</a>
+                    <a href="contact.html" data-nav="contact">Kontakt</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="services">Tjänster</h3>
+                <div class="footer-links">
+                    <a href="#">AI-modellutveckling</a>
+                    <a href="#">Dataanalys</a>
+                    <a href="#">Webbapplikationer</a>
+                    <a href="#">Mobilappar</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="contact">Kontakt</h3>
+                <div class="footer-links">
+                    <a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 13, 177 45 Järfälla</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 GlorifyTC. <span data-footer="rights">Alla rättigheter förbehållna.</span></p>
+            <div>
+                <a href="#" data-footer="privacy">Integritetspolicy</a>
+                <a href="#" style="margin-left: 1.5rem;" data-footer="terms">Användarvillkor</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cookie-consent.js" defer></script>
+
+    <!-- Translations (Swedish + English) -->
+    <script>
+        const translations = {
+            sv: {
+                nav: { home: "Hem", services: "Tjänster", about: "Om oss", team: "Team", blog: "Blogg", projects: "Våra Projekt", contact: "Kontakt", getStarted: "Kom igång" },
+                footer: { tagline: "Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.", quickLinks: "Snabblänkar", services: "Tjänster", contact: "Kontakt", rights: "Alla rättigheter förbehållna.", privacy: "Integritetspolicy", terms: "Användarvillkor" },
+                art: {
+                    category: "AI & Strategi", date: "24 juni 2026", readTime: "5", minRead: "min läsning",
+                    title: "AI vs traditionell automatisering: vad är skillnaden?",
+                    lead: "\"Vi behöver AI\" är ofta fel svar på rätt fråga. I många fall löser enklare, billigare automatisering exakt samma problem — snabbare och mer pålitligt.",
+                    p1: "Det här är en av de vanligaste missuppfattningarna vi möter: att allt som känns smart eller sparar tid måste vara \"AI\". I praktiken finns det en tydlig skillnad mellan traditionell automatisering och AI, och att veta vilken du behöver kan spara både tid och pengar.",
+                    h1: "Den enkla skillnaden",
+                    p2: "Traditionell automatisering följer regler som en människa har bestämt i förväg: \"om X händer, gör Y.\" AI hanterar situationer där reglerna inte är glasklara i förväg — den lär sig mönster från data och gör bedömningar i gråzoner.",
+                    autoTitle: "Traditionell automatisering",
+                    auto1: "Följer fasta, tydliga regler", auto2: "Samma input ger alltid samma output", auto3: "Snabbare och billigare att bygga", auto4: "Lätt att felsöka när något går fel",
+                    aiTitle: "AI",
+                    ai1: "Lär sig mönster från data", ai2: "Hanterar gråzoner och variation", ai3: "Kräver mer data och underhåll", ai4: "Svårare att förklara exakt varför ett beslut togs",
+                    h2title: "Konkreta exempel",
+                    ex1strong: "Automatisering räcker:",
+                    p3: "Automatisering räcker: Skicka en bekräftelsemejl när en kund lägger en beställning. Flytta en fil till rätt mapp baserat på filnamn. Skicka en påminnelse tre dagar innan en faktura förfaller. Reglerna är glasklara — det finns inget att \"lära sig\".",
+                    ex2strong: "AI behövs:",
+                    p4: "AI behövs: Sortera inkommande kundmejl efter ämne när de skrivs med fritext och olika formuleringar. Förutsäga vilka kunder som riskerar att lämna baserat på beteendemönster. Förstå och svara på frågor i naturligt språk. Här finns ingen fast regel som täcker alla varianter — systemet måste tolka och bedöma.",
+                    callout1: "Tumregel: om du kan skriva ner den exakta regeln på ett papper utan undantag, är det automatisering. Om regeln börjar med \"det beror på...\" är det troligen AI.",
+                    h3title: "Varför det spelar roll för din budget",
+                    p5: "Automatisering är generellt snabbare och billigare att bygga än AI, eftersom logiken är förutbestämd istället för inlärd. Att bygga en AI-lösning för ett problem som egentligen bara behöver fasta regler är ett vanligt sätt att betala för mycket — vi gick igenom det här mer i detalj i vår artikel om vad en AI-lösning faktiskt kostar.",
+                    p6: "Många av de bästa lösningarna vi bygger kombinerar faktiskt båda: automatisering hanterar de tydliga, repetitiva delarna av ett flöde, medan AI hanterar de delar som kräver bedömning. Det ger lägre kostnad och högre tillförlitlighet än att försöka lösa allt med AI.",
+                    ctaTitle: "Osäker på vad ditt problem egentligen behöver?",
+                    ctaDesc: "Beskriv vad du vill lösa — vi hjälper dig avgöra om det är automatisering, AI, eller en kombination.",
+                    ctaBtn: "Kontakta oss",
+                    backToBlog: "Tillbaka till bloggen"
+                }
+            },
+            en: {
+                nav: { home: "Home", services: "Services", about: "About", team: "Team", blog: "Blog", projects: "Our Projects", contact: "Contact", getStarted: "Get Started" },
+                footer: { tagline: "Advanced AI, Data Science & Modern Digital Development. Building intelligent solutions that matter.", quickLinks: "Quick Links", services: "Services", contact: "Contact", rights: "All rights reserved.", privacy: "Privacy Policy", terms: "Terms of Service" },
+                art: {
+                    category: "AI & Strategy", date: "June 24, 2026", readTime: "5", minRead: "min read",
+                    title: "AI vs Traditional Automation: What's the Difference?",
+                    lead: "\"We need AI\" is often the wrong answer to the right question. In many cases, simpler, cheaper automation solves the exact same problem — faster and more reliably.",
+                    p1: "This is one of the most common misconceptions we run into: that anything that feels smart or saves time must be \"AI.\" In practice, there's a clear difference between traditional automation and AI, and knowing which one you need can save both time and money.",
+                    h1: "The simple distinction",
+                    p2: "Traditional automation follows rules a human decided in advance: \"if X happens, do Y.\" AI handles situations where the rules aren't crystal clear in advance — it learns patterns from data and makes judgment calls in gray areas.",
+                    autoTitle: "Traditional automation",
+                    auto1: "Follows fixed, explicit rules", auto2: "Same input always gives the same output", auto3: "Faster and cheaper to build", auto4: "Easy to debug when something goes wrong",
+                    aiTitle: "AI",
+                    ai1: "Learns patterns from data", ai2: "Handles gray areas and variation", ai3: "Needs more data and upkeep", ai4: "Harder to explain exactly why a decision was made",
+                    h2title: "Concrete examples",
+                    ex1strong: "Automation is enough:",
+                    p3: "Automation is enough: Sending a confirmation email when a customer places an order. Moving a file to the right folder based on its name. Sending a reminder three days before an invoice is due. The rules are crystal clear — there's nothing to \"learn.\"",
+                    ex2strong: "AI is needed:",
+                    p4: "AI is needed: Sorting incoming customer emails by topic when they're written in free text with varying phrasing. Predicting which customers are at risk of churning based on behavior patterns. Understanding and responding to questions in natural language. There's no fixed rule covering every variation — the system has to interpret and judge.",
+                    callout1: "Rule of thumb: if you can write the exact rule down on paper with no exceptions, it's automation. If the rule starts with \"it depends...\", it's probably AI.",
+                    h3title: "Why this matters for your budget",
+                    p5: "Automation is generally faster and cheaper to build than AI, since the logic is predetermined rather than learned. Building an AI solution for a problem that really just needs fixed rules is a common way to overpay — we covered this in more detail in our article on what an AI solution actually costs.",
+                    p6: "Many of the best solutions we build actually combine both: automation handles the clear, repetitive parts of a workflow, while AI handles the parts that require judgment. That gives lower cost and higher reliability than trying to solve everything with AI.",
+                    ctaTitle: "Not sure what your problem actually needs?",
+                    ctaDesc: "Describe what you want to solve — we'll help you figure out if it's automation, AI, or a combination.",
+                    ctaBtn: "Get in touch",
+                    backToBlog: "Back to blog"
+                }
+            }
+        };
+
+        const LanguageManager = {
+            currentLang: (['sv','en'].includes(localStorage.getItem('glorifytc_lang')) ? localStorage.getItem('glorifytc_lang') : 'sv'),
+            init() {
+                this.loadLanguage(this.currentLang);
+                this.setupLanguageSelector();
+                this.updateCurrentLangDisplay();
+                this.highlightActiveLanguage();
+            },
+            loadLanguage(lang) {
+                const t = translations[lang];
+                if (!t) return;
+                document.querySelectorAll('[data-nav]').forEach(el => { const k = el.dataset.nav; if (t.nav && t.nav[k]) el.textContent = t.nav[k]; });
+                document.querySelectorAll('[data-footer]').forEach(el => { const k = el.dataset.footer; if (t.footer && t.footer[k]) el.textContent = t.footer[k]; });
+                document.querySelectorAll('[data-art]').forEach(el => { const k = el.dataset.art; if (t.art && t.art[k]) el.textContent = t.art[k]; });
+                document.documentElement.lang = lang;
+                localStorage.setItem('glorifytc_lang', lang);
+            },
+            setupLanguageSelector() {
+                const btn = document.getElementById('languageBtn');
+                const dropdown = document.getElementById('languageDropdown');
+                if (!btn || !dropdown) return;
+                btn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+                document.addEventListener('click', (e) => { if (!btn.contains(e.target)) dropdown.classList.remove('show'); });
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.addEventListener('click', () => {
+                        const lang = option.dataset.lang;
+                        if (lang === this.currentLang) { dropdown.classList.remove('show'); return; }
+                        this.currentLang = lang;
+                        this.loadLanguage(lang);
+                        this.updateCurrentLangDisplay();
+                        this.highlightActiveLanguage();
+                        dropdown.classList.remove('show');
+                    });
+                });
+            },
+            updateCurrentLangDisplay() { const s = document.getElementById('currentLang'); if (s) s.textContent = this.currentLang.toUpperCase(); },
+            highlightActiveLanguage() { document.querySelectorAll('.language-option').forEach(o => { o.classList.remove('active-lang'); if (o.dataset.lang === this.currentLang) o.classList.add('active-lang'); }); }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            LanguageManager.init();
+            document.documentElement.classList.add('lang-ready');
+        });
+    </script>
+</body>
+</html>
