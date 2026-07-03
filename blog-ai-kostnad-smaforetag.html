@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <style>html:not(.lang-ready) body{visibility:hidden}</style>
+    <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vad kostar en AI-lösning för småföretag? | GlorifyTC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <meta name="description" content="En ärlig genomgång av vad AI-lösningar faktiskt kostar för svenska småföretag 2026 — från enkla automatiseringar till skräddarsydda modeller, och hur du undviker att betala för mycket.">
+    <meta name="keywords" content="AI kostnad, AI lösning pris, AI för småföretag, AI Sverige pris, vad kostar AI, automatisering kostnad">
+    <meta name="author" content="GlorifyTC">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://glorifytc.se/blog-ai-kostnad-smaforetag.html">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="sv" href="https://glorifytc.se/blog-ai-kostnad-smaforetag.html">
+  <link rel="alternate" hreflang="en" href="https://glorifytc.se/blog-ai-kostnad-smaforetag.html">
+  <link rel="alternate" hreflang="x-default" href="https://glorifytc.se/blog-ai-kostnad-smaforetag.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GlorifyTC">
+  <meta property="og:title" content="Vad kostar AI för småföretag? | GlorifyTC Blogg">
+  <meta property="og:description" content="En guide om AI-kostnader för svenska småföretag — vad du kan förvänta dig och hur du kommer igång.">
+  <meta property="og:url" content="https://glorifytc.se/blog-ai-kostnad-smaforetag.html">
+  <meta property="og:image" content="https://glorifytc.se/og-image.jpg">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:locale:alternate" content="en_GB">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vad kostar AI för småföretag? | GlorifyTC Blogg">
+  <meta name="twitter:description" content="En guide om AI-kostnader för svenska småföretag — vad du kan förvänta dig och hur du kommer igång.">
+  <meta name="twitter:image" content="https://glorifytc.se/og-image.jpg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Vad kostar en AI-lösning för småföretag?",
+      "description": "En ärlig genomgång av vad AI-lösningar faktiskt kostar för svenska småföretag 2026.",
+      "author": { "@type": "Organization", "name": "GlorifyTC" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GlorifyTC",
+        "logo": { "@type": "ImageObject", "url": "https://glorifytc.se/logo.png" }
+      },
+      "datePublished": "2026-06-24",
+      "dateModified": "2026-06-24",
+      "mainEntityOfPage": "https://glorifytc.se/blog-ai-kostnad-smaforetag.html"
+    }
+    </script>
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="https://www.glorifytc.se/" class="logo">
+            <div class="logo-icon"><span>G</span></div>
+            <div class="logo-text">GlorifyTC</div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" data-nav="home">Hem</a>
+            <a href="services.html" data-nav="services">Tjänster</a>
+            <a href="about.html" data-nav="about">Om oss</a>
+            <a href="team.html" data-nav="team">Team</a>
+            <a href="blog.html" class="active" data-nav="blog">Blogg</a>
+            <a href="projects.html" data-nav="projects">Våra Projekt</a>
+            <a href="contact.html" data-nav="contact">Kontakt</a>
+        </div>
+        <div class="nav-right">
+            <div class="language-selector">
+                <button class="language-btn" id="languageBtn">
+                    <i class="fas fa-globe"></i>
+                    <span id="currentLang">SV</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
+                    <button class="language-option" data-lang="en">🇬🇧 English</button>
+                </div>
+            </div>
+            <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
+        </div>
+    </nav>
+
+    <style>
+    .article-page { max-width: 760px; margin: 0 auto; padding: 9rem 2rem 5rem; }
+    .article-meta-top { display: flex; align-items: center; gap: 1rem; color: var(--white-50); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .article-meta-top .cat { color: var(--cyan-400); font-weight: 600; }
+    .article-page h1 { font-size: clamp(2rem, 4.5vw, 2.8rem); font-weight: 100; color: white; line-height: 1.15; margin-bottom: 1.5rem; }
+    .article-lead { font-size: 1.2rem; color: var(--white-70); line-height: 1.7; margin-bottom: 2.5rem; }
+    .article-body h2 { font-size: 1.6rem; font-weight: 600; color: white; margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-size: 1.25rem; font-weight: 600; color: white; margin: 2rem 0 0.8rem; }
+    .article-body p { color: var(--white-70); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.2rem; }
+    .article-body ul, .article-body ol { color: var(--white-70); line-height: 1.8; font-size: 1.05rem; margin: 0 0 1.4rem 1.4rem; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: white; }
+    .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.95rem; }
+    .price-table th, .price-table td { text-align: left; padding: 0.85rem 1rem; border-bottom: 1px solid var(--white-10); color: var(--white-70); }
+    .price-table th { color: white; font-weight: 600; background: rgba(255,255,255,0.03); }
+    .price-table td:first-child { color: white; font-weight: 500; }
+    .callout { background: rgba(0, 209, 255, 0.06); border: 1px solid var(--cyan-400); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; }
+    .callout p { color: var(--white-90); margin-bottom: 0; font-size: 1rem; }
+    .callout p strong { color: var(--cyan-400); }
+    .article-cta { margin-top: 3rem; padding: 2.5rem; border-radius: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid var(--white-10); text-align: center; }
+    .article-cta h3 { font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: 0.6rem; }
+    .article-cta p { color: var(--white-70); margin-bottom: 1.4rem; }
+    .back-to-blog { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--cyan-400); text-decoration: none; font-weight: 600; margin-top: 3rem; }
+    @media (max-width: 600px) {
+        .article-page { padding: 7rem 1.25rem 3rem; }
+        .price-table { font-size: 0.85rem; }
+        .price-table th, .price-table td { padding: 0.6rem 0.6rem; }
+    }
+    </style>
+
+    <main class="article-page">
+        <div class="article-meta-top">
+            <span class="cat" data-art="category">AI & Strategi</span>
+            <span>·</span>
+            <span data-art="date">24 juni 2026</span>
+            <span>·</span>
+            <span><span data-art="readTime">7</span> <span data-art="minRead">min läsning</span></span>
+        </div>
+
+        <h1 data-art="title">Vad kostar en AI-lösning för småföretag?</h1>
+        <p class="article-lead" data-art="lead">Det korta svaret: mellan ett par tusen kronor i månaden för färdiga verktyg, och flera hundra tusen kronor för en helt skräddarsydd modell. Det långa svaret är mer användbart — så här resonerar du.</p>
+
+        <div class="article-body">
+            <p data-art="p1">Om du har sökt efter den här frågan har du förmodligen redan upptäckt problemet: priset på "en AI-lösning" kan variera enormt beroende på vem du frågar. Det beror på att "AI-lösning" egentligen täcker tre helt olika typer av projekt, med helt olika prislappar. Att förstå skillnaden är det som avgör om du betalar 2 000 kr eller 200 000 kr för att lösa samma underliggande problem.</p>
+
+            <h2 data-art="h1">De tre nivåerna av AI-lösningar</h2>
+            <p data-art="p2">Innan du pratar med någon leverantör — oss inkluderat — är det värt att veta vilken av dessa tre kategorier ditt behov faller in i.</p>
+
+            <h3 data-art="h2">1. Färdiga AI-verktyg (lägst kostnad)</h3>
+            <p data-art="p3">Det här är abonnemangstjänster som ChatGPT Team, Microsoft Copilot eller branschspecifika AI-tillägg till system du redan använder. Du betalar per användare och månad, oftast mellan 100–500 kr per person. Det är rätt val om ditt behov är generellt: skriva text, sammanfatta dokument, svara på vanliga frågor.</p>
+
+            <h3 data-art="h2">2. Skräddarsydd integration (mellannivå)</h3>
+            <p data-art="p4">Här kopplar man ihop ett befintligt AI-system (till exempel en språkmodell) med dina egna data och processer — en chatbot som faktiskt känner till dina produkter, ett system som automatiskt kategoriserar inkommande mejl, eller en AI-funktion inbyggd i din egen webbapplikation. Det här är ett konsultprojekt, inte ett abonnemang, och priset beror på omfattning.</p>
+
+            <h3 data-art="h2">3. Skräddarsydd modell (högst kostnad, sällan nödvändig)</h3>
+            <p data-art="p5">Att träna en egen modell från grunden är sällan motiverat för ett småföretag. De flesta affärsproblem löses bättre och billigare genom att bygga ovanpå befintliga modeller (kategori 2) än genom att bygga en helt egen. Var skeptisk om en leverantör föreslår detta utan att först ha uteslutit enklare alternativ.</p>
+
+            <h2 data-art="h3title">Ungefärliga prisnivåer 2026</h2>
+            <p data-art="p6">Siffrorna nedan är riktvärden baserade på typiska svenska konsultprojekt — exakt pris beror alltid på omfattning, integrationskomplexitet och hur mycket av din befintliga data som behöver städas upp innan ett system kan byggas på den.</p>
+
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th data-art="th1">Typ av projekt</th>
+                        <th data-art="th2">Typisk kostnad</th>
+                        <th data-art="th3">Tidsram</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-art="row1a">Färdigt AI-verktyg (abonnemang)</td>
+                        <td data-art="row1b">100–500 kr/användare/mån</td>
+                        <td data-art="row1c">Samma dag</td>
+                    </tr>
+                    <tr>
+                        <td data-art="row2a">Enkel chatbot eller automatisering</td>
+                        <td data-art="row2b">15 000–60 000 kr</td>
+                        <td data-art="row2c">2–4 veckor</td>
+                    </tr>
+                    <tr>
+                        <td data-art="row3a">AI-integration i befintligt system</td>
+                        <td data-art="row3b">40 000–150 000 kr</td>
+                        <td data-art="row3c">1–3 månader</td>
+                    </tr>
+                    <tr>
+                        <td data-art="row4a">Skräddarsydd prediktionsmodell</td>
+                        <td data-art="row4b">100 000–400 000+ kr</td>
+                        <td data-art="row4c">2–6 månader</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout">
+                <p data-art="callout1"><strong>Vanligaste misstaget vi ser:</strong> företag betalar för kategori 3 när kategori 1 eller 2 hade löst problemet lika bra. Be alltid en leverantör motivera varför ett enklare alternativ inte räcker, innan du godkänner en stor budget.</p>
+            </div>
+
+            <h2 data-art="h4title">Vad påverkar priset mest?</h2>
+            <ul>
+                <li data-art="li1"><strong>Datakvalitet.</strong> Om din data är spridd över Excel-filer, olika system och pappersanteckningar tar städningen ofta längre tid än själva AI-byggandet.</li>
+                <li data-art="li2"><strong>Integrationer.</strong> Att koppla ihop AI med ditt befintliga CRM, bokningssystem eller hemsida kostar mer än att bygga en fristående lösning.</li>
+                <li data-art="li3"><strong>Hur "smart" lösningen behöver vara.</strong> Att klassificera mejl i tre kategorier är enklare än att förutsäga kundbeteende sex månader framåt.</li>
+                <li data-art="li4"><strong>Underhåll efter lansering.</strong> En AI-lösning är sällan klar i och med driftsättning — modeller behöver övervakas och justeras när verkligheten förändras.</li>
+            </ul>
+
+            <h2 data-art="h5title">Tre frågor att ställa innan du betalar för något</h2>
+            <ol>
+                <li data-art="ol1">Löser det här ett problem jag faktiskt har idag, eller ett jag tror att jag kanske får?</li>
+                <li data-art="ol2">Finns det ett enklare/billigare sätt att uppnå 80 % av nyttan?</li>
+                <li data-art="ol3">Vad händer efter lansering — ingår support, eller är jag på egen hand?</li>
+            </ol>
+
+            <p data-art="p7">Vår egen utgångspunkt när vi pratar med kunder är alltid att börja med det enklaste alternativet som faktiskt löser problemet, och bara gå vidare till en mer omfattande lösning om det enkla alternativet visar sig vara otillräckligt. Det är både billigare för dig och ger ett snabbare bevis på att satsningen är värd det, innan ni investerar mer.</p>
+        </div>
+
+        <div class="article-cta">
+            <h3 data-art="ctaTitle">Fundera på vad just ditt projekt skulle kosta?</h3>
+            <p data-art="ctaDesc">Berätta kort vad du vill lösa — vi ger dig en ärlig bedömning, inte en uppsäljning.</p>
+            <a href="contact.html" class="cta-button"><span data-art="ctaBtn">Kontakta oss</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <a href="blog.html" class="back-to-blog"><i class="fas fa-arrow-left"></i> <span data-art="backToBlog">Tillbaka till bloggen</span></a>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-section">
+            <a href="https://www.glorifytc.se/" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
+                <div class="logo-icon">
+                    <span>G</span>
+                </div>
+                <div class="logo-text">GlorifyTC</div>
+            </a>
+            <p data-footer="tagline">Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/glorifytc/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="quickLinks">Snabblänkar</h3>
+                <div class="footer-links">
+                    <a href="index.html" data-nav="home">Hem</a>
+                    <a href="services.html" data-nav="services">Tjänster</a>
+                    <a href="about.html" data-nav="about">Om oss</a>
+                    <a href="team.html" data-nav="team">Team</a>
+                    <a href="blog.html" data-nav="blog">Blogg</a>
+                    <a href="projects.html" data-nav="projects">Våra Projekt</a>
+                    <a href="contact.html" data-nav="contact">Kontakt</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="services">Tjänster</h3>
+                <div class="footer-links">
+                    <a href="#">AI-modellutveckling</a>
+                    <a href="#">Dataanalys</a>
+                    <a href="#">Webbapplikationer</a>
+                    <a href="#">Mobilappar</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-footer="contact">Kontakt</h3>
+                <div class="footer-links">
+                    <a href="mailto:info@glorifytc.se"><i class="fas fa-envelope"></i> info@glorifytc.se</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Flygfältsvägen 13, 177 45 Järfälla</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 GlorifyTC. <span data-footer="rights">Alla rättigheter förbehållna.</span><br><span style="opacity:.7;font-size:.95em;">Org.nr 840818-1355 &middot; VAT SE840818135501</span></p>
+            <div>
+                <a href="#" data-footer="privacy">Integritetspolicy</a>
+                <a href="#" style="margin-left: 1.5rem;" data-footer="terms">Användarvillkor</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cookie-consent.js" defer></script>
+
+    <!-- Translations (Swedish + English) -->
+    <script>
+        const translations = {
+            sv: {
+                nav: { home: "Hem", services: "Tjänster", about: "Om oss", team: "Team", blog: "Blogg", projects: "Våra Projekt", contact: "Kontakt", getStarted: "Kom igång" },
+                footer: { tagline: "Avancerad AI, Data Science & Modern Digital Utveckling. Bygger intelligenta lösningar som gör skillnad.", quickLinks: "Snabblänkar", services: "Tjänster", contact: "Kontakt", rights: "Alla rättigheter förbehållna.", privacy: "Integritetspolicy", terms: "Användarvillkor" },
+                art: {
+                    category: "AI & Strategi", date: "24 juni 2026", readTime: "7", minRead: "min läsning",
+                    title: "Vad kostar en AI-lösning för småföretag?",
+                    lead: "Det korta svaret: mellan ett par tusen kronor i månaden för färdiga verktyg, och flera hundra tusen kronor för en helt skräddarsydd modell. Det långa svaret är mer användbart — så här resonerar du.",
+                    p1: "Om du har sökt efter den här frågan har du förmodligen redan upptäckt problemet: priset på \"en AI-lösning\" kan variera enormt beroende på vem du frågar. Det beror på att \"AI-lösning\" egentligen täcker tre helt olika typer av projekt, med helt olika prislappar. Att förstå skillnaden är det som avgör om du betalar 2 000 kr eller 200 000 kr för att lösa samma underliggande problem.",
+                    h1: "De tre nivåerna av AI-lösningar",
+                    p2: "Innan du pratar med någon leverantör — oss inkluderat — är det värt att veta vilken av dessa tre kategorier ditt behov faller in i.",
+                    h2: "1. Färdiga AI-verktyg (lägst kostnad)",
+                    p3: "Det här är abonnemangstjänster som ChatGPT Team, Microsoft Copilot eller branschspecifika AI-tillägg till system du redan använder. Du betalar per användare och månad, oftast mellan 100–500 kr per person. Det är rätt val om ditt behov är generellt: skriva text, sammanfatta dokument, svara på vanliga frågor.",
+                    p4: "Här kopplar man ihop ett befintligt AI-system (till exempel en språkmodell) med dina egna data och processer — en chatbot som faktiskt känner till dina produkter, ett system som automatiskt kategoriserar inkommande mejl, eller en AI-funktion inbyggd i din egen webbapplikation. Det här är ett konsultprojekt, inte ett abonnemang, och priset beror på omfattning.",
+                    p5: "Att träna en egen modell från grunden är sällan motiverat för ett småföretag. De flesta affärsproblem löses bättre och billigare genom att bygga ovanpå befintliga modeller (kategori 2) än genom att bygga en helt egen. Var skeptisk om en leverantör föreslår detta utan att först ha uteslutit enklare alternativ.",
+                    h3title: "Ungefärliga prisnivåer 2026",
+                    p6: "Siffrorna nedan är riktvärden baserade på typiska svenska konsultprojekt — exakt pris beror alltid på omfattning, integrationskomplexitet och hur mycket av din befintliga data som behöver städas upp innan ett system kan byggas på den.",
+                    th1: "Typ av projekt", th2: "Typisk kostnad", th3: "Tidsram",
+                    row1a: "Färdigt AI-verktyg (abonnemang)", row1b: "100–500 kr/användare/mån", row1c: "Samma dag",
+                    row2a: "Enkel chatbot eller automatisering", row2b: "15 000–60 000 kr", row2c: "2–4 veckor",
+                    row3a: "AI-integration i befintligt system", row3b: "40 000–150 000 kr", row3c: "1–3 månader",
+                    row4a: "Skräddarsydd prediktionsmodell", row4b: "100 000–400 000+ kr", row4c: "2–6 månader",
+                    callout1: "Vanligaste misstaget vi ser: företag betalar för kategori 3 när kategori 1 eller 2 hade löst problemet lika bra. Be alltid en leverantör motivera varför ett enklare alternativ inte räcker, innan du godkänner en stor budget.",
+                    h4title: "Vad påverkar priset mest?",
+                    li1: "Datakvalitet. Om din data är spridd över Excel-filer, olika system och pappersanteckningar tar städningen ofta längre tid än själva AI-byggandet.",
+                    li2: "Integrationer. Att koppla ihop AI med ditt befintliga CRM, bokningssystem eller hemsida kostar mer än att bygga en fristående lösning.",
+                    li3: "Hur \"smart\" lösningen behöver vara. Att klassificera mejl i tre kategorier är enklare än att förutsäga kundbeteende sex månader framåt.",
+                    li4: "Underhåll efter lansering. En AI-lösning är sällan klar i och med driftsättning — modeller behöver övervakas och justeras när verkligheten förändras.",
+                    h5title: "Tre frågor att ställa innan du betalar för något",
+                    ol1: "Löser det här ett problem jag faktiskt har idag, eller ett jag tror att jag kanske får?",
+                    ol2: "Finns det ett enklare/billigare sätt att uppnå 80 % av nyttan?",
+                    ol3: "Vad händer efter lansering — ingår support, eller är jag på egen hand?",
+                    p7: "Vår egen utgångspunkt när vi pratar med kunder är alltid att börja med det enklaste alternativet som faktiskt löser problemet, och bara gå vidare till en mer omfattande lösning om det enkla alternativet visar sig vara otillräckligt. Det är både billigare för dig och ger ett snabbare bevis på att satsningen är värd det, innan ni investerar mer.",
+                    ctaTitle: "Fundera på vad just ditt projekt skulle kosta?",
+                    ctaDesc: "Berätta kort vad du vill lösa — vi ger dig en ärlig bedömning, inte en uppsäljning.",
+                    ctaBtn: "Kontakta oss",
+                    backToBlog: "Tillbaka till bloggen"
+                }
+            },
+            en: {
+                nav: { home: "Home", services: "Services", about: "About", team: "Team", blog: "Blog", projects: "Our Projects", contact: "Contact", getStarted: "Get Started" },
+                footer: { tagline: "Advanced AI, Data Science & Modern Digital Development. Building intelligent solutions that matter.", quickLinks: "Quick Links", services: "Services", contact: "Contact", rights: "All rights reserved.", privacy: "Privacy Policy", terms: "Terms of Service" },
+                art: {
+                    category: "AI & Strategy", date: "June 24, 2026", readTime: "7", minRead: "min read",
+                    title: "What Does an AI Solution Cost for a Small Business?",
+                    lead: "The short answer: anywhere from a few hundred kronor a month for off-the-shelf tools, to several hundred thousand for a fully custom model. The long answer is more useful — here's how to think about it.",
+                    p1: "If you searched for this question, you've probably already found the problem: the price of \"an AI solution\" varies wildly depending on who you ask. That's because \"AI solution\" actually covers three completely different types of projects, with completely different price tags. Understanding the difference is what determines whether you pay a few thousand kronor or a few hundred thousand to solve the same underlying problem.",
+                    h1: "The three tiers of AI solutions",
+                    p2: "Before talking to any provider — us included — it's worth knowing which of these three categories your need falls into.",
+                    h2: "1. Off-the-shelf AI tools (lowest cost)",
+                    p3: "These are subscription services like ChatGPT Team, Microsoft Copilot, or industry-specific AI add-ons for systems you already use. You pay per user per month, typically a modest fixed fee. This is the right choice if your need is general: writing text, summarizing documents, answering common questions.",
+                    p4: "This is where an existing AI system (like a language model) gets connected to your own data and processes — a chatbot that actually knows your products, a system that automatically sorts incoming emails, or an AI feature built into your own web application. This is a consulting project, not a subscription, and the price depends on scope.",
+                    p5: "Training your own model from scratch is rarely justified for a small business. Most business problems are solved better and more cheaply by building on top of existing models (tier 2) than by building an entirely custom one. Be skeptical if a provider suggests this without first ruling out simpler options.",
+                    h3title: "Rough price ranges in 2026",
+                    p6: "The figures below are benchmarks based on typical consulting projects — the exact price always depends on scope, integration complexity, and how much of your existing data needs cleaning up before a system can be built on it.",
+                    th1: "Project type", th2: "Typical cost", th3: "Timeline",
+                    row1a: "Off-the-shelf AI tool (subscription)", row1b: "Modest fee per user/month", row1c: "Same day",
+                    row2a: "Simple chatbot or automation", row2b: "Lower five figures (SEK)", row2c: "2–4 weeks",
+                    row3a: "AI integration into existing system", row3b: "Mid five to low six figures (SEK)", row3c: "1–3 months",
+                    row4a: "Custom prediction model", row4b: "Six figures and up (SEK)", row4c: "2–6 months",
+                    callout1: "The most common mistake we see: companies pay for tier 3 when tier 1 or 2 would have solved the problem just as well. Always ask a provider to justify why a simpler option won't work before approving a large budget.",
+                    h4title: "What affects the price the most?",
+                    li1: "Data quality. If your data is scattered across spreadsheets, different systems, and paper notes, cleaning it up often takes longer than building the AI itself.",
+                    li2: "Integrations. Connecting AI to your existing CRM, booking system, or website costs more than building a standalone solution.",
+                    li3: "How \"smart\" the solution needs to be. Sorting emails into three categories is simpler than predicting customer behavior six months out.",
+                    li4: "Maintenance after launch. An AI solution is rarely \"done\" at launch — models need monitoring and adjustment as reality changes.",
+                    h5title: "Three questions to ask before paying for anything",
+                    ol1: "Does this solve a problem I actually have today, or one I think I might have?",
+                    ol2: "Is there a simpler/cheaper way to get 80% of the benefit?",
+                    ol3: "What happens after launch — is support included, or am I on my own?",
+                    p7: "Our own starting point with clients is always to begin with the simplest option that actually solves the problem, and only move to something more extensive if that proves insufficient. It's cheaper for you, and it gives faster proof the investment is worth it before you commit more.",
+                    ctaTitle: "Wondering what your project would cost?",
+                    ctaDesc: "Tell us briefly what you want to solve — we'll give you an honest assessment, not a sales pitch.",
+                    ctaBtn: "Get in touch",
+                    backToBlog: "Back to blog"
+                }
+            }
+        };
+
+        const LanguageManager = {
+            currentLang: (['sv','en'].includes(localStorage.getItem('glorifytc_lang')) ? localStorage.getItem('glorifytc_lang') : 'sv'),
+            init() {
+                this.loadLanguage(this.currentLang);
+                this.setupLanguageSelector();
+                this.updateCurrentLangDisplay();
+                this.highlightActiveLanguage();
+            },
+            loadLanguage(lang) {
+                const t = translations[lang];
+                if (!t) return;
+                document.querySelectorAll('[data-nav]').forEach(el => { const k = el.dataset.nav; if (t.nav && t.nav[k]) el.textContent = t.nav[k]; });
+                document.querySelectorAll('[data-footer]').forEach(el => { const k = el.dataset.footer; if (t.footer && t.footer[k]) el.textContent = t.footer[k]; });
+                document.querySelectorAll('[data-art]').forEach(el => { const k = el.dataset.art; if (t.art && t.art[k]) el.textContent = t.art[k]; });
+                document.documentElement.lang = lang;
+                localStorage.setItem('glorifytc_lang', lang);
+            },
+            setupLanguageSelector() {
+                const btn = document.getElementById('languageBtn');
+                const dropdown = document.getElementById('languageDropdown');
+                if (!btn || !dropdown) return;
+                btn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+                document.addEventListener('click', (e) => { if (!btn.contains(e.target)) dropdown.classList.remove('show'); });
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.addEventListener('click', () => {
+                        const lang = option.dataset.lang;
+                        if (lang === this.currentLang) { dropdown.classList.remove('show'); return; }
+                        this.currentLang = lang;
+                        this.loadLanguage(lang);
+                        this.updateCurrentLangDisplay();
+                        this.highlightActiveLanguage();
+                        dropdown.classList.remove('show');
+                    });
+                });
+            },
+            updateCurrentLangDisplay() { const s = document.getElementById('currentLang'); if (s) s.textContent = this.currentLang.toUpperCase(); },
+            highlightActiveLanguage() { document.querySelectorAll('.language-option').forEach(o => { o.classList.remove('active-lang'); if (o.dataset.lang === this.currentLang) o.classList.add('active-lang'); }); }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            LanguageManager.init();
+            document.documentElement.classList.add('lang-ready');
+        });
+    </script>
+</body>
+</html>

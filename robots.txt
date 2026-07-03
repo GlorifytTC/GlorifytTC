@@ -1,0 +1,5 @@
+# robots.txt for GlorifyTC.se
+User-agent: *
+Allow: /
+
+Sitemap: https://glorifytc.se/sitemap.xml
