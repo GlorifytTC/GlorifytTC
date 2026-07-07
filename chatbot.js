@@ -11,26 +11,26 @@
       sv: "Varsågod! Är det något mer jag kan hjälpa dig med?",
       en: "You're welcome! Anything else I can help you with?" },
     { test: function(m){ return /\b(hej da|hejda|vi hors|ha det|bye|goodbye|see you)\b/.test(m); },
-      sv: "Tack för att du hörde av dig – ha en fin dag! Du når oss alltid på info@glorifytc.se.",
-      en: "Thanks for stopping by — have a great day! You can always reach us at info@glorifytc.se." },
+      sv: "Tack för att du hörde av dig – ha en fin dag! Du når oss alltid på sales@glorifytc.se.",
+      en: "Thanks for stopping by — have a great day! You can always reach us at sales@glorifytc.se." },
     { test: function(m){ return /(taskbridge|task bridge|projekt|project|vad bygger|what do you build)/.test(m); },
       sv: "Vårt första lanserade projekt är TaskBridge – en smart plattform för personal- och schemahantering för skolor, vårdhem och organisationer. Fler projekt är på väg! Se alla under \"Våra Projekt\", eller besök taskbridge.se.",
       en: "Our first launched project is TaskBridge — a smart staff & shift management platform for schools, care homes and organizations. More projects are on the way! See them all under \"Our Projects\", or visit taskbridge.se." },
     { test: function(m){ return /(pris|kostnad|kostar|kosta|offert|betala|price|cost|pricing|how much|quote|budget)/.test(m); },
-      sv: "Priset beror på projektets omfattning – vi jobbar oftast med en fast offert per projekt. Berätta kort vad du vill bygga så återkommer vi med ett förslag. Maila info@glorifytc.se eller använd kontaktsidan.",
-      en: "Pricing depends on the scope of the project — we usually work with a fixed quote per project. Tell us briefly what you'd like to build and we'll come back with a proposal. Email info@glorifytc.se or use the contact page." },
+      sv: "Priset beror på projektets omfattning – vi jobbar oftast med en fast offert per projekt. Berätta kort vad du vill bygga så återkommer vi med ett förslag. Maila sales@glorifytc.se eller använd kontaktsidan.",
+      en: "Pricing depends on the scope of the project — we usually work with a fixed quote per project. Tell us briefly what you'd like to build and we'll come back with a proposal. Email sales@glorifytc.se or use the contact page." },
     { test: function(m){ return /(adress|address|var ligger|var finns|location|located|where are|how do i find|kontor|office|besoka|visit you)/.test(m); },
-      sv: "Vi finns på Flygfältsvägen 13, 177 45 Järfälla. Hör gärna av dig innan besök på info@glorifytc.se.",
-      en: "We're located at Flygfältsvägen 13, 177 45 Järfälla. Drop us a line at info@glorifytc.se before visiting." },
+      sv: "Vi finns på Flygfältsvägen 13, 177 45 Järfälla. Hör gärna av dig innan besök på sales@glorifytc.se.",
+      en: "We're located at Flygfältsvägen 13, 177 45 Järfälla. Drop us a line at sales@glorifytc.se before visiting." },
     { test: function(m){ return /(telefon|nummer|ring|phone|call you|call us|mail|mejl|mejla|e-post|epost|email|kontakt|contact|hor av|get in touch|reach you|na er)/.test(m); },
-      sv: "Du når oss enklast på info@glorifytc.se eller via formuläret på kontaktsidan.",
-      en: "The easiest way to reach us is info@glorifytc.se or via the form on the contact page." },
+      sv: "Du når oss enklast på sales@glorifytc.se eller via formuläret på kontaktsidan.",
+      en: "The easiest way to reach us is sales@glorifytc.se or via the form on the contact page." },
     { test: function(m){ return /(jobb|jobba|karriar|anstall|rekryter|praktik|job|career|hiring|vacancy|work with you|internship)/.test(m); },
-      sv: "Kul att du är intresserad! Vi växer gärna – skicka en intresseanmälan till info@glorifytc.se så hör vi av oss.",
-      en: "Great that you're interested! We're growing — send an intro to info@glorifytc.se and we'll be in touch." },
+      sv: "Kul att du är intresserad! Vi växer gärna – skicka en intresseanmälan till sales@glorifytc.se så hör vi av oss.",
+      en: "Great that you're interested! We're growing — send an intro to sales@glorifytc.se and we'll be in touch." },
     { test: function(m){ return /(boka|mote|traffas|komma igang|kom igang|book|meeting|get started|schedule|demo|konsultation)/.test(m); },
-      sv: "Gärna! Boka enklast genom att maila info@glorifytc.se eller fylla i formuläret på kontaktsidan, så hittar vi en tid.",
-      en: "Love to! The easiest way is to email info@glorifytc.se or fill in the form on the contact page and we'll find a time." },
+      sv: "Gärna! Boka enklast genom att maila sales@glorifytc.se eller fylla i formuläret på kontaktsidan, så hittar vi en tid.",
+      en: "Love to! The easiest way is to email sales@glorifytc.se or fill in the form on the contact page and we'll find a time." },
     { test: function(m){ return /\b(ai|a\.i|artificiell|machine learning|maskininlarning|ml|automation|automatisering)\b/.test(m); },
       sv: "Vi utvecklar skräddarsydda AI-lösningar – allt från modeller och automation till AI-integrationer i befintliga system. Vad har du för use case?",
       en: "We build custom AI solutions — from models and automation to AI integrations in your existing systems. What's your use case?" },
@@ -38,8 +38,8 @@
       sv: "Vi hjälper er samla in, analysera och visualisera data så ni kan fatta bättre beslut. Vill du veta mer om hur vi jobbar med data?",
       en: "We help you collect, analyze and visualize data so you can make better decisions. Want to know more about how we work with data?" },
     { test: function(m){ return /\b(webb|web|hemsida|website|webbplats|app|appar|mobil|mobile|ios|android|frontend|backend)\b/.test(m); },
-      sv: "Vi bygger moderna, responsiva webbplatser och appar – både webb och mobil. Vill du bygga något specifikt? Maila info@glorifytc.se.",
-      en: "We build modern, responsive websites and apps — both web and mobile. Got something specific in mind? Email info@glorifytc.se." },
+      sv: "Vi bygger moderna, responsiva webbplatser och appar – både webb och mobil. Vill du bygga något specifikt? Maila sales@glorifytc.se.",
+      en: "We build modern, responsive websites and apps — both web and mobile. Got something specific in mind? Email sales@glorifytc.se." },
     { test: function(m){ return /(vem ar ni|vilka ar ni|om er|om oss|team|vem ligger bakom|who are you|about you|about us|your team|vem ar du)/.test(m); },
       sv: "GlorifyTC är ett svenskt teknikföretag som bygger AI- och datadrivna produkter och erbjuder teknisk konsulting. Läs mer under \"Om oss\" och \"Team\".",
       en: "GlorifyTC is a Swedish tech company building AI- and data-driven products and offering technical consulting. Read more under \"About\" and \"Team\"." },
@@ -64,8 +64,8 @@
       try { if (KB[i].test(m)) return KB[i][lang]; } catch (e) {}
     }
     return lang === 'en'
-      ? "Good question! I can't fully answer that one here, but our team would be happy to. Email info@glorifytc.se and we'll get back to you quickly. You can also ask me about our services, pricing, projects or contact details."
-      : "Bra fråga! Den kan jag inte svara fullt ut på här, men teamet hjälper dig gärna. Maila info@glorifytc.se så återkommer vi snabbt. Du kan också fråga mig om våra tjänster, priser, projekt eller kontaktuppgifter.";
+      ? "Good question! I can't fully answer that one here, but our team would be happy to. Email sales@glorifytc.se and we'll get back to you quickly. You can also ask me about our services, pricing, projects or contact details."
+      : "Bra fråga! Den kan jag inte svara fullt ut på här, men teamet hjälper dig gärna. Maila sales@glorifytc.se så återkommer vi snabbt. Du kan också fråga mig om våra tjänster, priser, projekt eller kontaktuppgifter.";
   }
 
   // ---- Chat UI ----
