@@ -5,37 +5,46 @@
     <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
     <style>html:not(.lang-ready) body{visibility:hidden}</style>
     <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
-    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google tag (gtag.js) — Consent Mode v2: analytics denied until the visitor accepts cookies -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKJF8EV25G"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      (function(){try{if(localStorage.getItem('glorifytc_cookie_consent')==='accepted'){gtag('consent','update',{'analytics_storage':'granted'});}}catch(e){}})();
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+
+      gtag('config', 'G-BKJF8EV25G');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Våra Projekt | GlorifyTC</title>
+    <title>Våra Projekt – TaskBridge & fler lösningar | GlorifyTC</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <meta name="description" content="Projekt byggda av GlorifyTC. TaskBridge – smart plattform för personal- och schemahantering för skolor, vårdhem och organisationer. Fler projekt på väg.">
-    <meta name="keywords" content="GlorifyTC, projekt, TaskBridge, personalhantering, schemaläggning, SaaS, Sverige">
     <meta name="author" content="GlorifyTC">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://glorifytc.se/projects.html">
-  <link rel="alternate" hreflang="sv" href="https://glorifytc.se/projects.html">
-  <link rel="alternate" hreflang="en" href="https://glorifytc.se/projects.html">
-  <link rel="alternate" hreflang="x-default" href="https://glorifytc.se/projects.html">
-    <meta property="og:title" content="Våra Projekt | GlorifyTC">
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="GlorifyTC">
+    <meta property="og:title" content="Våra Projekt – TaskBridge & fler | GlorifyTC">
     <meta property="og:description" content="Projekt byggda av GlorifyTC. Vi börjar med TaskBridge och fler är på väg.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://glorifytc.se/projects.html">
     <meta property="og:image" content="https://glorifytc.se/og-image.jpg">
+    <meta property="og:locale" content="sv_SE">
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Våra Projekt | GlorifyTC">
+    <meta name="twitter:title" content="Våra Projekt – TaskBridge & fler | GlorifyTC">
     <meta name="twitter:description" content="Projekt byggda av GlorifyTC. Vi börjar med TaskBridge och fler är på väg.">
+    <meta name="twitter:image" content="https://glorifytc.se/og-image.jpg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -43,6 +52,16 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Våra Projekt – GlorifyTC",
+      "url": "https://glorifytc.se/projects.html",
+      "description": "Projekt byggda av GlorifyTC, bland annat TaskBridge – en smart plattform för personal- och schemahantering för skolor, vårdhem och organisationer.",
+      "isPartOf": { "@type": "WebSite", "name": "GlorifyTC", "url": "https://glorifytc.se" }
+    }
+    </script>
   <link rel="stylesheet" href="footer.css">
 </head>
 <body>
@@ -348,10 +367,10 @@
             <div class="footer-section">
                 <h3 data-footer="services">Tjänster</h3>
                 <div class="footer-links">
-                    <a href="#">AI-modellutveckling</a>
-                    <a href="#">Dataanalys</a>
-                    <a href="#">Webbapplikationer</a>
-                    <a href="#">Mobilappar</a>
+                    <a href="services.html">AI-modellutveckling</a>
+                    <a href="services.html">Dataanalys</a>
+                    <a href="services.html">Webbapplikationer</a>
+                    <a href="services.html">Mobilappar</a>
                 </div>
             </div>
             

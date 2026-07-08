@@ -5,25 +5,28 @@
     <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
     <style>html:not(.lang-ready) body{visibility:hidden}</style>
     <script>setTimeout(function(){document.documentElement.classList.add('lang-ready');},1500);</script>
-    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google tag (gtag.js) — Consent Mode v2: analytics denied until the visitor accepts cookies -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKJF8EV25G"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      (function(){try{if(localStorage.getItem('glorifytc_cookie_consent')==='accepted'){gtag('consent','update',{'analytics_storage':'granted'});}}catch(e){}})();
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+
+      gtag('config', 'G-BKJF8EV25G');
     </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakta GlorifyTC – AI-konsult i Stockholm | Få svar inom 24h</title>
   <meta name="description" content="Kontakta GlorifyTC för AI-lösningar, dataanalys, webb- och apputveckling. Fyll i formuläret eller maila sales@glorifytc.se — vi svarar inom 24 timmar. Järfälla, Stockholm.">
-  <meta name="keywords" content="kontakta GlorifyTC, AI-konsult Stockholm, Data Science konsult, webbutveckling Järfälla, apputveckling Sverige, maskininlärning konsulting">
   <meta name="author" content="GlorifyTC">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://glorifytc.se/contact.html">
-  <!-- hreflang for bilingual pages -->
-  <link rel="alternate" hreflang="sv" href="https://glorifytc.se/contact.html">
-  <link rel="alternate" hreflang="en" href="https://glorifytc.se/contact.html">
-  <link rel="alternate" hreflang="x-default" href="https://glorifytc.se/contact.html">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="GlorifyTC">
@@ -323,10 +326,10 @@
             <div class="footer-section">
                 <h3 data-footer="services">Tjänster</h3>
                 <div class="footer-links">
-                    <a href="#">AI-modellutveckling</a>
-                    <a href="#">Dataanalys</a>
-                    <a href="#">Webbapplikationer</a>
-                    <a href="#">Mobilappar</a>
+                    <a href="services.html">AI-modellutveckling</a>
+                    <a href="services.html">Dataanalys</a>
+                    <a href="services.html">Webbapplikationer</a>
+                    <a href="services.html">Mobilappar</a>
                 </div>
             </div>
             

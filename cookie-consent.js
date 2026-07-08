@@ -15,13 +15,13 @@
 
     var COPY = {
         sv: {
-            text: 'Vi använder cookies för att webbplatsen ska fungera korrekt, t.ex. för Google Maps-inbäddningen på vår kontaktsida. Genom att klicka på "Acceptera" godkänner du detta.',
+            text: 'Vi använder cookies för nödvändiga funktioner, t.ex. Google Maps på kontaktsidan, och — om du godkänner — anonym besöksstatistik via Google Analytics. Klicka på "Acceptera" för att tillåta statistik.',
             accept: 'Acceptera',
             decline: 'Endast nödvändiga',
             policy: 'Läs mer'
         },
         en: {
-            text: 'We use cookies to make the site work properly, e.g. for the Google Maps embed on our contact page. By clicking "Accept" you agree to this.',
+            text: 'We use cookies for essential features, e.g. the Google Maps embed on our contact page, and — with your consent — anonymous visitor statistics via Google Analytics. Click "Accept" to allow statistics.',
             accept: 'Accept',
             decline: 'Necessary only',
             policy: 'Learn more'
@@ -64,8 +64,20 @@
             setTimeout(function () { wrap.remove(); }, 350);
         }
 
-        document.getElementById('cookieAccept').addEventListener('click', function () { dismiss('accepted'); });
-        document.getElementById('cookieDecline').addEventListener('click', function () { dismiss('declined'); });
+        function updateAnalyticsConsent(granted) {
+            if (typeof window.gtag === 'function') {
+                window.gtag('consent', 'update', { 'analytics_storage': granted ? 'granted' : 'denied' });
+            }
+        }
+
+        document.getElementById('cookieAccept').addEventListener('click', function () {
+            dismiss('accepted');
+            updateAnalyticsConsent(true);
+        });
+        document.getElementById('cookieDecline').addEventListener('click', function () {
+            dismiss('declined');
+            updateAnalyticsConsent(false);
+        });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
