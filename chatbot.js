@@ -13,12 +13,15 @@
     { test: function(m){ return /\b(hej da|hejda|vi hors|ha det|bye|goodbye|see you)\b/.test(m); },
       sv: "Tack för att du hörde av dig – ha en fin dag! Du når oss alltid på sales@glorifytc.se.",
       en: "Thanks for stopping by — have a great day! You can always reach us at sales@glorifytc.se." },
-    { test: function(m){ return /(taskbridge|task bridge|projekt|project|vad bygger|what do you build)/.test(m); },
-      sv: "Vårt första lanserade projekt är TaskBridge – en smart plattform för personal- och schemahantering för skolor, vårdhem och organisationer. Fler projekt är på väg! Se alla under \"Våra Projekt\", eller besök taskbridge.se.",
-      en: "Our first launched project is TaskBridge — a smart staff & shift management platform for schools, care homes and organizations. More projects are on the way! See them all under \"Our Projects\", or visit taskbridge.se." },
+    // NOTE: pricing must be tested BEFORE the TaskBridge/projects rule, otherwise a
+    // question like "vad kostar ett projekt" / "how much does a project cost" would be
+    // caught by the projekt|project keyword and answered with the TaskBridge blurb.
     { test: function(m){ return /(pris|kostnad|kostar|kosta|offert|betala|price|cost|pricing|how much|quote|budget)/.test(m); },
       sv: "Priset beror på projektets omfattning – vi jobbar oftast med en fast offert per projekt. Berätta kort vad du vill bygga så återkommer vi med ett förslag. Maila sales@glorifytc.se eller använd kontaktsidan.",
       en: "Pricing depends on the scope of the project — we usually work with a fixed quote per project. Tell us briefly what you'd like to build and we'll come back with a proposal. Email sales@glorifytc.se or use the contact page." },
+    { test: function(m){ return /(taskbridge|task bridge|projekt|project|vad bygger|what do you build)/.test(m); },
+      sv: "Vårt första lanserade projekt är TaskBridge – en smart plattform för personal- och schemahantering för skolor, vårdhem och organisationer. Fler projekt är på väg! Se alla under \"Våra Projekt\", eller besök taskbridge.se.",
+      en: "Our first launched project is TaskBridge — a smart staff & shift management platform for schools, care homes and organizations. More projects are on the way! See them all under \"Our Projects\", or visit taskbridge.se." },
     { test: function(m){ return /(adress|address|var ligger|var finns|location|located|where are|how do i find|kontor|office|besoka|visit you)/.test(m); },
       sv: "Vi finns på Flygfältsvägen 13, 177 45 Järfälla. Hör gärna av dig innan besök på sales@glorifytc.se.",
       en: "We're located at Flygfältsvägen 13, 177 45 Järfälla. Drop us a line at sales@glorifytc.se before visiting." },
