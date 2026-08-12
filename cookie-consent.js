@@ -1,4 +1,4 @@
-/* GlorifyTC — Cookie consent banner (EU/GDPR)
+/* GlorifyTC, Cookie consent banner (EU/GDPR)
    Shared across all pages. Shows once until the visitor accepts or
    declines, then remembers the choice. Re-uses the site's existing
    language detection (glorifytc_lang in localStorage) so it speaks
@@ -15,13 +15,13 @@
 
     var COPY = {
         sv: {
-            text: 'Vi använder cookies för nödvändiga funktioner, t.ex. Google Maps på kontaktsidan, och — om du godkänner — anonym besöksstatistik via Google Analytics. Klicka på "Acceptera" för att tillåta statistik.',
+            text: 'Vi använder cookies för nödvändiga funktioner, t.ex. Google Maps på kontaktsidan, och, om du godkänner, anonym besöksstatistik via Google Analytics. Klicka på "Acceptera" för att tillåta statistik.',
             accept: 'Acceptera',
             decline: 'Endast nödvändiga',
             policy: 'Läs mer'
         },
         en: {
-            text: 'We use cookies for essential features, e.g. the Google Maps embed on our contact page, and — with your consent — anonymous visitor statistics via Google Analytics. Click "Accept" to allow statistics.',
+            text: 'We use cookies for essential features, e.g. the Google Maps embed on our contact page, and, with your consent, anonymous visitor statistics via Google Analytics. Click "Accept" to allow statistics.',
             accept: 'Accept',
             decline: 'Necessary only',
             policy: 'Learn more'

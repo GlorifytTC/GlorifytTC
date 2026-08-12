@@ -1,4 +1,4 @@
-/* nav-menu.js — shared mobile hamburger navigation for ALL pages.
+/* nav-menu.js, shared mobile hamburger navigation for ALL pages.
 
    The site has a fragmented CSS setup: some pages load the shared
    styles.css, others load their own per-page stylesheet (Contact.css,

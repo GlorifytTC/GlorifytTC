@@ -1,6 +1,6 @@
-/* space-bg.js — adds faint floating AI / data-science / tech symbols as a
+/* space-bg.js, adds faint floating AI / data-science / tech symbols as a
    fixed BACKGROUND layer behind the existing site. No black hole. Does not
-   change layout, colours, logo or content — it only sits behind everything
+   change layout, colours, logo or content, it only sits behind everything
    (z-index:-1) at low opacity so it never disturbs reading. */
 (function () {
     if (document.getElementById('space-bg')) return;

@@ -1,4 +1,4 @@
-/* scroll-fx.js — adds scroll-reveal, parallax depth and 3D card tilt to the
+/* scroll-fx.js, adds scroll-reveal, parallax depth and 3D card tilt to the
    existing site WITHOUT changing any colours, logo or layout. Pure motion,
    layered on top. Safe to include on any page; respects reduced-motion and
    degrades gracefully if features/elements are missing. */
