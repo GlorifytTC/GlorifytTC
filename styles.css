@@ -465,39 +465,6 @@ body {
     z-index: -1;
 }
 
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.bg-circle {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-}
-
-.circle-1 {
-    top: 25%;
-    left: 25%;
-    width: 25rem;
-    height: 25rem;
-    background: linear-gradient(135deg, var(--cyan-400), transparent);
-    opacity: 0.1;
-}
-
-.circle-2 {
-    bottom: 25%;
-    right: 25%;
-    width: 25rem;
-    height: 25rem;
-    background: linear-gradient(135deg, var(--purple-500), transparent);
-    opacity: 0.05;
-}
-
 .hero-content {
     max-width: 1300px;
     margin: 0 auto;
@@ -517,7 +484,6 @@ body {
     border: 1px solid var(--white-10);
     border-radius: 50px;
     margin-bottom: 1.5rem;
-    animation: pulse 2s infinite;
 }
 
 /* Cyan accent text — used to highlight a word/phrase inside headings
@@ -542,7 +508,6 @@ body {
     height: 0.5rem;
     background: var(--cyan-400);
     border-radius: 50%;
-    animation: pulse 1.5s infinite;
 }
 
 .tag-text {
@@ -1768,4 +1733,83 @@ body {
     .logo-text {
         font-size: 1.1rem;
     }
+}
+/* ============================================================
+   PROFESSIONAL POLISH — subtle refinements only.
+   Additive; changes no layout, color, or visual identity.
+   ============================================================ */
+
+/* Crisper rendering for the thin (weight 100) display type */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Smooth in-page navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fluid hero headline: smooths the breakpoint jump, keeps the same
+   desktop size, and adds a touch of tracking so thin type feels intentional */
+.hero h1 {
+    font-size: clamp(2.2rem, 6.2vw, 4.2rem);
+    letter-spacing: -0.02em;
+}
+
+/* Slightly more natural motion curve on interactive lifts
+   (same distances and durations, just a better easing feel) */
+.service-card,
+.cta-button {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Keyboard focus visibility (on-brand, invisible to mouse users) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--cyan-400);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Respect users who prefer reduced motion: calm the float and transitions */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ── Hero eyebrow label (redesign of the "Avancerade AI-lösningar" badge) ──
+   Removes the generic translucent pill + glowing dot (the common AI-startup
+   look) and replaces it with a quiet editorial kicker: a short cyan rule and
+   an uppercase, letter-spaced label. Scoped to .hero so no other .tag badge
+   on the site (projects, blog) is affected. */
+.hero .tag {
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+}
+.hero .tag-dot {
+    width: 1.75rem;
+    height: 2px;
+    border-radius: 0;
+    background: linear-gradient(to right, var(--cyan-400), var(--cyan-600));
+}
+.hero .tag-text {
+    color: var(--white-70);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
 }
