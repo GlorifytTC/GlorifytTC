@@ -88,8 +88,8 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="language-dropdown" id="languageDropdown">
-                    <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
-                    <button class="language-option" data-lang="en">🇬🇧 English</button>
+                    <button class="language-option" data-lang="sv"><span class="lang-code">SV</span> Svenska</button>
+                    <button class="language-option" data-lang="en"><span class="lang-code">EN</span> English</button>
                 </div>
             </div>
             <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
@@ -278,29 +278,17 @@
             <article class="project-card">
                 <div class="project-card-head">
                     <div class="proj-logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="url(#tb-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                           <defs>
                             <linearGradient id="tb-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
                               <stop offset="0%" stop-color="#38bdf8"/>
                               <stop offset="100%" stop-color="#2563eb"/>
                             </linearGradient>
                           </defs>
-                          <!-- calendar body -->
-                          <rect x="8" y="16" width="48" height="40" rx="6" fill="url(#tb-grad)" opacity=".9"/>
-                          <!-- calendar pins -->
-                          <circle cx="24" cy="14" r="3.5" fill="#38bdf8"/><rect x="22.5" y="10" width="3" height="8" rx="1.5" fill="#38bdf8"/>
-                          <circle cx="40" cy="14" r="3.5" fill="#38bdf8"/><rect x="38.5" y="10" width="3" height="8" rx="1.5" fill="#38bdf8"/>
-                          <!-- grid lines -->
-                          <line x1="8" y1="28" x2="56" y2="28" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
-                          <!-- grid dots (3x3) -->
-                          <circle cx="22" cy="35" r="2.5" fill="rgba(255,255,255,.85)"/>
-                          <circle cx="32" cy="35" r="2.5" fill="rgba(255,255,255,.85)"/>
-                          <circle cx="42" cy="35" r="2.5" fill="rgba(255,255,255,.85)"/>
-                          <circle cx="22" cy="44" r="2.5" fill="rgba(255,255,255,.85)"/>
-                          <circle cx="32" cy="44" r="2.5" fill="rgba(255,255,255,.85)"/>
-                          <circle cx="42" cy="44" r="2.5" fill="rgba(255,255,255,.6)"/>
-                          <circle cx="22" cy="53" r="2.5" fill="rgba(255,255,255,.6)"/>
-                          <circle cx="32" cy="53" r="2.5" fill="rgba(255,255,255,.4)"/>
+                          <rect x="12" y="16" width="40" height="36" rx="5"/>
+                          <path d="M12 26h40"/>
+                          <path d="M22 11v8M42 11v8"/>
+                          <path d="M23 40l5 5 10-12"/>
                         </svg>
                     </div>
                     <div class="project-card-titles">
@@ -320,9 +308,83 @@
                 </a>
             </article>
 
+            <!-- HUB ART -->
+            <article class="project-card">
+                <div class="project-card-head">
+                    <div class="proj-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="url(#ha-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <defs>
+                            <linearGradient id="ha-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                              <stop offset="0%" stop-color="#e7e5e4"/>
+                              <stop offset="100%" stop-color="#a8a29e"/>
+                            </linearGradient>
+                          </defs>
+                          <path d="M9 53h46"/>
+                          <path d="M16 53V21l14-8v40"/>
+                          <path d="M30 27h16v26"/>
+                          <path d="M21 25v4M21 33v4M21 41v4"/>
+                          <path d="M36 34h5M36 41h5"/>
+                        </svg>
+                    </div>
+                    <div class="project-card-titles">
+                        <h2><span style="font-weight:700;">HUB</span> <span style="color:#a8a29e;font-weight:600;">ART</span></h2>
+                        <span class="proj-sector" data-proj="haSector">Arkitektur &amp; inredning i Baku</span>
+                    </div>
+                </div>
+                <span class="proj-badge live"><span class="dot"></span><span data-proj="haLiveBadge">Live</span></span>
+                <p class="proj-desc" data-proj="haDesc">HUB ART är en arkitekt- och inredningsstudio i Baku som tar hand om hela resan - från första planritning till sista möbel. De ritar, bygger och inreder kompletta bostäder och kommersiella rum, allt under ett tak.</p>
+                <div class="proj-tags">
+                    <span data-proj="haTag1">Arkitektur</span>
+                    <span data-proj="haTag2">Inredning</span>
+                    <span data-proj="haTag3">Landskap</span>
+                </div>
+                <a class="proj-link" href="https://hubart.az/" target="_blank" rel="noopener">
+                    <span data-proj="haVisit">Besök HUB ART</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <!-- Marani -->
+            <article class="project-card">
+                <div class="project-card-head">
+                    <div class="proj-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="url(#ma-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <defs>
+                            <linearGradient id="ma-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                              <stop offset="0%" stop-color="#c25a5a"/>
+                              <stop offset="100%" stop-color="#7a0d0d"/>
+                            </linearGradient>
+                          </defs>
+                          <path d="M22 13h20"/>
+                          <path d="M23 13c0 10 4 16 9 16s9-6 9-16"/>
+                          <path d="M32 29v20"/>
+                          <path d="M23 50h18"/>
+                        </svg>
+                    </div>
+                    <div class="project-card-titles">
+                        <h2><span style="font-weight:700;">Marani</span></h2>
+                        <span class="proj-sector" data-proj="maSector">Georgisk restaurang i Stockholm</span>
+                    </div>
+                </div>
+                <span class="proj-badge live"><span class="dot"></span><span data-proj="maLiveBadge">Live</span></span>
+                <p class="proj-desc" data-proj="maDesc">Marani är en georgisk restaurang i centrala Stockholm där tradition möter nutid. Webbplatsen bjuder på menyn, bordsbokning och event i en atmosfärisk miljö - autentiska smaker från Kaukasus, serverade i en historisk lokal.</p>
+                <div class="proj-tags">
+                    <span data-proj="maTag1">Meny</span>
+                    <span data-proj="maTag2">Bordsbokning</span>
+                    <span data-proj="maTag3">Event</span>
+                </div>
+                <a class="proj-link" href="https://marani.bar/" target="_blank" rel="noopener">
+                    <span data-proj="maVisit">Besök Marani</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+
             <!-- More coming -->
             <article class="project-card placeholder">
-                <div class="ph-icon"><i class="fas fa-rocket"></i></div>
+                <div class="ph-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="32" cy="32" r="20"/>
+                        <path d="M32 23v18M23 32h18"/>
+                    </svg>
+                </div>
                 <span class="proj-badge soon" data-proj="soonBadge">Kommer snart</span>
                 <h2 data-proj="soonTitle">Fler projekt på väg</h2>
                 <p data-proj="soonDesc">Vi bygger fler produkter just nu. Håll utkik - den här sidan växer allt eftersom vi lanserar.</p>
@@ -417,6 +479,20 @@
                     tbTag2: "Närvaro",
                     tbTag3: "Kommunikation",
                     tbVisit: "Besök TaskBridge",
+                    haSector: "Arkitektur & inredning i Baku",
+                    haLiveBadge: "Live",
+                    haDesc: "HUB ART är en arkitekt- och inredningsstudio i Baku som tar hand om hela resan - från första planritning till sista möbel. De ritar, bygger och inreder kompletta bostäder och kommersiella rum, allt under ett tak.",
+                    haTag1: "Arkitektur",
+                    haTag2: "Inredning",
+                    haTag3: "Landskap",
+                    haVisit: "Besök HUB ART",
+                    maSector: "Georgisk restaurang i Stockholm",
+                    maLiveBadge: "Live",
+                    maDesc: "Marani är en georgisk restaurang i centrala Stockholm där tradition möter nutid. Webbplatsen bjuder på menyn, bordsbokning och event i en atmosfärisk miljö - autentiska smaker från Kaukasus, serverade i en historisk lokal.",
+                    maTag1: "Meny",
+                    maTag2: "Bordsbokning",
+                    maTag3: "Event",
+                    maVisit: "Besök Marani",
                     soonBadge: "Kommer snart",
                     soonTitle: "Fler projekt på väg",
                     soonDesc: "Vi bygger fler produkter just nu. Håll utkik - den här sidan växer allt eftersom vi lanserar.",
@@ -447,6 +523,20 @@
                     tbTag2: "Attendance",
                     tbTag3: "Communication",
                     tbVisit: "Visit TaskBridge",
+                    haSector: "Architecture & interior design in Baku",
+                    haLiveBadge: "Live",
+                    haDesc: "HUB ART is an architecture and interior design studio in Baku that handles the whole journey - from the first floor plan to the final piece of furniture. They design, build, and furnish complete residential and commercial spaces, all under one roof.",
+                    haTag1: "Architecture",
+                    haTag2: "Interior",
+                    haTag3: "Landscape",
+                    haVisit: "Visit HUB ART",
+                    maSector: "Georgian restaurant in Stockholm",
+                    maLiveBadge: "Live",
+                    maDesc: "Marani is a Georgian restaurant in central Stockholm where tradition meets modernity. The site showcases the menu, table reservations, and events in an atmospheric setting - authentic flavors from the Caucasus, served in a historic venue.",
+                    maTag1: "Menu",
+                    maTag2: "Reservations",
+                    maTag3: "Events",
+                    maVisit: "Visit Marani",
                     soonBadge: "Coming soon",
                     soonTitle: "More projects on the way",
                     soonDesc: "We're building more products right now. Stay tuned, this page will grow as we launch.",
