@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();(function(){try{var t=localStorage.getItem('glorifytc_theme'),d=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t!=='light'&&d))document.documentElement.setAttribute('data-theme','dark');}catch(e){}document.documentElement.setAttribute('data-preload','');window.addEventListener('load',function(){document.documentElement.removeAttribute('data-preload');});})();</script>
     <!-- Google tag (gtag.js) — Consent Mode v2: analytics denied until the visitor accepts cookies -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKJF8EV25G"></script>
     <script>
@@ -49,9 +49,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,6 +84,9 @@
     </script>
 
           <link rel="stylesheet" href="footer.css">
+          <link rel="stylesheet" href="design-system.css">
+          <link rel="stylesheet" href="dark-mode.css">
+          <script src="dark-mode.js" defer></script>
 </head>
         <body>
             <!-- Navigation with Email Bot Link -->
@@ -116,47 +118,41 @@
                         <button class="language-option" data-lang="en"><span class="lang-code">EN</span> English</button>
                     </div>
                 </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Byt tema">
+                    <i class="fas fa-sun" data-light-icon></i>
+                    <i class="fas fa-moon" data-dark-icon></i>
+                </button>
                 <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
             </div>
         </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="tag">
-                    <span class="tag-dot"></span>
-                    <span class="tag-text" data-home="tag">Avancerade AI-lösningar</span>
-                </div>
-                <h1><span data-home="title">Förhärligande</span> <span class="cyan" data-home="titleSpan">Teknologi</span></h1>
+        <div class="hero-inner">
+            <div class="hero-lead-block">
+                <p class="eyebrow" data-home="tag">Avancerade AI-lösningar</p>
+                <h1 class="display">
+                    <span data-home="title">Förhärligande</span> <span class="cyan" data-home="titleSpan">Teknologi</span>
+                </h1>
                 <p data-home="description">Vi bygger intelligenta, moderna digitala produkter från AI-drivna system till responsiva webbplatser och mobilapplikationer.</p>
                 <div class="hero-buttons">
-                    <a href="services.html" class="cta-button"><span data-home="explore">Utforska tjänster</span> <i class="fas fa-arrow-right"></i></a>
+                    <a href="services.html" class="btn btn-primary"><span data-home="explore">Utforska tjänster</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            
-            <div class="robot-container">
-                <div class="robot">
-                    <div class="robot-particles" id="robotParticles"></div>
-                    <div class="robot-head">
-                        <div class="robot-antenna">
-                            <div class="antenna-base"></div>
-                            <div class="antenna-tip"></div>
-                        </div>
-                        <div class="robot-body">
-                            <div class="robot-head-container">
-                                <div class="robot-face">
-                                    <div class="robot-eyes">
-                                        <div class="robot-eye"></div>
-                                        <div class="robot-eye"></div>
-                                    </div>
-                                    <div class="robot-mouth"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <dl class="hero-meta">
+                <div>
+                    <dt>Grundat</dt>
+                    <dd>2026</dd>
                 </div>
-            </div>
+                <div>
+                    <dt>Baserat i</dt>
+                    <dd>Stockholm</dd>
+                </div>
+                <div>
+                    <dt>Fokus</dt>
+                    <dd>AI &amp; Webb</dd>
+                </div>
+            </dl>
         </div>
     </section>
 
@@ -594,24 +590,14 @@
 
         // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
-            createRobotParticles();
             initNavbar();
             LanguageManager.init();
             document.documentElement.classList.add('lang-ready');
-            
-            setTimeout(() => {
-                const heroText = document.querySelector('.hero-text');
-                if (heroText) {
-                    heroText.style.opacity = 1;
-                    heroText.style.transform = 'translateY(0)';
-                }
-            }, 300);
         });
     </script>
 <script src="chatbot.js" defer></script>
 <script src="nav-menu.js" defer></script>
 <script src="cookie-consent.js" defer></script>
 <script src="scroll-fx.js" defer></script>
-<script src="space-bg.js" defer></script>
 </body>
 </html>

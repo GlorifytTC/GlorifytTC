@@ -1,0 +1,249 @@
+/* ============================================================
+   GlorifyTC — Dark Mode + Liquid Glass
+   Load after design-system.css
+   ============================================================ */
+
+/* Flash prevention — suppressed until load event removes [data-preload] */
+[data-preload] *,
+[data-preload] *::before,
+[data-preload] *::after { transition: none !important; }
+
+/* Smooth theme switching on user toggle */
+body { transition: background-color 0.35s var(--ease), color 0.35s var(--ease); }
+.navbar { transition: background 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease), padding 0.4s var(--ease); }
+
+/* ============================================================
+   DARK THEME TOKENS
+   All design-system.css components using CSS vars adapt for free
+   ============================================================ */
+[data-theme="dark"] {
+  --paper:       #111110;
+  --paper-2:     #1B1B19;
+  --paper-3:     #242421;
+  --ink-surface: #080807;
+  --ink:         #EAE6DF;
+  --ink-2:       #918F89;
+  --ink-3:       #56534E;
+  --on-dark:     #EAE6DF;
+  --on-dark-2:   #918F89;
+  --line:        rgba(255,255,255,0.08);
+  --line-2:      rgba(255,255,255,0.12);
+  --line-dark:   rgba(255,255,255,0.08);
+  color-scheme: dark;
+}
+
+/* ============================================================
+   LIQUID GLASS UTILITIES
+   Refractive translucency: blur + specular top edge + inset glow
+   ============================================================ */
+
+/* Full surface — modals, panels, sheets */
+.glass {
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(24px) saturate(200%) brightness(1.02);
+  -webkit-backdrop-filter: blur(24px) saturate(200%) brightness(1.02);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-top-color: rgba(255,255,255,0.50);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.08),
+    0 1px 4px rgba(0,0,0,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.60);
+}
+[data-theme="dark"] .glass {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.09);
+  border-top-color: rgba(255,255,255,0.16);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.30),
+    0 1px 4px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* Small — buttons, chips, pills */
+.glass-sm {
+  background: rgba(255,255,255,0.20);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-top-color: rgba(255,255,255,0.55);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.70);
+}
+[data-theme="dark"] .glass-sm {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.10);
+  border-top-color: rgba(255,255,255,0.18);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* Inverted — for use on dark bands (CTA, Founder) */
+.glass-invert {
+  background: rgba(0,0,0,0.14);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-top-color: rgba(255,255,255,0.20);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.24),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+/* ============================================================
+   NAV — liquid glass bar
+   Enhances existing backdrop-filter with specular highlights
+   ============================================================ */
+.navbar {
+  background: rgba(251,250,247,0.72);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.72);
+}
+.navbar.scrolled {
+  background: rgba(251,250,247,0.90);
+}
+[data-theme="dark"] .navbar {
+  background: rgba(17,17,16,0.72);
+  border-bottom-color: rgba(255,255,255,0.07);
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.30),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+[data-theme="dark"] .navbar.scrolled {
+  background: rgba(17,17,16,0.92);
+}
+
+/* dark nav links */
+[data-theme="dark"] .nav-links a { color: var(--ink-2); }
+[data-theme="dark"] .nav-links a:hover,
+[data-theme="dark"] .nav-links a.active { color: var(--ink); }
+[data-theme="dark"] .nav-links a::after { background: var(--ink); }
+[data-theme="dark"] .language-btn { color: var(--ink-2); }
+[data-theme="dark"] .language-btn:hover { color: var(--ink); }
+[data-theme="dark"] .nav-toggle { border-color: var(--line-2); color: var(--ink-2); }
+
+/* ============================================================
+   THEME TOGGLE — glass circle button, lives in .nav-right
+   ============================================================ */
+.theme-toggle {
+  width: 34px; height: 34px; border-radius: 50%; padding: 0;
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.80);
+  cursor: pointer; display: grid; place-items: center;
+  color: var(--ink-2); font-size: 0.78rem; flex-shrink: 0;
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease), background 0.25s var(--ease);
+}
+.theme-toggle:hover { border-color: rgba(0,0,0,0.22); color: var(--ink); }
+[data-theme="dark"] .theme-toggle {
+  background: rgba(255,255,255,0.06);
+  border-color: var(--line-2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.07);
+}
+[data-theme="dark"] .theme-toggle:hover { border-color: var(--ink-3); color: var(--ink); }
+
+/* icon visibility controlled by theme */
+.theme-toggle [data-light-icon] { display: block; }
+.theme-toggle [data-dark-icon]  { display: none; }
+[data-theme="dark"] .theme-toggle [data-light-icon] { display: none; }
+[data-theme="dark"] .theme-toggle [data-dark-icon]  { display: block; }
+
+/* ============================================================
+   CHAT BUTTON — liquid glass circle (replaces solid ink bg)
+   ============================================================ */
+.chat-button {
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.30);
+  border-top-color: rgba(255,255,255,0.58);
+  color: var(--ink);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.10),
+    0 2px 6px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+}
+.chat-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 32px rgba(0,0,0,0.14),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+}
+[data-theme="dark"] .chat-button {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.10);
+  border-top-color: rgba(255,255,255,0.18);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.32),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* ============================================================
+   CHAT MODAL — glass panel
+   ============================================================ */
+.chat-modal {
+  background: rgba(251,250,247,0.88);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.30);
+  border-top-color: rgba(255,255,255,0.55);
+  box-shadow:
+    0 24px 64px rgba(0,0,0,0.14),
+    0 4px 16px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.40);
+}
+[data-theme="dark"] .chat-modal {
+  background: rgba(20,20,18,0.90);
+  border-color: rgba(255,255,255,0.08);
+  border-top-color: rgba(255,255,255,0.14);
+  box-shadow:
+    0 24px 64px rgba(0,0,0,0.50),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* chat UI elements — use CSS vars so they adapt for free */
+.chat-header { background: transparent; border-bottom-color: var(--line); }
+.chat-title h3 { color: var(--ink); text-shadow: none; }
+.chat-title p { color: var(--ink-2); }
+.chat-close { background: transparent; border: none; color: var(--ink-3); }
+.chat-close:hover { background: var(--paper-2); color: var(--ink); }
+.chat-messages { background: transparent; }
+.message.assistant { background: var(--paper-2); color: var(--ink); border-color: var(--line); }
+.message.user { background: var(--ink); color: var(--paper); }
+.chat-input { background: transparent; border-top-color: var(--line); }
+.chat-input input {
+  background: var(--paper-2); border-color: var(--line-2);
+  color: var(--ink); -webkit-text-fill-color: unset;
+}
+.chat-input input::placeholder { color: var(--ink-3); }
+.chat-input input:focus { border-color: var(--ink); outline: none; box-shadow: none; }
+.chat-input button { background: var(--ink); color: var(--paper); }
+
+/* ============================================================
+   LANGUAGE DROPDOWN — glass panel
+   ============================================================ */
+.language-dropdown {
+  background: rgba(255,255,255,0.90);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.30);
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.10),
+    0 2px 8px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.55);
+}
+[data-theme="dark"] .language-dropdown {
+  background: rgba(27,27,25,0.92);
+  border-color: rgba(255,255,255,0.09);
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.40),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+[data-theme="dark"] .language-option { color: var(--ink-2); }
+[data-theme="dark"] .language-option:hover { background: var(--paper-3); color: var(--ink); }
+[data-theme="dark"] .language-option.active-lang { color: var(--ink); }

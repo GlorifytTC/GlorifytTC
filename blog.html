@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();(function(){try{var t=localStorage.getItem('glorifytc_theme'),d=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t!=='light'&&d))document.documentElement.setAttribute('data-theme','dark');}catch(e){}document.documentElement.setAttribute('data-preload','');window.addEventListener('load',function(){document.documentElement.removeAttribute('data-preload');});})();</script>
     <!-- Google tag (gtag.js), Consent Mode v2: analytics denied until the visitor accepts cookies -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKJF8EV25G"></script>
     <script>
@@ -50,9 +50,7 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Font: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Blog CSS -->
-  <link rel="stylesheet" href="blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -68,17 +66,48 @@
   }
   </script>
     <style>
+    /* compat: map legacy dark vars to design-system tokens */
+    :root {
+      --white-5:  rgba(26,26,23,0.03);
+      --white-10: var(--line);
+      --white-20: var(--line-2);
+      --white-50: var(--ink-3);
+      --white-70: var(--ink-2);
+      --white-90: var(--ink);
+      --zinc-900: var(--paper-3);
+      --cyan-400: var(--ink);
+      --cyan-500: var(--ink);
+      --text-primary: var(--ink);
+      --text-secondary: var(--ink-2);
+      --bg-primary: var(--paper);
+      --bg-secondary: var(--paper-2);
+    }
+    [data-theme="dark"] {
+      --white-5:  rgba(255,255,255,0.04);
+      --white-10: rgba(255,255,255,0.08);
+      --white-20: rgba(255,255,255,0.12);
+      --white-50: rgba(255,255,255,0.50);
+      --white-70: rgba(255,255,255,0.70);
+      --white-90: rgba(255,255,255,0.90);
+      --zinc-900: var(--paper-3);
+      --cyan-400: var(--ink);
+      --cyan-500: var(--ink);
+      --text-primary: var(--ink);
+      --text-secondary: var(--ink-2);
+      --bg-primary: var(--paper);
+      --bg-secondary: var(--paper-2);
+    }
     .blog-filters { padding: 1.5rem 0 2.5rem; }
     .filter-layout { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
     .search-wrapper { position: relative; flex: 1 1 280px; max-width: 360px; }
     .search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--white-50); font-size: 0.9rem; }
-    .search-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--white-10); border-radius: 50px; padding: 0.7rem 1rem 0.7rem 2.6rem; color: white; font-size: 0.9rem; font-family: inherit; }
+    .search-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--white-10); border-radius: 50px; padding: 0.7rem 1rem 0.7rem 2.6rem; color: var(--ink); font-size: 0.9rem; font-family: inherit; }
     .search-input::placeholder { color: var(--white-50); }
     .search-input:focus { outline: none; border-color: var(--cyan-400); }
     .filter-container { display: flex; flex-wrap: wrap; gap: 0.6rem; }
     .filter-btn { background: rgba(255,255,255,0.04); border: 1px solid var(--white-10); color: var(--white-70); padding: 0.55rem 1.1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 500; cursor: pointer; font-family: inherit; transition: all 0.25s ease; }
-    .filter-btn:hover { background: rgba(255,255,255,0.08); color: white; }
-    .filter-btn.active { background: linear-gradient(to right, var(--cyan-500), var(--cyan-600)); border-color: transparent; color: white; }
+    .filter-btn:hover { background: rgba(255,255,255,0.08); color: var(--ink); }
+    .filter-btn.active { background: var(--ink); border-color: transparent; color: var(--paper); }
 
     .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
     .featured-card { position: relative; display: block; border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--white-10); background: rgba(255,255,255,0.03); transition: transform 0.3s ease, border-color 0.3s ease; }
@@ -87,7 +116,7 @@
     .featured-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .featured-content { padding: 1.5rem; }
     .featured-meta { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.8rem; }
-    .featured-badge { background: var(--cyan-400); color: #04141a; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .featured-badge { background: var(--ink); color: var(--paper); font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.4px; }
     .category-label { color: var(--cyan-400); font-size: 0.8rem; font-weight: 600; }
     .featured-title { color: white; font-size: 1.3rem; font-weight: 600; margin-bottom: 0.6rem; line-height: 1.3; }
     .featured-excerpt { color: var(--white-70); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; }
@@ -100,7 +129,7 @@
     .card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .card-content { padding: 1.4rem; }
     .card-category { display: flex; align-items: center; gap: 0.4rem; color: var(--cyan-400); font-size: 0.78rem; font-weight: 600; margin-bottom: 0.7rem; }
-    .card-title { color: white; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; line-height: 1.3; }
+    .card-title { color: var(--ink); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; line-height: 1.3; }
     .card-excerpt { color: var(--white-70); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; }
     .no-results { text-align: center; color: var(--white-50); padding: 2rem 0; }
     @media (max-width: 600px) {
@@ -109,6 +138,9 @@
     }
     </style>
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="dark-mode.css">
+  <script src="dark-mode.js" defer></script>
 </head>
 <body>
 
@@ -142,7 +174,10 @@
         <button class="language-option" data-lang="en"><span class="lang-code">EN</span> English</button>
       </div>
     </div>
-    
+    <button class="theme-toggle" id="themeToggle" aria-label="Byt tema">
+        <i class="fas fa-sun" data-light-icon></i>
+        <i class="fas fa-moon" data-dark-icon></i>
+    </button>
     <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
   </div>
 </nav>
@@ -639,6 +674,5 @@
 <script src="nav-menu.js" defer></script>
 <script src="cookie-consent.js" defer></script>
 <script src="scroll-fx.js" defer></script>
-<script src="space-bg.js" defer></script>
 </body>
 </html>

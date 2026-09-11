@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();</script>
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();(function(){try{var t=localStorage.getItem('glorifytc_theme'),d=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t!=='light'&&d))document.documentElement.setAttribute('data-theme','dark');}catch(e){}document.documentElement.setAttribute('data-preload','');window.addEventListener('load',function(){document.documentElement.removeAttribute('data-preload');});})();</script>
     <!-- Google tag (gtag.js), Consent Mode v2: analytics denied until the visitor accepts cookies -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKJF8EV25G"></script>
     <script>
@@ -51,9 +51,7 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Font: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Contact CSS -->
-  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet">
   <!-- Structured Data: ContactPage + LocalBusiness -->
   <script type="application/ld+json">
   {
@@ -97,6 +95,9 @@
   }
   </script>
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="dark-mode.css">
+  <script src="dark-mode.js" defer></script>
 </head>
 <body>
 
@@ -130,7 +131,10 @@
           <button class="language-option" data-lang="en"><span class="lang-code">EN</span> English</button>
         </div>
       </div>
-      
+      <button class="theme-toggle" id="themeToggle" aria-label="Byt tema">
+          <i class="fas fa-sun" data-light-icon></i>
+          <i class="fas fa-moon" data-dark-icon></i>
+      </button>
       <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
     </div>
   </nav>
@@ -645,6 +649,5 @@
 <script src="nav-menu.js" defer></script>
 <script src="cookie-consent.js" defer></script>
 <script src="scroll-fx.js" defer></script>
-<script src="space-bg.js" defer></script>
 </body>
 </html>
