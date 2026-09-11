@@ -107,63 +107,47 @@
    carry the glass look.
    ============================================================ */
 .project-card {
-  background:
-    linear-gradient(145deg,
-      rgba(255,255,255,0.55) 0%,
-      rgba(255,255,255,0.12) 35%,
-      transparent            60%
-    ),
-    rgba(251,250,247,0.38) !important;
+  background: var(--card-tint, rgba(251,250,247,0.06)) !important;
   backdrop-filter: var(--glass-blur) !important;
   -webkit-backdrop-filter: var(--glass-blur) !important;
-  border:        1px solid rgba(255,255,255,0.80) !important;
-  border-bottom: 1px solid rgba(200,197,190,0.50) !important;
+  border:        1px solid rgba(255,255,255,0.55) !important;
+  border-bottom: 1px solid rgba(200,197,190,0.28) !important;
   border-radius: var(--glass-radius) !important;
   box-shadow:
-    0 4px 24px rgba(0,0,0,0.08),
-    0 1px 6px  rgba(0,0,0,0.04),
-    inset 0 1px 0 rgba(255,255,255,0.95) !important;
+    0 2px 12px rgba(0,0,0,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.45) !important;
   transition: transform 0.35s var(--ease, ease),
               box-shadow 0.35s var(--ease, ease) !important;
 }
 
 [data-theme="dark"] .project-card {
-  background:
-    linear-gradient(145deg,
-      rgba(255,255,255,0.10) 0%,
-      rgba(255,255,255,0.03) 35%,
-      transparent            60%
-    ),
-    rgba(255,255,255,0.05) !important;
-  border-color:        rgba(255,255,255,0.13) !important;
-  border-bottom-color: rgba(255,255,255,0.06) !important;
+  background:          rgba(255,255,255,0.04) !important;
+  border-color:        rgba(255,255,255,0.10) !important;
+  border-bottom-color: rgba(255,255,255,0.05) !important;
   box-shadow:
-    0 4px 24px rgba(0,0,0,0.38),
-    0 1px 6px  rgba(0,0,0,0.22),
-    inset 0 1px 0 rgba(255,255,255,0.12) !important;
+    0 4px 24px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.06) !important;
 }
 
 .project-card:hover {
   transform:  translateY(-5px) !important;
   box-shadow:
-    0 16px 48px rgba(0,0,0,0.12),
-    0 4px 12px  rgba(0,0,0,0.07),
-    inset 0 1px 0 rgba(255,255,255,0.95) !important;
+    0 12px 36px rgba(0,0,0,0.09),
+    inset 0 1px 0 rgba(255,255,255,0.38) !important;
 }
 [data-theme="dark"] .project-card:hover {
   box-shadow:
-    0 16px 48px rgba(0,0,0,0.50),
-    0 4px 12px  rgba(0,0,0,0.28),
-    inset 0 1px 0 rgba(255,255,255,0.14) !important;
+    0 12px 36px rgba(0,0,0,0.42),
+    inset 0 1px 0 rgba(255,255,255,0.07) !important;
 }
 
 .project-card.placeholder {
-  background:   rgba(251,250,247,0.20) !important;
+  background:   rgba(251,250,247,0.04) !important;
   border-style: dashed !important;
   box-shadow:   none   !important;
 }
 [data-theme="dark"] .project-card.placeholder {
-  background: rgba(255,255,255,0.025) !important;
+  background: rgba(255,255,255,0.02) !important;
 }
 
 /* ============================================================
@@ -309,18 +293,15 @@ body { padding-top: 68px; }
 }
 [data-theme="dark"] .chat-modal::before { opacity: 0.55; }
 
-/* project cards: fades in on hover, faster spin */
+/* project cards: same opacity and speed as dropdown/modal */
 .project-card::before {
-  opacity: 0;
+  opacity: 0.75;
   transition: opacity 0.4s ease;
-  animation: prism-spin 7s linear infinite;
-  animation-play-state: paused;
+  animation: prism-spin 10s linear infinite;
 }
-.project-card:hover::before {
-  opacity: 1;
-  animation-play-state: running;
-}
-[data-theme="dark"] .project-card:hover::before { opacity: 0.65; }
+.project-card:hover::before { opacity: 1; }
+[data-theme="dark"] .project-card::before { opacity: 0.55; }
+[data-theme="dark"] .project-card:hover::before { opacity: 0.70; }
 
 /* ============================================================
    Accessibility
@@ -333,9 +314,9 @@ body { padding-top: 68px; }
     animation: none !important;
   }
   .language-dropdown::before,
-  .chat-modal::before  { opacity: 0.50; }
-  .navbar::after       { opacity: 0.40; }
-  .project-card:hover::before { opacity: 0.60; }
+  .chat-modal::before,
+  .project-card::before { opacity: 0.50; }
+  .navbar::after        { opacity: 0.40; }
 }
 
 @media (prefers-reduced-transparency: reduce) {

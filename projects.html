@@ -183,104 +183,79 @@
 
     .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 1.75rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
     }
     .project-card {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid var(--white-10);
         border-radius: 1.5rem;
-        padding: 2.25rem;
-        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        padding: 1.5rem 1.75rem;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
         position: relative;
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        gap: 0.5rem;
     }
     .project-card:hover {
-        transform: translateY(-6px);
-        border-color: var(--cyan-400);
-        box-shadow: 0 20px 50px rgba(0, 209, 255, 0.12);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.09);
     }
-    .project-card-head {
+    .project-card-meta {
         display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
+        flex-direction: column;
+        gap: 0.3rem;
     }
-    .proj-logo {
-        width: 64px; height: 64px;
-        border-radius: 1rem;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid var(--white-10);
-        display: flex; align-items: center; justify-content: center;
-        flex-shrink: 0;
-        overflow: hidden;
+    .project-card-meta h2 {
+        font-size: 1rem; font-weight: 500;
+        font-family: var(--sans, 'Inter', sans-serif);
+        letter-spacing: -0.015em;
+        color: var(--ink); margin: 0; line-height: 1.25;
     }
-    .proj-logo img { width: 100%; height: 100%; object-fit: contain; }
-    .proj-logo-fallback {
-        width: 100%; height: 100%;
-        display: none;
-        align-items: center; justify-content: center;
-        font-weight: 700; font-size: 1.5rem; letter-spacing: -1px;
-        color: var(--cyan-400);
-    }
-    .project-card-titles h2 {
-        font-size: 1.5rem; font-weight: 400; font-family: var(--serif); color: var(--ink); margin: 0 0 0.3rem;
-    }
-    .project-card-titles .proj-sector {
-        color: var(--white-50); font-size: 0.85rem;
+    .project-card-meta .proj-sector {
+        color: var(--white-50); font-size: 0.78rem;
     }
     .proj-badge {
-        display: inline-flex; align-items: center; gap: 0.45rem;
-        font-size: 0.72rem; font-weight: 600; letter-spacing: 0.5px;
-        padding: 0.25rem 0.8rem; border-radius: 50px;
-        text-transform: uppercase;
-        align-self: flex-start;
-        margin-bottom: 1.1rem;
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        font-size: 0.68rem; font-weight: 600; letter-spacing: 0.5px;
+        padding: 0.2rem 0.65rem; border-radius: 50px;
+        text-transform: uppercase; align-self: flex-start;
+        margin-top: 0.15rem;
     }
     .proj-badge.live {
         background: rgba(16, 185, 129, 0.12);
         border: 1px solid #10b981; color: #34d399;
     }
     .proj-badge.live .dot {
-        width: 7px; height: 7px; border-radius: 50%; background: #34d399;
-        box-shadow: 0 0 10px #34d399;
+        width: 6px; height: 6px; border-radius: 50%; background: #34d399;
+        box-shadow: 0 0 8px #34d399;
     }
     .proj-badge.soon {
         background: rgba(0, 209, 255, 0.1);
         border: 1px solid var(--cyan-400); color: var(--cyan-400);
     }
     .project-card p.proj-desc {
-        color: var(--white-70); line-height: 1.7; font-size: 1rem; margin-bottom: 1.4rem;
-        flex-grow: 1;
-    }
-    .proj-tags {
-        display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.6rem;
-    }
-    .proj-tags span {
-        font-size: 0.78rem; color: var(--white-70);
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--white-10);
-        padding: 0.3rem 0.8rem; border-radius: 50px;
+        flex: 1;
+        color: var(--white-70); line-height: 1.6; font-size: 0.9rem;
+        margin: 0.2rem 0 0;
     }
     .proj-link {
-        display: inline-flex; align-items: center; gap: 0.5rem;
-        color: var(--cyan-400); font-weight: 600; text-decoration: none;
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        color: var(--cyan-400); font-weight: 500; font-size: 0.85rem;
+        letter-spacing: 0.01em; text-decoration: none;
         align-self: flex-start; transition: gap 0.25s ease;
+        margin-top: auto; padding-top: 0.75rem;
     }
-    .proj-link:hover { gap: 0.85rem; }
+    .proj-link:hover { gap: 0.65rem; }
 
     .project-card.placeholder {
-        align-items: center; justify-content: center; text-align: center;
         border-style: dashed; background: rgba(255, 255, 255, 0.015);
+        justify-content: center;
     }
     .project-card.placeholder:hover { transform: none; box-shadow: none; }
-    .project-card.placeholder .ph-icon {
-        font-size: 2rem; color: var(--cyan-400); margin-bottom: 1rem;
-    }
-    .project-card.placeholder h2 { font-size: 1.25rem; font-weight: 500; color: var(--ink); margin-bottom: 0.6rem; }
-    .project-card.placeholder p { color: var(--white-50); font-size: 0.95rem; line-height: 1.6; max-width: 320px; }
+    .project-card.placeholder h2 { font-size: 1rem; font-weight: 500; font-family: var(--sans, 'Inter', sans-serif); letter-spacing: -0.015em; color: var(--ink); margin: 0; }
+    .project-card.placeholder p.proj-desc { color: var(--white-50); flex: none; }
 
     .projects-cta {
         text-align: center;
@@ -293,7 +268,7 @@
 
     @media (max-width: 600px) {
         .projects-page { padding: 7rem 1.25rem 3rem; }
-        .project-card { padding: 1.75rem; }
+        .project-card { padding: 1.25rem; }
     }
     </style>
 
@@ -311,118 +286,53 @@
         <div class="projects-grid">
             <!-- TaskBridge -->
             <article class="project-card">
-                <div class="project-card-head">
-                    <div class="proj-logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="url(#tb-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                          <defs>
-                            <linearGradient id="tb-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-                              <stop offset="0%" stop-color="#38bdf8"/>
-                              <stop offset="100%" stop-color="#2563eb"/>
-                            </linearGradient>
-                          </defs>
-                          <rect x="12" y="16" width="40" height="36" rx="5"/>
-                          <path d="M12 26h40"/>
-                          <path d="M22 11v8M42 11v8"/>
-                          <path d="M23 40l5 5 10-12"/>
-                        </svg>
-                    </div>
-                    <div class="project-card-titles">
-                        <h2><span style="color:#38bdf8;font-weight:700;">T</span><span style="color:#94a3b8;">ask</span> <span style="font-weight:700;">Bridge</span></h2>
-                        <span class="proj-sector" data-proj="tbSector">För skolor, vårdhem &amp; organisationer</span>
-                    </div>
+                <div class="project-card-meta">
+                    <h2>TaskBridge</h2>
+                    <span class="proj-sector" data-proj="tbSector">För skolor, vårdhem &amp; organisationer</span>
+                    <span class="proj-badge live"><span class="dot"></span><span data-proj="liveBadge">Live</span></span>
                 </div>
-                <span class="proj-badge live"><span class="dot"></span><span data-proj="liveBadge">Live</span></span>
-                <p class="proj-desc" data-proj="tbDesc">TaskBridge är en smart plattform för personal- och schemahantering. Skapa och hantera arbetspass, följ närvaro och effektivisera kommunikationen mellan personal och ledning - allt på ett ställe.</p>
-                <div class="proj-tags">
-                    <span data-proj="tbTag1">Schemaläggning</span>
-                    <span data-proj="tbTag2">Närvaro</span>
-                    <span data-proj="tbTag3">Kommunikation</span>
-                </div>
+                <p class="proj-desc" data-proj="tbDesc">Smart plattform för personal- och schemahantering. Arbetspass, närvaro och kommunikation på ett ställe.</p>
                 <a class="proj-link" href="https://www.taskbridge.se/" target="_blank" rel="noopener">
-                    <span data-proj="tbVisit">Besök TaskBridge</span> <i class="fas fa-arrow-right"></i>
+                    <span data-proj="tbVisit">Besök TaskBridge</span>
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11 11 2"/><path d="M5.5 2H11v5.5"/></svg>
                 </a>
             </article>
 
             <!-- HUB ART -->
             <article class="project-card">
-                <div class="project-card-head">
-                    <div class="proj-logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="url(#ha-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                          <defs>
-                            <linearGradient id="ha-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-                              <stop offset="0%" stop-color="#e7e5e4"/>
-                              <stop offset="100%" stop-color="#a8a29e"/>
-                            </linearGradient>
-                          </defs>
-                          <path d="M9 53h46"/>
-                          <path d="M16 53V21l14-8v40"/>
-                          <path d="M30 27h16v26"/>
-                          <path d="M21 25v4M21 33v4M21 41v4"/>
-                          <path d="M36 34h5M36 41h5"/>
-                        </svg>
-                    </div>
-                    <div class="project-card-titles">
-                        <h2><span style="font-weight:700;">HUB</span> <span style="color:#a8a29e;font-weight:600;">ART</span></h2>
-                        <span class="proj-sector" data-proj="haSector">Arkitektur &amp; inredning i Baku</span>
-                    </div>
+                <div class="project-card-meta">
+                    <h2>HUB ART</h2>
+                    <span class="proj-sector" data-proj="haSector">Arkitektur &amp; inredning i Baku</span>
+                    <span class="proj-badge live"><span class="dot"></span><span data-proj="haLiveBadge">Live</span></span>
                 </div>
-                <span class="proj-badge live"><span class="dot"></span><span data-proj="haLiveBadge">Live</span></span>
-                <p class="proj-desc" data-proj="haDesc">HUB ART är en arkitekt- och inredningsstudio i Baku som tar hand om hela resan - från första planritning till sista möbel. De ritar, bygger och inreder kompletta bostäder och kommersiella rum, allt under ett tak.</p>
-                <div class="proj-tags">
-                    <span data-proj="haTag1">Arkitektur</span>
-                    <span data-proj="haTag2">Inredning</span>
-                    <span data-proj="haTag3">Landskap</span>
-                </div>
+                <p class="proj-desc" data-proj="haDesc">Arkitekt- och inredningsstudio i Baku. Från planritning till färdig interiör, allt under ett tak.</p>
                 <a class="proj-link" href="https://hubart.az/" target="_blank" rel="noopener">
-                    <span data-proj="haVisit">Besök HUB ART</span> <i class="fas fa-arrow-right"></i>
+                    <span data-proj="haVisit">Besök HUB ART</span>
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11 11 2"/><path d="M5.5 2H11v5.5"/></svg>
                 </a>
             </article>
 
             <!-- Marani -->
             <article class="project-card">
-                <div class="project-card-head">
-                    <div class="proj-logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="url(#ma-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                          <defs>
-                            <linearGradient id="ma-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-                              <stop offset="0%" stop-color="#c25a5a"/>
-                              <stop offset="100%" stop-color="#7a0d0d"/>
-                            </linearGradient>
-                          </defs>
-                          <path d="M22 13h20"/>
-                          <path d="M23 13c0 10 4 16 9 16s9-6 9-16"/>
-                          <path d="M32 29v20"/>
-                          <path d="M23 50h18"/>
-                        </svg>
-                    </div>
-                    <div class="project-card-titles">
-                        <h2><span style="font-weight:700;">Marani</span></h2>
-                        <span class="proj-sector" data-proj="maSector">Georgisk restaurang i Stockholm</span>
-                    </div>
+                <div class="project-card-meta">
+                    <h2>Marani</h2>
+                    <span class="proj-sector" data-proj="maSector">Georgisk restaurang i Stockholm</span>
+                    <span class="proj-badge live"><span class="dot"></span><span data-proj="maLiveBadge">Live</span></span>
                 </div>
-                <span class="proj-badge live"><span class="dot"></span><span data-proj="maLiveBadge">Live</span></span>
-                <p class="proj-desc" data-proj="maDesc">Marani är en georgisk restaurang i centrala Stockholm där tradition möter nutid. Webbplatsen bjuder på menyn, bordsbokning och event i en atmosfärisk miljö - autentiska smaker från Kaukasus, serverade i en historisk lokal.</p>
-                <div class="proj-tags">
-                    <span data-proj="maTag1">Meny</span>
-                    <span data-proj="maTag2">Bordsbokning</span>
-                    <span data-proj="maTag3">Event</span>
-                </div>
+                <p class="proj-desc" data-proj="maDesc">Georgisk restaurang i centrala Stockholm. Autentiska smaker från Kaukasus i en historisk lokal.</p>
                 <a class="proj-link" href="https://marani.bar/" target="_blank" rel="noopener">
-                    <span data-proj="maVisit">Besök Marani</span> <i class="fas fa-arrow-right"></i>
+                    <span data-proj="maVisit">Besök Marani</span>
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11 11 2"/><path d="M5.5 2H11v5.5"/></svg>
                 </a>
             </article>
 
             <!-- More coming -->
             <article class="project-card placeholder">
-                <div class="ph-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="32" cy="32" r="20"/>
-                        <path d="M32 23v18M23 32h18"/>
-                    </svg>
+                <div class="project-card-meta">
+                    <h2 data-proj="soonTitle">Fler projekt på väg</h2>
+                    <span class="proj-badge soon" data-proj="soonBadge">Kommer snart</span>
                 </div>
-                <span class="proj-badge soon" data-proj="soonBadge">Kommer snart</span>
-                <h2 data-proj="soonTitle">Fler projekt på väg</h2>
-                <p data-proj="soonDesc">Vi bygger fler produkter just nu. Håll utkik - den här sidan växer allt eftersom vi lanserar.</p>
+                <p class="proj-desc" data-proj="soonDesc">Vi bygger fler produkter just nu. Håll utkik.</p>
             </article>
         </div>
 
@@ -509,28 +419,19 @@
                     intro: "Vi utvecklar egna digitala produkter vid sidan av vårt konsultarbete. Här är vad vi har lanserat hittills - och vi lägger till fler projekt allt eftersom de blir klara.",
                     tbSector: "För skolor, vårdhem & organisationer",
                     liveBadge: "Live",
-                    tbDesc: "TaskBridge är en smart plattform för personal- och schemahantering. Skapa och hantera arbetspass, följ närvaro och effektivisera kommunikationen mellan personal och ledning - allt på ett ställe.",
-                    tbTag1: "Schemaläggning",
-                    tbTag2: "Närvaro",
-                    tbTag3: "Kommunikation",
+                    tbDesc: "Smart plattform för personal- och schemahantering. Arbetspass, närvaro och kommunikation på ett ställe.",
                     tbVisit: "Besök TaskBridge",
                     haSector: "Arkitektur & inredning i Baku",
                     haLiveBadge: "Live",
-                    haDesc: "HUB ART är en arkitekt- och inredningsstudio i Baku som tar hand om hela resan - från första planritning till sista möbel. De ritar, bygger och inreder kompletta bostäder och kommersiella rum, allt under ett tak.",
-                    haTag1: "Arkitektur",
-                    haTag2: "Inredning",
-                    haTag3: "Landskap",
+                    haDesc: "Arkitekt- och inredningsstudio i Baku. Från planritning till färdig interiör, allt under ett tak.",
                     haVisit: "Besök HUB ART",
                     maSector: "Georgisk restaurang i Stockholm",
                     maLiveBadge: "Live",
-                    maDesc: "Marani är en georgisk restaurang i centrala Stockholm där tradition möter nutid. Webbplatsen bjuder på menyn, bordsbokning och event i en atmosfärisk miljö - autentiska smaker från Kaukasus, serverade i en historisk lokal.",
-                    maTag1: "Meny",
-                    maTag2: "Bordsbokning",
-                    maTag3: "Event",
+                    maDesc: "Georgisk restaurang i centrala Stockholm. Autentiska smaker från Kaukasus i en historisk lokal.",
                     maVisit: "Besök Marani",
                     soonBadge: "Kommer snart",
                     soonTitle: "Fler projekt på väg",
-                    soonDesc: "Vi bygger fler produkter just nu. Håll utkik - den här sidan växer allt eftersom vi lanserar.",
+                    soonDesc: "Vi bygger fler produkter just nu. Håll utkik.",
                     ctaTitle: "Har du en idé vi kan bygga?",
                     ctaDesc: "Vi tar gärna en pratstund om ditt nästa projekt.",
                     ctaBtn: "Kontakta oss"
@@ -553,28 +454,19 @@
                     intro: "Alongside our consulting work, we develop our own digital products. Here's what we've launched so far, and we'll add more projects as they're ready.",
                     tbSector: "For schools, care homes & organizations",
                     liveBadge: "Live",
-                    tbDesc: "TaskBridge is a smart staff and shift management platform. Create and manage shifts, track attendance, and streamline communication between staff and management, all in one place.",
-                    tbTag1: "Scheduling",
-                    tbTag2: "Attendance",
-                    tbTag3: "Communication",
+                    tbDesc: "Smart staff and scheduling platform. Shifts, attendance, and team communication in one place.",
                     tbVisit: "Visit TaskBridge",
                     haSector: "Architecture & interior design in Baku",
                     haLiveBadge: "Live",
-                    haDesc: "HUB ART is an architecture and interior design studio in Baku that handles the whole journey - from the first floor plan to the final piece of furniture. They design, build, and furnish complete residential and commercial spaces, all under one roof.",
-                    haTag1: "Architecture",
-                    haTag2: "Interior",
-                    haTag3: "Landscape",
+                    haDesc: "Architecture and interior design studio in Baku. From first blueprint to final furniture, under one roof.",
                     haVisit: "Visit HUB ART",
                     maSector: "Georgian restaurant in Stockholm",
                     maLiveBadge: "Live",
-                    maDesc: "Marani is a Georgian restaurant in central Stockholm where tradition meets modernity. The site showcases the menu, table reservations, and events in an atmospheric setting - authentic flavors from the Caucasus, served in a historic venue.",
-                    maTag1: "Menu",
-                    maTag2: "Reservations",
-                    maTag3: "Events",
+                    maDesc: "Georgian restaurant in central Stockholm. Authentic Caucasian flavors in a historic venue.",
                     maVisit: "Visit Marani",
                     soonBadge: "Coming soon",
                     soonTitle: "More projects on the way",
-                    soonDesc: "We're building more products right now. Stay tuned, this page will grow as we launch.",
+                    soonDesc: "We're building more products right now. Stay tuned.",
                     ctaTitle: "Have an idea we can build?",
                     ctaDesc: "We'd love to chat about your next project.",
                     ctaBtn: "Get in touch"
