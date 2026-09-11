@@ -1,0 +1,357 @@
+/* ============================================================
+   Liquid Glass — sparse web implementation
+   Works with dark-mode.css (loads before it in cascade).
+   Uses !important only where dark-mode.css would otherwise win.
+
+   Core insight: glass needs LOW opacity to show through.
+   rgba(251,250,247,0.88) over #FBFAF7 = invisible.
+   rgba(251,250,247,0.32) over #FBFAF7 = visible frosted pane.
+   ============================================================ */
+
+:root {
+  --glass-bg-light:   rgba(251, 250, 247, 0.32);
+  --glass-bg-dark:    rgba(14,  14,  12,  0.42);
+
+  --glass-border-light: rgba(255, 255, 255, 0.72);
+  --glass-border-dark:  rgba(255, 255, 255, 0.12);
+
+  --glass-blur:  blur(28px) saturate(200%);
+
+  /* specular: bright inset top-edge line — the main visual tell */
+  --glass-shadow-light:
+    0 8px 32px rgba(0,0,0,0.10),
+    0 2px 8px  rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.95);
+  --glass-shadow-dark:
+    0 8px 32px rgba(0,0,0,0.42),
+    0 2px 8px  rgba(0,0,0,0.26),
+    inset 0 1px 0 rgba(255,255,255,0.14);
+
+  --glass-radius: 14px;
+}
+
+/* ============================================================
+   1. Language dropdown
+   ============================================================ */
+.language-dropdown {
+  background:      var(--glass-bg-light) !important;
+  backdrop-filter: var(--glass-blur)     !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border:          1px solid var(--glass-border-light) !important;
+  border-radius:   var(--glass-radius)   !important;
+  box-shadow:      var(--glass-shadow-light) !important;
+}
+
+[data-theme="dark"] .language-dropdown {
+  background:   var(--glass-bg-dark)      !important;
+  border-color: var(--glass-border-dark)  !important;
+  box-shadow:   var(--glass-shadow-dark)  !important;
+}
+
+.language-option:hover {
+  background: rgba(0,0,0,0.07) !important;
+}
+[data-theme="dark"] .language-option:hover {
+  background: rgba(255,255,255,0.09) !important;
+}
+
+/* ============================================================
+   2. Chat modal
+   ============================================================ */
+.chat-modal {
+  background:       rgba(251,250,247,0.35)    !important;
+  backdrop-filter:  var(--glass-blur)         !important;
+  -webkit-backdrop-filter: var(--glass-blur)  !important;
+  border:           1px solid rgba(255,255,255,0.70) !important;
+  border-top-color: rgba(255,255,255,0.95)    !important;
+  border-radius:    var(--glass-radius)        !important;
+  box-shadow:
+    0 24px 72px rgba(0,0,0,0.14),
+    0 4px 16px  rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.90) !important;
+}
+
+[data-theme="dark"] .chat-modal {
+  background:       rgba(14,14,12,0.45)        !important;
+  border-color:     rgba(255,255,255,0.10)     !important;
+  border-top-color: rgba(255,255,255,0.20)     !important;
+  box-shadow:
+    0 24px 72px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.10) !important;
+}
+
+.chat-header {
+  background:    rgba(255,255,255,0.30) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.40) !important;
+}
+[data-theme="dark"] .chat-header {
+  background:          rgba(255,255,255,0.04) !important;
+  border-bottom-color: rgba(255,255,255,0.08) !important;
+}
+
+.chat-messages { background: transparent !important; }
+
+.chat-input {
+  background: rgba(255,255,255,0.22) !important;
+  border-top: 1px solid rgba(255,255,255,0.40) !important;
+}
+[data-theme="dark"] .chat-input {
+  background:      rgba(255,255,255,0.04) !important;
+  border-top-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ============================================================
+   3. Project cards
+   Backdrop-filter blurs behind — on near-white the transparency
+   is subtle, so the diagonal specular gradient + inset top edge
+   carry the glass look.
+   ============================================================ */
+.project-card {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,0.55) 0%,
+      rgba(255,255,255,0.12) 35%,
+      transparent            60%
+    ),
+    rgba(251,250,247,0.38) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border:        1px solid rgba(255,255,255,0.80) !important;
+  border-bottom: 1px solid rgba(200,197,190,0.50) !important;
+  border-radius: var(--glass-radius) !important;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.08),
+    0 1px 6px  rgba(0,0,0,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.95) !important;
+  transition: transform 0.35s var(--ease, ease),
+              box-shadow 0.35s var(--ease, ease) !important;
+}
+
+[data-theme="dark"] .project-card {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,0.10) 0%,
+      rgba(255,255,255,0.03) 35%,
+      transparent            60%
+    ),
+    rgba(255,255,255,0.05) !important;
+  border-color:        rgba(255,255,255,0.13) !important;
+  border-bottom-color: rgba(255,255,255,0.06) !important;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.38),
+    0 1px 6px  rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.12) !important;
+}
+
+.project-card:hover {
+  transform:  translateY(-5px) !important;
+  box-shadow:
+    0 16px 48px rgba(0,0,0,0.12),
+    0 4px 12px  rgba(0,0,0,0.07),
+    inset 0 1px 0 rgba(255,255,255,0.95) !important;
+}
+[data-theme="dark"] .project-card:hover {
+  box-shadow:
+    0 16px 48px rgba(0,0,0,0.50),
+    0 4px 12px  rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.14) !important;
+}
+
+.project-card.placeholder {
+  background:   rgba(251,250,247,0.20) !important;
+  border-style: dashed !important;
+  box-shadow:   none   !important;
+}
+[data-theme="dark"] .project-card.placeholder {
+  background: rgba(255,255,255,0.025) !important;
+}
+
+/* ============================================================
+   4. Navbar — fixed glass overlay, always on
+   ============================================================ */
+
+/* compensate for fixed navbar taking the element out of flow */
+body { padding-top: 68px; }
+
+.navbar {
+  position:   fixed !important;
+  top:        0     !important;
+  left:       0     !important;
+  right:      0     !important;
+  width:      100%  !important;
+  max-width:  none  !important;
+  z-index:    200   !important;
+
+  background:      rgba(251,250,247,0.55) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  border-bottom:   1px solid rgba(255,255,255,0.55) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.90),
+    0 4px 24px rgba(0,0,0,0.07) !important;
+}
+
+[data-theme="dark"] .navbar {
+  background:    rgba(14,14,12,0.60) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.07),
+    0 4px 24px rgba(0,0,0,0.42) !important;
+}
+
+/* stronger glass when scrolled (content is actively behind it) */
+.navbar.scrolled {
+  background: rgba(251,250,247,0.68) !important;
+}
+[data-theme="dark"] .navbar.scrolled {
+  background: rgba(14,14,12,0.75) !important;
+}
+
+/* prismatic bottom edge — conic on full ::after, mask reveals only the 1.5px bottom strip */
+.navbar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding-bottom: 1.5px;   /* only bottom strip will show */
+  background: conic-gradient(
+    from var(--prism-angle),
+    hsla(210, 90%, 78%, 0.00),
+    hsla(210, 90%, 78%, 0.80),
+    hsla(265, 80%, 78%, 0.70),
+    hsla(320, 75%, 82%, 0.60),
+    hsla( 35, 90%, 88%, 0.50),
+    hsla(155, 70%, 78%, 0.60),
+    hsla(210, 90%, 78%, 0.80),
+    hsla(210, 90%, 78%, 0.00)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.80;
+  animation: prism-spin 10s linear infinite;
+  z-index: 0;   /* below any positioned child (language-selector at z-index:2) */
+}
+[data-theme="dark"] .navbar::after { opacity: 0.50; }
+
+/* keep the language selector (and its dropdown) above the prism line */
+.language-selector {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================================
+   5. Prismatic border ring
+   Technique: conic-gradient on ::before, mask-composite:exclude
+   carves out only the 1px rim (padding defines thickness).
+   @property lets the angle animate — without it conic-gradient
+   angles can't interpolate and the spin stutters or jumps.
+
+   Palette: soft iridescence, not saturated rainbow.
+   Ice-blue → lavender → blush → warm → mint → back.
+   ============================================================ */
+
+@property --prism-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes prism-spin {
+  to { --prism-angle: 360deg; }
+}
+
+/* shared ring mixin — inset:0 + padding:1.5px + mask = border-only */
+.language-dropdown::before,
+.chat-modal::before,
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;           /* border thickness */
+  background: conic-gradient(
+    from var(--prism-angle),
+    hsla(210, 90%, 78%, 0.00),   /* transparent anchor */
+    hsla(210, 90%, 78%, 0.80),   /* ice blue */
+    hsla(265, 80%, 78%, 0.70),   /* lavender */
+    hsla(320, 75%, 82%, 0.60),   /* blush pink */
+    hsla( 35, 90%, 88%, 0.50),   /* warm gold */
+    hsla(155, 70%, 78%, 0.60),   /* mint */
+    hsla(210, 90%, 78%, 0.80),   /* ice blue again */
+    hsla(210, 90%, 78%, 0.00)    /* transparent anchor */
+  );
+  /* carve out the inner area — only the padding rim remains */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* language dropdown: always-on slow drift */
+.language-dropdown::before {
+  opacity: 0.75;
+  animation: prism-spin 10s linear infinite;
+}
+[data-theme="dark"] .language-dropdown::before { opacity: 0.55; }
+
+/* chat modal: always-on matching the dropdown */
+.chat-modal::before {
+  opacity: 0.75;
+  animation: prism-spin 10s linear infinite;
+  /* chat modal uses fixed/absolute positioning — keep ring inside rounded corners */
+  border-radius: var(--glass-radius);
+}
+[data-theme="dark"] .chat-modal::before { opacity: 0.55; }
+
+/* project cards: fades in on hover, faster spin */
+.project-card::before {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: prism-spin 7s linear infinite;
+  animation-play-state: paused;
+}
+.project-card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+[data-theme="dark"] .project-card:hover::before { opacity: 0.65; }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .language-dropdown::before,
+  .chat-modal::before,
+  .navbar::after,
+  .project-card::before {
+    animation: none !important;
+  }
+  .language-dropdown::before,
+  .chat-modal::before  { opacity: 0.50; }
+  .navbar::after       { opacity: 0.40; }
+  .project-card:hover::before { opacity: 0.60; }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .language-dropdown,
+  .chat-modal,
+  .project-card,
+  .navbar {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .language-dropdown,
+  .chat-modal,
+  .navbar        { background: var(--paper, #FBFAF7)  !important; }
+  .project-card  { background: var(--paper-2, #F3F1EA) !important; }
+  [data-theme="dark"] .language-dropdown,
+  [data-theme="dark"] .chat-modal,
+  [data-theme="dark"] .navbar { background: #111110 !important; }
+  [data-theme="dark"] .project-card { background: #1B1B19 !important; }
+}
