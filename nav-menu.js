@@ -11,27 +11,32 @@
 (function () {
     var CSS = '' +
         'html, body { overflow-x: hidden; }' +
+        /* nav-toggle: matches design-system.css desktop defaults */
         '.nav-toggle {' +
         '  display: none; width: 2.7rem; height: 2.7rem;' +
         '  align-items: center; justify-content: center;' +
-        '  background: rgba(255,255,255,0.05);' +
-        '  border: 1px solid rgba(255,255,255,0.1);' +
-        '  border-radius: 0.7rem; color: rgba(255,255,255,0.9);' +
+        '  background: transparent;' +
+        '  border: 1px solid var(--line-2, rgba(0,0,0,0.12));' +
+        '  border-radius: 0.7rem; color: var(--ink-2, #55585f);' +
         '  font-size: 1.15rem; cursor: pointer;' +
         '  transition: all 0.3s ease; position: relative; z-index: 1300;' +
         '}' +
         '.nav-toggle:hover { border-color: #00f5ff; color: #00f5ff; }' +
+        /* dark-mode toggle colours — mirrors dark-mode.css [data-theme=dark] .nav-toggle */
+        '[data-theme="dark"] .nav-toggle { border-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.5); }' +
         '@media (max-width: 768px) {' +
         '  .nav-toggle { display: inline-flex; }' +
         '  .navbar .nav-right .cta-button { display: none; }' +
+        /* light-mode panel — same glass as desktop .navbar in dark-mode.css */
         '  .navbar .nav-links {' +
         '    display: flex; flex-direction: column; align-items: flex-start;' +
         '    gap: 0.25rem; position: fixed; top: 0; right: 0; height: 100vh;' +
         '    width: min(80vw, 320px); padding: 5.5rem 1.75rem 2rem;' +
-        '    background: rgba(0,0,0,0.97);' +
-        '    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);' +
-        '    border-left: 1px solid rgba(255,255,255,0.1);' +
-        '    box-shadow: -10px 0 40px rgba(0,0,0,0.5);' +
+        '    background: rgba(251,250,247,0.92);' +
+        '    -webkit-backdrop-filter: blur(24px) saturate(200%);' +
+        '    backdrop-filter: blur(24px) saturate(200%);' +
+        '    border-left: 1px solid rgba(0,0,0,0.06);' +
+        '    box-shadow: -10px 0 40px rgba(0,0,0,0.10), inset 1px 0 0 rgba(255,255,255,0.72);' +
         '    transform: translateX(100%);' +
         '    transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);' +
         '    z-index: 1200; overflow-y: auto;' +
@@ -39,9 +44,18 @@
         '  .navbar .nav-links.open { transform: translateX(0); }' +
         '  .navbar .nav-links a {' +
         '    width: 100%; padding: 0.85rem 0; font-size: 1.05rem;' +
-        '    border-bottom: 1px solid rgba(255,255,255,0.05);' +
+        '    color: var(--ink-2, #55585f);' +
+        '    border-bottom: 1px solid rgba(0,0,0,0.06);' +
         '  }' +
+        '  .navbar .nav-links a:hover, .navbar .nav-links a.active { color: var(--ink, #17181c); }' +
         '  .navbar .nav-links a::after { display: none; }' +
+        /* dark-mode panel — mirrors [data-theme=dark] .navbar in dark-mode.css */
+        '  [data-theme="dark"] .navbar .nav-links {' +
+        '    background: rgba(17,17,16,0.92);' +
+        '    border-left-color: rgba(255,255,255,0.07);' +
+        '    box-shadow: -10px 0 40px rgba(0,0,0,0.50), inset 1px 0 0 rgba(255,255,255,0.05);' +
+        '  }' +
+        '  [data-theme="dark"] .navbar .nav-links a { border-bottom-color: rgba(255,255,255,0.07); }' +
         '}';
 
     function injectCss() {
