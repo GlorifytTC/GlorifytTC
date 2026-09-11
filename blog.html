@@ -136,6 +136,60 @@
         .filter-layout { flex-direction: column; align-items: stretch; }
         .search-wrapper { max-width: none; }
     }
+
+    .newsletter-section {
+        background: var(--paper-2, #F3F1EA);
+        border-top: 1px solid var(--line, #E4E1D8);
+        border-bottom: 1px solid var(--line, #E4E1D8);
+        padding: 3.5rem 0;
+    }
+    .newsletter-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+        .newsletter-container { flex-direction: row; align-items: center; justify-content: space-between; }
+    }
+    .newsletter-text {
+        color: var(--ink-2, #55585F);
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 42ch;
+        margin: 0;
+    }
+    .newsletter-form { display: flex; gap: 0.6rem; flex-shrink: 0; }
+    .newsletter-input {
+        padding: 0.7rem 1rem;
+        background: var(--paper, #FBFAF7);
+        border: 1px solid var(--line-2, #D6D2C7);
+        border-radius: 3px;
+        color: var(--ink, #17181C);
+        font-size: 0.9rem;
+        font-family: inherit;
+        width: 240px;
+        transition: border-color 0.2s;
+    }
+    .newsletter-input:focus { outline: none; border-color: var(--ink-3, #8B8E96); }
+    .newsletter-input::placeholder { color: var(--ink-3, #8B8E96); }
+    .subscribe-btn {
+        padding: 0.7rem 1.25rem;
+        background: var(--ink, #17181C);
+        color: var(--paper, #FBFAF7);
+        border: none;
+        border-radius: 3px;
+        font-family: inherit;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background 0.25s, transform 0.25s;
+    }
+    .subscribe-btn:hover { background: #2b2d34; transform: translateY(-1px); }
+    @media (max-width: 640px) {
+        .newsletter-form { flex-direction: column; }
+        .newsletter-input { width: 100%; }
+    }
     </style>
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="design-system.css">

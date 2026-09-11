@@ -383,7 +383,7 @@ body > .navbar > * { }
   color: var(--ink);
 }
 .service-description { font-size: 1rem; color: var(--ink-2); line-height: 1.6; margin: 0; }
-.service-card:hover { background: linear-gradient(to bottom, transparent, var(--paper-2)); }
+.service-card:hover { background: none; }
 
 .view-all { margin-top: 2.6rem; }
 
@@ -814,10 +814,7 @@ body > .navbar > * { }
   position: static; width: auto; height: auto;
   background: none; opacity: 1;
 }
-.main-content .service-card:hover {
-  background: var(--paper-2); transform: none; box-shadow: none;
-}
-.main-content .service-card:hover::before { opacity: 1; }
+.main-content .service-card:hover { background: none; }
 
 .service-header {
   display: grid; grid-template-columns: 1fr 2fr;
@@ -1094,7 +1091,7 @@ body > .navbar > * { }
 }
 .team-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 0;
 }
 .team-card {
@@ -1106,6 +1103,7 @@ body > .navbar > * { }
   flex-direction: column;
   gap: 0.75rem;
 }
+.team-card:last-child { border-right: none; }
 .team-card:hover { background: var(--paper-2); }
 .card-image { display: flex; justify-content: center; }
 .avatar-wrapper {

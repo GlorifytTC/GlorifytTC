@@ -93,7 +93,7 @@
 
     function setupTilt() {
         if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
-        var cards = document.querySelectorAll('.service-card, .feature-card, .pricing-card');
+        var cards = document.querySelectorAll('.feature-card, .pricing-card');
         cards.forEach(function (card) {
             card.classList.add('fx-tilt');
             card.addEventListener('mousemove', function (ev) {
