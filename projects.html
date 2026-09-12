@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();(function(){try{var t=localStorage.getItem('glorifytc_theme'),d=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t!=='light'&&d))document.documentElement.setAttribute('data-theme','dark');}catch(e){}document.documentElement.setAttribute('data-preload','');window.addEventListener('load',function(){document.documentElement.removeAttribute('data-preload');});})();</script>
+    <script>(function(){try{var l=localStorage.getItem('glorifytc_lang');if(l!=='sv'&&l!=='en')l='sv';document.documentElement.lang=l;}catch(e){}})();(function(){try{var t=localStorage.getItem('glorifytc_theme'),d=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;if(t!=='light')document.documentElement.setAttribute('data-theme','dark');}catch(e){}document.documentElement.setAttribute('data-preload','');window.addEventListener('load',function(){document.documentElement.removeAttribute('data-preload');});})();</script>
     <!-- Google tag (gtag.js), Consent Mode v2: analytics denied until the visitor accepts cookies -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKJF8EV25G"></script>
     <script>
@@ -109,10 +109,6 @@
       --white-20: var(--line-2);
       --white-50: var(--ink-3);
       --white-70: var(--ink-2);
-      --white-90: var(--ink);
-      --zinc-900: var(--paper-3);
-      --cyan-400: var(--ink);
-      --cyan-500: var(--ink);
       --text-primary: var(--ink);
       --text-secondary: var(--ink-2);
       --bg-primary: var(--paper);
@@ -124,10 +120,6 @@
       --white-20: rgba(255,255,255,0.12);
       --white-50: rgba(255,255,255,0.50);
       --white-70: rgba(255,255,255,0.70);
-      --white-90: rgba(255,255,255,0.90);
-      --zinc-900: var(--paper-3);
-      --cyan-400: var(--ink);
-      --cyan-500: var(--ink);
       --text-primary: var(--ink);
       --text-secondary: var(--ink-2);
       --bg-primary: var(--paper);
@@ -152,7 +144,7 @@
         border-radius: 0;
         padding: 0.4rem 1rem;
         margin-bottom: 1.5rem;
-        color: var(--cyan-400);
+        color: var(--ink-2);
         font-size: 0.8rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -160,7 +152,7 @@
     }
     .projects-head .tag-dot {
         width: 8px; height: 8px; border-radius: 50%;
-        background: var(--cyan-400);
+        background: var(--ink-3);
         box-shadow: none;
     }
     .projects-head h1 {
@@ -233,7 +225,7 @@
     }
     .proj-badge.soon {
         background: rgba(0, 209, 255, 0.1);
-        border: 1px solid var(--cyan-400); color: var(--cyan-400);
+        border: 1px solid var(--accent); color: var(--accent);
     }
     .project-card p.proj-desc {
         flex: 1;
@@ -242,7 +234,7 @@
     }
     .proj-link {
         display: inline-flex; align-items: center; gap: 0.4rem;
-        color: var(--cyan-400); font-weight: 500; font-size: 0.85rem;
+        color: var(--accent); font-weight: 500; font-size: 0.85rem;
         letter-spacing: 0.01em; text-decoration: none;
         align-self: flex-start; transition: gap 0.25s ease;
         margin-top: auto; padding-top: 0.75rem;
@@ -273,8 +265,8 @@
     </style>
 
     <!-- Projects content -->
-    <main class="projects-page">
-        <div class="projects-head">
+    <section class="projects-head">
+        <div class="max-width">
             <div class="tag">
                 <span class="tag-dot"></span>
                 <span data-proj="tag">Våra Projekt</span>
@@ -282,7 +274,9 @@
             <h1><span data-proj="title">Vad vi</span> <span class="cyan" data-proj="titleSpan">bygger</span></h1>
             <p data-proj="intro">Vi utvecklar egna digitala produkter vid sidan av vårt konsultarbete. Här är vad vi har lanserat hittills - och vi lägger till fler projekt allt eftersom de blir klara.</p>
         </div>
+    </section>
 
+    <main class="projects-page">
         <div class="projects-grid">
             <!-- TaskBridge -->
             <article class="project-card">

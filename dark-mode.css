@@ -17,18 +17,25 @@ body { transition: background-color 0.35s var(--ease), color 0.35s var(--ease); 
    All design-system.css components using CSS vars adapt for free
    ============================================================ */
 [data-theme="dark"] {
-  --paper:       #111110;
-  --paper-2:     #1B1B19;
-  --paper-3:     #242421;
-  --ink-surface: #080807;
-  --ink:         #EAE6DF;
-  --ink-2:       #918F89;
-  --ink-3:       #56534E;
-  --on-dark:     #EAE6DF;
-  --on-dark-2:   #918F89;
-  --line:        rgba(255,255,255,0.08);
-  --line-2:      rgba(255,255,255,0.12);
-  --line-dark:   rgba(255,255,255,0.08);
+  /* Black & blue — the pre-redesign night identity, retuned for the clean grid */
+  --paper:       #05070D;   /* blue-black */
+  --paper-2:     #0A0E17;
+  --paper-3:     #111726;
+  --ink-surface: #000000;
+  --ink:         #E9F3F8;   /* cool white */
+  --ink-2:       #8A97AB;   /* muted blue-grey */
+  --ink-3:       #515C6E;
+  --on-dark:     #E9F3F8;
+  --on-dark-2:   #8A97AB;
+  --line:        rgba(120,190,255,0.10);
+  --line-2:      rgba(120,190,255,0.17);
+  --line-dark:   rgba(120,190,255,0.10);
+  --accent:      #00D1FF;   /* neon brand cyan */
+  --accent-soft: rgba(0,209,255,0.12);
+  --cyan-300:    #5CE1FF;   /* cyan ramp for CTA gradients */
+  --cyan-400:    #00D1FF;
+  --cyan-500:    #00A8D6;
+  --cyan-600:    #0088B3;
   color-scheme: dark;
 }
 
@@ -120,7 +127,7 @@ body { transition: background-color 0.35s var(--ease), color 0.35s var(--ease); 
 [data-theme="dark"] .nav-links a { color: var(--ink-2); }
 [data-theme="dark"] .nav-links a:hover,
 [data-theme="dark"] .nav-links a.active { color: var(--ink); }
-[data-theme="dark"] .nav-links a::after { background: var(--ink); }
+[data-theme="dark"] .nav-links a::after { background: var(--accent); box-shadow: 0 0 8px rgba(0,209,255,0.6); }
 [data-theme="dark"] .language-btn { color: var(--ink-2); }
 [data-theme="dark"] .language-btn:hover { color: var(--ink); }
 [data-theme="dark"] .nav-toggle { border-color: var(--line-2); color: var(--ink-2); }
@@ -247,3 +254,85 @@ body { transition: background-color 0.35s var(--ease), color 0.35s var(--ease); 
 [data-theme="dark"] .language-option { color: var(--ink-2); }
 [data-theme="dark"] .language-option:hover { background: var(--paper-3); color: var(--ink); }
 [data-theme="dark"] .language-option.active-lang { color: var(--ink); }
+
+/* ============================================================
+   BLACK & BLUE — night-mode accents (light mode stays editorial)
+   ============================================================ */
+
+/* Accent words glow neon cyan instead of reading as quiet italic.
+   Covers landing (.display/.h2/.section-title) + every page's hero title. */
+[data-theme="dark"] .display .cyan,
+[data-theme="dark"] .h2 .cyan,
+[data-theme="dark"] .section-title .cyan,
+[data-theme="dark"] .hero-title .cyan,
+[data-theme="dark"] .projects-head h1 .cyan {
+  color: var(--accent);
+  font-style: italic;
+  text-shadow: 0 0 26px rgba(0,209,255,0.45);
+}
+
+/* Primary CTAs — cyan gradient with a soft halo (hero + nav) */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .nav-right .cta-button {
+  background: linear-gradient(135deg, var(--cyan-400), var(--cyan-600));
+  color: #001018;
+  border-color: transparent;
+  box-shadow: 0 0 24px rgba(0,209,255,0.30);
+}
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .nav-right .cta-button:hover {
+  background: linear-gradient(135deg, var(--cyan-300), var(--cyan-500));
+  box-shadow: 0 0 38px rgba(0,209,255,0.50);
+  transform: translateY(-1px);
+}
+
+/* Outline button picks up the cyan edge on hover */
+[data-theme="dark"] .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Ambient aurora behind the hero — the old "space" atmosphere, cleaned up.
+   isolate + z-index:-1 keeps it behind content; clip contains the glow.
+   Applied to every page's hero section, not just the landing hero. */
+[data-theme="dark"] .hero,
+[data-theme="dark"] .about-hero,
+[data-theme="dark"] .services-header,
+[data-theme="dark"] .team-hero,
+[data-theme="dark"] .blog-header,
+[data-theme="dark"] .contact-header,
+[data-theme="dark"] .projects-head {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+[data-theme="dark"] .hero::before,
+[data-theme="dark"] .about-hero::before,
+[data-theme="dark"] .services-header::before,
+[data-theme="dark"] .team-hero::before,
+[data-theme="dark"] .blog-header::before,
+[data-theme="dark"] .contact-header::before,
+[data-theme="dark"] .projects-head::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 140%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 48% at 18% 12%, rgba(0,209,255,0.16), transparent 70%),
+    radial-gradient(34% 44% at 86% 22%, rgba(0,120,255,0.13), transparent 70%),
+    radial-gradient(30% 40% at 62% 78%, rgba(138,43,226,0.09), transparent 70%);
+  filter: blur(6px);
+  animation: heroAurora 16s ease-in-out infinite alternate;
+}
+@keyframes heroAurora {
+  from { transform: translate3d(0,0,0) scale(1);      opacity: 0.85; }
+  to   { transform: translate3d(0,-3%,0) scale(1.08); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="dark"] .hero::before,
+  [data-theme="dark"] .about-hero::before,
+  [data-theme="dark"] .services-header::before,
+  [data-theme="dark"] .team-hero::before,
+  [data-theme="dark"] .blog-header::before,
+  [data-theme="dark"] .contact-header::before,
+  [data-theme="dark"] .projects-head::before { animation: none; }
+}
