@@ -128,49 +128,7 @@
     .projects-page {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 9rem 2rem 5rem;
-    }
-    .projects-head {
-        text-align: center;
-        max-width: 760px;
-        margin: 0 auto 3.5rem;
-    }
-    .projects-head .tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: none;
-        border: 1px solid var(--line-2);
-        border-radius: 0;
-        padding: 0.4rem 1rem;
-        margin-bottom: 1.5rem;
-        color: var(--ink-2);
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    .projects-head .tag-dot {
-        width: 8px; height: 8px; border-radius: 50%;
-        background: var(--ink-3);
-        box-shadow: none;
-    }
-    .projects-head h1 {
-        font-size: clamp(2.2rem, 5vw, 3.2rem);
-        font-weight: 400;
-        font-family: var(--serif);
-        color: var(--ink);
-        margin-bottom: 1.2rem;
-        line-height: 1.1;
-    }
-    .projects-head h1 .cyan {
-        font-style: italic;
-        color: var(--ink);
-    }
-    .projects-head p {
-        color: var(--white-70);
-        font-size: 1.1rem;
-        line-height: 1.7;
+        padding: 4rem 2rem 5rem;
     }
 
     .projects-grid {
@@ -259,7 +217,7 @@
     .projects-cta p { color: var(--white-70); margin-bottom: 1.6rem; }
 
     @media (max-width: 600px) {
-        .projects-page { padding: 7rem 1.25rem 3rem; }
+        .projects-page { padding: 3rem 1.25rem 3rem; }
         .project-card { padding: 1.25rem; }
     }
     </style>
@@ -267,12 +225,14 @@
     <!-- Projects content -->
     <section class="projects-head">
         <div class="max-width">
-            <div class="tag">
-                <span class="tag-dot"></span>
-                <span data-proj="tag">Våra Projekt</span>
+            <div class="header-content">
+                <div class="tag">
+                    <span class="tag-dot"></span>
+                    <span class="tag-text" data-proj="tag">Våra Projekt</span>
+                </div>
+                <h1 class="hero-title"><span data-proj="title">Vad vi</span> <span class="cyan" data-proj="titleSpan">bygger</span></h1>
+                <p class="hero-description" data-proj="intro">Vi utvecklar egna digitala produkter vid sidan av vårt konsultarbete. Här är vad vi har lanserat hittills - och vi lägger till fler projekt allt eftersom de blir klara.</p>
             </div>
-            <h1><span data-proj="title">Vad vi</span> <span class="cyan" data-proj="titleSpan">bygger</span></h1>
-            <p data-proj="intro">Vi utvecklar egna digitala produkter vid sidan av vårt konsultarbete. Här är vad vi har lanserat hittills - och vi lägger till fler projekt allt eftersom de blir klara.</p>
         </div>
     </section>
 

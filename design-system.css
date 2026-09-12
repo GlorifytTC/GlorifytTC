@@ -4,6 +4,14 @@
    Built to read as human-designed, not template/AI-generated.
    ============================================================ */
 
+/* Prevent flash of Swedish source text before JS applies the chosen language.
+   Swedish is baked into the HTML (instant, no hiding). For any other language,
+   hide the translatable elements until DOMContentLoaded adds .lang-ready.
+   visibility (not display) reserves layout, so there's no shift. */
+html:not([lang="sv"]):not(.lang-ready) :is([data-nav],[data-footer],[data-chat],[data-home],[data-about],[data-services],[data-team],[data-blog],[data-contact],[data-proj],[data-art],[data-category]) {
+  visibility: hidden;
+}
+
 /* ---------- Tokens ---------- */
 :root {
   /* Surface */
@@ -39,6 +47,15 @@
 
   --radius: 3px;   /* barely-there, not the pill/blob look */
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* Legacy brand cyans — drive the glowing "G" logo (both themes) and the
+     black-&-blue night mode. Sourced from the pre-redesign styles.css. */
+  --cyan-300: #66f9ff;
+  --cyan-400: #00f5ff;
+  --cyan-500: #00d1ff;
+  --cyan-600: #00a8ff;
+  --zinc-900: #111827;
+  --white-90: rgba(255,255,255,0.9);
 }
 
 /* ---------- Reset / base ---------- */
@@ -193,19 +210,47 @@ body > .navbar { max-width: none; padding-inline: 0; }
 body > .navbar > * { }
 .navbar.scrolled { border-bottom-color: var(--line); }
 
-.logo { display: inline-flex; align-items: center; gap: 0.7rem; margin-left: var(--gutter); }
+.logo { display: inline-flex; align-items: center; gap: 0.7rem; margin-left: var(--gutter); position: relative; }
 .logo-icon {
-  width: 34px; height: 34px;
+  position: relative;
+  width: 40px; height: 40px;
   display: grid; place-items: center;
-  background: var(--ink);
-  color: var(--paper);
-  border-radius: 4px;
+  background: linear-gradient(135deg, var(--cyan-500), var(--cyan-600));
+  border-radius: 11px;
   font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 500;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 0 22px rgba(0,209,255,0.30);
+  animation: glorifyGlow 3s ease-in-out infinite;
+  transition: transform 0.4s cubic-bezier(0.2,0.9,0.4,1.1);
 }
-.logo-icon span { line-height: 1; }
-.logo-text { font-family: var(--sans); font-weight: 600; font-size: 1.08rem; letter-spacing: -0.01em; color: var(--ink); }
+.logo-icon::before {
+  content: ''; position: absolute; inset: -2px; z-index: -1;
+  border-radius: 11px; opacity: 0; transition: opacity 0.4s ease;
+  background: linear-gradient(135deg, var(--cyan-400), var(--cyan-600), var(--cyan-400));
+}
+.logo-icon::after {
+  content: ''; position: absolute; inset: 2px; z-index: 0;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--zinc-900), #000);
+}
+.logo-icon span {
+  position: relative; z-index: 1; line-height: 1;
+  background: linear-gradient(135deg, var(--white-90), var(--cyan-400), var(--white-90));
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: glorifyPulse 2.5s ease-in-out infinite;
+}
+.logo:hover .logo-icon { transform: scale(1.04); animation: none; }
+.logo:hover .logo-icon::before { opacity: 1; animation: glorifyRotate 2s linear infinite; }
+.logo-text {
+  font-family: var(--sans); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.01em;
+  background: linear-gradient(135deg, var(--ink), var(--cyan-500), var(--ink));
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: glorifyShimmer 5s ease infinite;
+}
 
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a {
@@ -291,7 +336,8 @@ body > .navbar > * { }
 .hero { position: relative; padding-top: clamp(3.5rem, 8vw, 6.5rem); padding-bottom: 0; }
 .hero .hero-bg, .hero .bg-circle { display: none; }   /* kill legacy glowing blobs */
 
-.hero-inner { max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.hero-inner { position: relative; z-index: 1; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.hero { overflow: clip; }
 
 .hero-text { max-width: 20ch; } /* not used for width; kept as JS hook */
 .hero-lead-block { max-width: 62%; }
@@ -329,6 +375,20 @@ body > .navbar > * { }
   text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.5rem;
 }
 .hero-meta dd { margin: 0; font-family: var(--serif); font-size: 1.15rem; color: var(--ink); }
+
+/* hero entrance — staggered rise on load (theme-agnostic motion) */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-lead-block > * { opacity: 0; animation: heroRise 0.9s var(--ease) both; }
+  .hero .eyebrow                    { animation-delay: 0.05s; }
+  .hero h1                          { animation-delay: 0.16s; }
+  .hero p[data-home="description"]  { animation-delay: 0.30s; }
+  .hero-buttons                     { animation-delay: 0.44s; }
+  .hero-meta { opacity: 0; animation: heroRise 0.9s var(--ease) both; animation-delay: 0.58s; }
+}
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* hide the legacy robot entirely */
 .robot-container, .robot, .robot-head, .robot-particles { display: none !important; }
@@ -422,16 +482,16 @@ body > .navbar > * { }
   font-size: clamp(2rem, 4.5vw, 3.4rem); line-height: 1.1; letter-spacing: -0.015em;
   margin-bottom: 1.3rem;
 }
-.cta-title .cyan { font-style: italic; color: var(--on-dark); }
+.cta-title .cyan { font-style: italic; color: var(--cyan-500); text-shadow: 0 0 26px rgba(0,209,255,0.35); }
 .cta-description { font-size: 1.15rem; color: var(--on-dark-2); max-width: 46ch; margin: 0 auto 2.4rem; }
 .cta .cta-button {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  background: var(--paper); color: var(--ink);
+  background: #fff; color: #101418;
   font-family: var(--sans); font-size: 0.98rem; font-weight: 500;
   padding: 0.9rem 1.7rem; border-radius: var(--radius);
-  transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
-.cta .cta-button:hover { transform: translateY(-2px); background: #fff; }
+.cta .cta-button:hover { transform: translateY(-2px); background: #fff; color: #101418; box-shadow: 0 8px 30px rgba(0,209,255,0.30); }
 .cta .cta-button i { transition: transform 0.3s var(--ease); }
 .cta .cta-button:hover i { transform: translateX(3px); }
 
@@ -608,34 +668,8 @@ body > .navbar > * { }
 }
 .chat-chip:hover { background: var(--paper-3) !important; }
 
-/* ============================================================
-   LOGO — static, editorial, no animations
-   Overrides footer.css glow/shimmer/rotate after cascade order
-   ============================================================ */
-.logo-icon {
-  animation: none;
-  box-shadow: none;
-}
-.logo-icon::before, .logo-icon::after { display: none !important; }
-.logo-icon span {
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  background-clip: unset !important;
-  -webkit-text-fill-color: unset !important;
-  color: var(--paper) !important;
-  animation: none !important;
-  text-shadow: none !important;
-}
-.logo-text {
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  background-clip: unset !important;
-  -webkit-text-fill-color: unset !important;
-  color: var(--ink) !important;
-  animation: none !important;
-  font-size: 1.08rem !important;
-  font-weight: 600 !important;
-}
+/* Glowing "G" logo is defined near the top (.logo-icon) and in footer.css;
+   no longer neutralized — it's the reintroduced brand mark. */
 .language-btn i.fa-globe { animation: none !important; }
 
 /* ============================================================
@@ -880,7 +914,7 @@ body > .navbar > * { }
 .process-step:hover { background: var(--paper-3); transform: none; box-shadow: none; }
 .step-number {
   font-family: var(--serif); font-size: 2rem; font-weight: 400;
-  color: var(--line-2); margin-bottom: 1rem;
+  color: var(--accent); margin-bottom: 1rem;
 }
 .step-title {
   font-family: var(--serif); font-size: 1.1rem; font-weight: 400;
@@ -918,7 +952,8 @@ body > .navbar > * { }
 /* ============================================================
    CONTACT PAGE
    ============================================================ */
-.contact-header {
+.contact-header,
+.projects-head {
   padding: 9rem 2rem 4rem;
   text-align: center;
   border-bottom: 1px solid var(--line);
@@ -1436,40 +1471,8 @@ body > .navbar > * { }
   margin: 0 auto;
   padding: 8rem 2rem 5rem;
 }
-.projects-head {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 3.5rem;
-}
-.projects-head .tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--paper-2);
-  border: 1px solid var(--line-2);
-  border-radius: 50px;
-  padding: 0.35rem 1rem;
-  margin-bottom: 1.25rem;
-  color: var(--ink-3);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.projects-head h1 {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 400;
-  color: var(--ink);
-  margin-bottom: 1rem;
-  line-height: 1.1;
-}
-.projects-head p,
-.projects-head .subtitle {
-  color: var(--ink-2);
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
+/* .projects-head styled by the shared .contact-header rule above (identical
+   hero to other pages); tag/title/copy use the generic .tag/.hero-* classes. */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
