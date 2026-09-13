@@ -390,62 +390,69 @@ body > .navbar > * { }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* hide the legacy robot entirely */
-.robot-container, .robot, .robot-head, .robot-particles { display: none !important; }
-
-/* ---------- Hero orbit — mesmerizing vector animation, right of the lead block.
-   Sits behind .hero-inner (z-index:1), bleeds off the clipped hero edge, and
-   is radially masked so it never competes with the headline or meta strip.
-   Colors flow from --accent (cyan in dark theme). Decorative, aria-hidden. ---- */
-.hero-orbit {
+/* floating robot — sits right of the lead block, same slot the orbit used.
+   Behind .hero-inner (z-index:1), bleeds off the clipped hero edge. Decorative. */
+.robot-container {
   position: absolute;
-  top: 42%;
-  right: clamp(60px, 13vw, 240px);
+  top: 62%;
+  right: clamp(120px, 18vw, 340px);
   transform: translateY(-50%);
-  width: clamp(340px, 37vw, 540px);
-  aspect-ratio: 1;
+  width: clamp(240px, 26vw, 380px);
   z-index: 0;
   pointer-events: none;
-  -webkit-mask-image: radial-gradient(closest-side, #000 50%, transparent 100%);
-  mask-image: radial-gradient(closest-side, #000 50%, transparent 100%);
 }
-.hero-orbit::before {
-  content: "";
-  position: absolute;
-  inset: 16%;
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%);
-  animation: orbPulse 3.5s ease-in-out infinite;
+@media (max-width: 880px) { .robot-container { display: none; } }
+
+/* robot visuals — ported from legacy styles.css (that file is no longer linked) */
+.robot {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 400px;
+  margin-inline: auto;
+  animation: floatRobot 4.6s ease-in-out infinite;
 }
-.hero-orbit svg { position: relative; display: block; width: 100%; height: 100%; }
-
-.hero-orbit circle { fill: none; stroke: var(--accent); }
-.hero-orbit .orb-node circle,
-.hero-orbit .orb-core { stroke: none; fill: var(--accent); }
-.hero-orbit .orb-node circle { filter: drop-shadow(0 0 5px var(--accent)); }
-
-.orb-ring, .orb-node {
-  transform-box: view-box;
-  transform-origin: 200px 200px;
-  animation: orbSpin linear infinite;
+@keyframes floatRobot {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
-.orb-ring.rev, .orb-node.rev { animation-name: orbSpinRev; }
-
-/* Each node shares its ring's duration + direction so it rides that ring */
-.orb-r1, .orb-n3 { animation-duration: 48s; }
-.orb-r2, .orb-n4 { animation-duration: 24s; }
-.orb-r3, .orb-n1 { animation-duration: 30s; }
-.orb-r4          { animation-duration: 38s; }
-.orb-r5, .orb-n5 { animation-duration: 20s; }
-.orb-r6, .orb-n2 { animation-duration: 18s; }
-.orb-r7          { animation-duration: 13s; }
-
-@keyframes orbSpin    { to { transform: rotate(360deg); } }
-@keyframes orbSpinRev { to { transform: rotate(-360deg); } }
-@keyframes orbPulse   { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
-
-/* Lead block goes full-width here — reclaim the space, drop the orbit */
-@media (max-width: 880px) { .hero-orbit { display: none; } }
+.robot-particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
+.particle {
+  position: absolute; width: 4px; height: 4px;
+  background: var(--cyan-400); border-radius: 50%; opacity: 0.3;
+  animation: floatParticle 10s infinite linear;
+}
+@keyframes floatParticle {
+  0% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-100vh) translateX(50px); opacity: 0.3; }
+}
+.robot-head { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.robot-antenna { position: absolute; top: -2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; }
+.antenna-base { width: 0.3rem; height: 2.5rem; background: linear-gradient(to top, #4b5563, #374151); border-radius: 0.15rem; margin-bottom: 0.3rem; }
+.antenna-tip { width: 0.8rem; height: 0.8rem; background: var(--cyan-400); border-radius: 50%; box-shadow: 0 0 10px var(--cyan-400); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { opacity: 0.7; } 50% { opacity: 1; } 100% { opacity: 0.7; } }
+.robot-body { position: relative; width: 100%; height: 100%; }
+.robot-head-container {
+  width: 16rem; height: 14rem; background: linear-gradient(to bottom, #1f2937, #111827);
+  border-radius: 3rem; border: 2px solid #374151; position: relative; overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.1);
+}
+.robot-face {
+  position: absolute; inset: 1.5rem; background: #000; border-radius: 2rem; border: 1px solid #374151;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;
+}
+.robot-eyes { display: flex; gap: 2.5rem; }
+.robot-eye {
+  width: 2rem; height: 2rem; background: var(--cyan-400); border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.9), 0 0 40px rgba(0, 245, 255, 0.6);
+  animation: eyeGlow 3s ease-in-out infinite;
+}
+@keyframes eyeGlow {
+  0%, 100% { box-shadow: 0 0 25px rgba(0, 245, 255, 0.9), 0 0 40px rgba(0, 245, 255, 0.6); }
+  50% { box-shadow: 0 0 15px rgba(0, 245, 255, 0.7), 0 0 30px rgba(0, 245, 255, 0.4); }
+}
+.robot-mouth { width: 5rem; height: 0.8rem; background: #374151; border-radius: 0.4rem; box-shadow: 0 0 10px rgba(192, 192, 192, 0.3); }
 
 /* ============================================================
    SERVICES  (editorial hairline grid — no glowing cards)

@@ -129,44 +129,27 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-orbit" aria-hidden="true">
-            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- dotted outer ring -->
-                <g class="orb-ring orb-r1">
-                    <circle cx="200" cy="200" r="188" stroke-opacity="0.28" stroke-width="1.5" stroke-dasharray="1.5 13" stroke-linecap="round"/>
-                </g>
-                <!-- thin counter-sweeping arc -->
-                <g class="orb-ring orb-r2 rev">
-                    <circle cx="200" cy="200" r="166" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="70 1000" stroke-linecap="round"/>
-                </g>
-                <!-- bright sweeping arc -->
-                <g class="orb-ring orb-r3 rev">
-                    <circle cx="200" cy="200" r="150" stroke-opacity="0.9" stroke-width="2.5" stroke-dasharray="230 1000" stroke-linecap="round"/>
-                </g>
-                <!-- dotted mid ring -->
-                <g class="orb-ring orb-r4">
-                    <circle cx="200" cy="200" r="118" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="2 11" stroke-linecap="round"/>
-                </g>
-                <!-- dashed ring -->
-                <g class="orb-ring orb-r5 rev">
-                    <circle cx="200" cy="200" r="100" stroke-opacity="0.32" stroke-width="1.5" stroke-dasharray="7 12" stroke-linecap="round"/>
-                </g>
-                <!-- bright inner arc -->
-                <g class="orb-ring orb-r6 rev">
-                    <circle cx="200" cy="200" r="82" stroke-opacity="0.75" stroke-width="2.5" stroke-dasharray="120 600" stroke-linecap="round"/>
-                </g>
-                <!-- dotted core ring -->
-                <g class="orb-ring orb-r7">
-                    <circle cx="200" cy="200" r="46" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="1.5 9" stroke-linecap="round"/>
-                </g>
-                <!-- nodes riding the rings (cy = 200 − ring radius) -->
-                <g class="orb-node orb-n1 rev"><circle cx="200" cy="50" r="3.8"/></g>
-                <g class="orb-node orb-n2 rev"><circle cx="200" cy="118" r="3.2"/></g>
-                <g class="orb-node orb-n3"><circle cx="200" cy="12" r="2.6"/></g>
-                <g class="orb-node orb-n4 rev"><circle cx="200" cy="34" r="2.4"/></g>
-                <g class="orb-node orb-n5 rev"><circle cx="200" cy="100" r="2.8"/></g>
-                <circle class="orb-core" cx="200" cy="200" r="3.2"/>
-            </svg>
+        <div class="robot-container" aria-hidden="true">
+            <div class="robot">
+                <div class="robot-particles" id="robotParticles"></div>
+                <div class="robot-head">
+                    <div class="robot-antenna">
+                        <div class="antenna-base"></div>
+                        <div class="antenna-tip"></div>
+                    </div>
+                    <div class="robot-body">
+                        <div class="robot-head-container">
+                            <div class="robot-face">
+                                <div class="robot-eyes">
+                                    <div class="robot-eye"></div>
+                                    <div class="robot-eye"></div>
+                                </div>
+                                <div class="robot-mouth"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="hero-inner">
             <div class="hero-lead-block">
@@ -631,6 +614,7 @@
         // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
             initNavbar();
+            createRobotParticles();
             LanguageManager.init();
             document.documentElement.classList.add('lang-ready');
         });
