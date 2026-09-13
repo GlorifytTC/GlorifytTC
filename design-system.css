@@ -788,6 +788,17 @@ body > .navbar > * { }
 }
 .header-content { max-width: 60ch; }
 
+/* Centered page headers (match .team-hero) */
+.services-header { text-align: center; }
+.services-header .header-content,
+.blog-header .header-content,
+.contact-header .header-content,
+.projects-head .header-content,
+.services-header .hero-description,
+.blog-header .hero-description,
+.contact-header .hero-description,
+.projects-head .hero-description { margin-left: auto; margin-right: auto; }
+
 .hero-title {
   font-family: var(--serif); font-weight: 400;
   font-size: clamp(2rem, 4.2vw, 3.2rem);

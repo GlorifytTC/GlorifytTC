@@ -63,7 +63,6 @@
   <link rel="stylesheet" href="design-system.css">
   <link rel="stylesheet" href="liquid-glass.css">
   <link rel="stylesheet" href="dark-mode.css">
-  <script src="dark-mode.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -93,10 +92,6 @@
                     <button class="language-option" data-lang="en"><span class="lang-code">EN</span> English</button>
                 </div>
             </div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Byt tema">
-                <i class="fas fa-sun" data-light-icon></i>
-                <i class="fas fa-moon" data-dark-icon></i>
-            </button>
             <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
         </div>
     </nav>
@@ -497,5 +492,36 @@
     <script src="nav-menu.js" defer></script>
 <script src="cookie-consent.js" defer></script>
     <script src="scroll-fx.js" defer></script>
+
+    <!-- ===== CHAT BUTTON ===== -->
+    <button class="chat-button" id="chatButton"></button>
+
+    <!-- ===== CHAT MODAL ===== -->
+    <div class="chat-modal" id="chatModal">
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="chat-title">
+          <h3 data-chat="title">GlorifyTC Assistent</h3>
+          <p data-chat="subtitle">AI-driven support</p>
+        </div>
+        <button class="chat-close" id="chatClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message assistant" data-chat="welcome">
+          Hej! Jag är GlorifyTCs AI-assistent. Jag kan hjälpa dig med information om våra tjänster, svara på frågor om AI och datavetenskap, eller hjälpa till med andra frågor. Hur kan jag hjälpa dig idag?
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Fråga vad som helst..." data-chat="placeholder">
+        <button id="sendButton" disabled>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+    <script src="chatbot.js" defer></script>
 </body>
 </html>

@@ -133,61 +133,19 @@ body { transition: background-color 0.35s var(--ease), color 0.35s var(--ease); 
 [data-theme="dark"] .nav-toggle { border-color: var(--line-2); color: var(--ink-2); }
 
 /* ============================================================
-   THEME TOGGLE — glass circle button, lives in .nav-right
-   ============================================================ */
-.theme-toggle {
-  width: 34px; height: 34px; border-radius: 50%; padding: 0;
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(0,0,0,0.10);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.80);
-  cursor: pointer; display: grid; place-items: center;
-  color: var(--ink-2); font-size: 0.78rem; flex-shrink: 0;
-  transition: border-color 0.25s var(--ease), color 0.25s var(--ease), background 0.25s var(--ease);
-}
-.theme-toggle:hover { border-color: rgba(0,0,0,0.22); color: var(--ink); }
-[data-theme="dark"] .theme-toggle {
-  background: rgba(255,255,255,0.06);
-  border-color: var(--line-2);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.07);
-}
-[data-theme="dark"] .theme-toggle:hover { border-color: var(--ink-3); color: var(--ink); }
-
-/* icon visibility controlled by theme */
-.theme-toggle [data-light-icon] { display: block; }
-.theme-toggle [data-dark-icon]  { display: none; }
-[data-theme="dark"] .theme-toggle [data-light-icon] { display: none; }
-[data-theme="dark"] .theme-toggle [data-dark-icon]  { display: block; }
-
-/* ============================================================
-   CHAT BUTTON — liquid glass circle (replaces solid ink bg)
+   CHAT BUTTON — cyan gradient circle, colour-matched to the
+   nav "Get Started" CTA (--cyan-400 → --cyan-600) with soft halo.
    ============================================================ */
 .chat-button {
-  background: rgba(255,255,255,0.22);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255,255,255,0.30);
-  border-top-color: rgba(255,255,255,0.58);
-  color: var(--ink);
-  box-shadow:
-    0 8px 24px rgba(0,0,0,0.10),
-    0 2px 6px rgba(0,0,0,0.06),
-    inset 0 1px 0 rgba(255,255,255,0.65);
+  background: linear-gradient(135deg, var(--cyan-400), var(--cyan-600));
+  border: none;
+  color: #fff;
+  box-shadow: 0 0 24px rgba(0,209,255,0.30);
 }
 .chat-button:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 12px 32px rgba(0,0,0,0.14),
-    inset 0 1px 0 rgba(255,255,255,0.65);
-}
-[data-theme="dark"] .chat-button {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.10);
-  border-top-color: rgba(255,255,255,0.18);
-  box-shadow:
-    0 8px 24px rgba(0,0,0,0.32),
-    inset 0 1px 0 rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, var(--cyan-300), var(--cyan-500));
+  box-shadow: 0 0 38px rgba(0,209,255,0.50);
 }
 
 /* ============================================================
