@@ -273,7 +273,8 @@ body > .navbar > * { }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a:hover::after,
 .nav-links a.active::after { transform: scaleX(1); }
-.nav-links a.active { color: var(--ink); }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.active::after { background: var(--accent); }
 
 .nav-right { display: flex; align-items: center; gap: 1.1rem; margin-right: var(--gutter); }
 
@@ -667,13 +668,14 @@ body > .navbar > * { }
   transition: transform 0.3s var(--ease), background 0.3s var(--ease);
 }
 .chat-button::before {
-  font-family: "Font Awesome 6 Free"; font-weight: 900; content: "\f4ad"; /* comment-dots */
-  font-size: 1.2rem;
+  content: ""; display: block; width: 1.7rem; height: 1.7rem;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect x="23" y="4" width="2" height="6" rx="1" fill="%23fff"/><rect x="8" y="10" width="32" height="30" rx="7" fill="%23fff"/><circle cx="18" cy="22" r="3.5" fill="%23141414"/><circle cx="30" cy="22" r="3.5" fill="%23141414"/><rect x="17" y="31" width="14" height="2.5" rx="1.25" fill="%23141414"/></svg>') no-repeat center;
+  background-size: contain;
 }
 .chat-button:hover { transform: translateY(-2px); background: #2b2d34; }
 
 .chat-modal {
-  position: fixed; right: 1.6rem; bottom: 5.6rem; z-index: 121;
+  position: fixed; right: 1.6rem; bottom: 1.6rem; z-index: 121;
   width: min(380px, calc(100vw - 3rem)); height: min(560px, calc(100vh - 8rem));
   background: #fff; border: 1px solid var(--line);
   border-radius: 10px; overflow: hidden;
