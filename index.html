@@ -20,7 +20,7 @@
       gtag('config', 'G-BKJF8EV25G');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-lösningar, Data Science & Webbutveckling i Stockholm | GlorifyTC</title>
+    <title>GlorifyTC | AI, Data Science & Webbutveckling i Stockholm</title>
     <meta name="description" content="GlorifyTC erbjuder avancerade AI-lösningar, dataanalys och digital utveckling. Bygg intelligenta system med vårt expertteam. AI-modellutveckling, webbappar och konsulting.">
     <meta name="author" content="GlorifyTC">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -55,8 +55,10 @@
     {
       "@context": "https://schema.org",
       "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://www.glorifytc.se/#organization",
       "name": "GlorifyTC",
-      "url": "https://www.glorifytc.se",
+      "alternateName": "Glorify TC",
+      "url": "https://www.glorifytc.se/",
       "logo": "https://www.glorifytc.se/logo.png",
       "image": "https://www.glorifytc.se/og-image.jpg",
       "sameAs": [
@@ -82,6 +84,18 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.glorifytc.se/#website",
+      "name": "GlorifyTC",
+      "alternateName": ["Glorify TC", "glorifytc.se"],
+      "url": "https://www.glorifytc.se/",
+      "inLanguage": "sv-SE",
+      "publisher": { "@id": "https://www.glorifytc.se/#organization" }
+    }
+    </script>
 
           <link rel="stylesheet" href="footer.css">
           <link rel="stylesheet" href="design-system.css">
@@ -98,13 +112,13 @@
                 <div class="logo-text">GlorifyTC</div>
             </a>
             <div class="nav-links">
-                <a href="index.html" class="active" data-nav="home">Hem</a>
-                <a href="services.html" data-nav="services">Tjänster</a>
-                <a href="about.html" data-nav="about">Om oss</a>
-                <a href="team.html" data-nav="team">Team</a>
-                <a href="blog.html" data-nav="blog">Blogg</a>
-                <a href="projects.html" data-nav="projects">Våra Projekt</a>
-                <a href="contact.html" data-nav="contact">Kontakt</a>
+                <a href="/" class="active" data-nav="home">Hem</a>
+                <a href="/services" data-nav="services">Tjänster</a>
+                <a href="/about" data-nav="about">Om oss</a>
+                <a href="/team" data-nav="team">Team</a>
+                <a href="/blog" data-nav="blog">Blogg</a>
+                <a href="/projects" data-nav="projects">Våra Projekt</a>
+                <a href="/contact" data-nav="contact">Kontakt</a>
             </div>
             <div class="nav-right">
                 <div class="language-selector">
@@ -118,7 +132,7 @@
                         <button class="language-option" data-lang="en"><span class="lang-code">EN</span> English</button>
                     </div>
                 </div>
-                <a href="contact.html" class="cta-button" data-nav="getStarted">Kom igång</a>
+                <a href="/contact" class="cta-button" data-nav="getStarted">Kom igång</a>
             </div>
         </nav>
 
@@ -126,24 +140,7 @@
     <section class="hero">
         <div class="robot-container" aria-hidden="true">
             <div class="robot">
-                <div class="robot-particles" id="robotParticles"></div>
-                <div class="robot-head">
-                    <div class="robot-antenna">
-                        <div class="antenna-base"></div>
-                        <div class="antenna-tip"></div>
-                    </div>
-                    <div class="robot-body">
-                        <div class="robot-head-container">
-                            <div class="robot-face">
-                                <div class="robot-eyes">
-                                    <div class="robot-eye"></div>
-                                    <div class="robot-eye"></div>
-                                </div>
-                                <div class="robot-mouth"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <canvas class="hero-bits" id="heroBits" width="360" height="360"></canvas>
             </div>
         </div>
         <div class="hero-inner">
@@ -154,7 +151,7 @@
                 </h1>
                 <p data-home="description">Vi bygger intelligenta, moderna digitala produkter från AI-drivna system till responsiva webbplatser och mobilapplikationer.</p>
                 <div class="hero-buttons">
-                    <a href="services.html" class="btn btn-primary"><span data-home="explore">Utforska tjänster</span> <i class="fas fa-arrow-right"></i></a>
+                    <a href="/services" class="btn btn-primary"><span data-home="explore">Utforska tjänster</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <dl class="hero-meta">
@@ -219,7 +216,7 @@
         </div>
         
         <div class="view-all">
-            <a href="services.html"><span data-home="viewAll">Visa alla tjänster</span> <i class="fas fa-arrow-right"></i></a>
+            <a href="/services"><span data-home="viewAll">Visa alla tjänster</span> <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
@@ -267,7 +264,7 @@
         <div class="cta-container">
             <h2 class="cta-title"><span data-home="ctaTitle">Redo att bygga något</span> <span class="cyan" data-home="ctaSpan">extraordinärt</span>?</h2>
             <p class="cta-description" data-home="ctaDesc">Låt oss diskutera hur AI och datavetenskap kan transformera ditt företag.</p>
-            <a href="contact.html" class="cta-button"><span data-home="ctaButton">Starta en konversation</span> <i class="fas fa-arrow-right"></i></a>
+            <a href="/contact" class="cta-button"><span data-home="ctaButton">Starta en konversation</span> <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
@@ -319,23 +316,23 @@
             <div class="footer-section">
                 <h3 data-footer="quickLinks">Snabblänkar</h3>
                 <div class="footer-links">
-                    <a href="index.html" data-nav="home">Hem</a>
-                    <a href="services.html" data-nav="services">Tjänster</a>
-                    <a href="about.html" data-nav="about">Om oss</a>
-                    <a href="team.html" data-nav="team">Team</a>
-                    <a href="blog.html" data-nav="blog">Blogg</a>
-                    <a href="projects.html" data-nav="projects">Våra Projekt</a>
-                    <a href="contact.html" data-nav="contact">Kontakt</a>
+                    <a href="/" data-nav="home">Hem</a>
+                    <a href="/services" data-nav="services">Tjänster</a>
+                    <a href="/about" data-nav="about">Om oss</a>
+                    <a href="/team" data-nav="team">Team</a>
+                    <a href="/blog" data-nav="blog">Blogg</a>
+                    <a href="/projects" data-nav="projects">Våra Projekt</a>
+                    <a href="/contact" data-nav="contact">Kontakt</a>
                 </div>
             </div>
             
             <div class="footer-section">
                 <h3 data-footer="services">Tjänster</h3>
                 <div class="footer-links">
-                    <a href="services.html">AI-modellutveckling</a>
-                    <a href="services.html">Dataanalys</a>
-                    <a href="services.html">Webbapplikationer</a>
-                    <a href="services.html">Mobilappar</a>
+                    <a href="/services">AI-modellutveckling</a>
+                    <a href="/services">Dataanalys</a>
+                    <a href="/services">Webbapplikationer</a>
+                    <a href="/services">Mobilappar</a>
                 </div>
             </div>
             
@@ -578,20 +575,6 @@
             }
         };
 
-        // Create particles for robot background
-        function createRobotParticles() {
-            const container = document.getElementById('robotParticles');
-            if (!container) return;
-            
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
-                particle.style.animationDelay = `${Math.random() * 2}s`;
-                container.appendChild(particle);
-            }
-        }
         // Chat handled by chatbot.js
 
         // Navbar scroll effect
@@ -609,7 +592,6 @@
         // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
             initNavbar();
-            createRobotParticles();
             LanguageManager.init();
             document.documentElement.classList.add('lang-ready');
         });
@@ -618,5 +600,6 @@
 <script src="nav-menu.js" defer></script>
 <script src="cookie-consent.js" defer></script>
 <script src="scroll-fx.js" defer></script>
+<script src="hero-bits.js" defer></script>
 </body>
 </html>

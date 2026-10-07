@@ -391,11 +391,11 @@ body > .navbar > * { }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* floating robot — sits right of the lead block, same slot the orbit used.
+/* hero bit rain slot: sits right of the lead block, same slot the orbit used.
    Behind .hero-inner (z-index:1), bleeds off the clipped hero edge. Decorative. */
 .robot-container {
   position: absolute;
-  top: 62%;
+  top: 56%;
   right: clamp(120px, 18vw, 340px);
   transform: translateY(-50%);
   width: clamp(240px, 26vw, 380px);
@@ -404,56 +404,17 @@ body > .navbar > * { }
 }
 @media (max-width: 880px) { .robot-container { display: none; } }
 
-/* robot visuals — ported from legacy styles.css (that file is no longer linked) */
+/* hero bit rain: columns of 0s and 1s falling from top to bottom.
+   Drawn on the canvas by hero-bits.js. .robot stays as the wrapper so the
+   existing pointer parallax in scroll-fx.js keeps working. */
 .robot {
   position: relative;
   width: 100%;
   aspect-ratio: 1;
   max-width: 400px;
   margin-inline: auto;
-  animation: floatRobot 4.6s ease-in-out infinite;
 }
-@keyframes floatRobot {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-.robot-particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
-.particle {
-  position: absolute; width: 4px; height: 4px;
-  background: var(--cyan-400); border-radius: 50%; opacity: 0.3;
-  animation: floatParticle 10s infinite linear;
-}
-@keyframes floatParticle {
-  0% { transform: translateY(0) translateX(0); opacity: 0.3; }
-  50% { opacity: 0.8; }
-  100% { transform: translateY(-100vh) translateX(50px); opacity: 0.3; }
-}
-.robot-head { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
-.robot-antenna { position: absolute; top: -2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; }
-.antenna-base { width: 0.3rem; height: 2.5rem; background: linear-gradient(to top, #4b5563, #374151); border-radius: 0.15rem; margin-bottom: 0.3rem; }
-.antenna-tip { width: 0.8rem; height: 0.8rem; background: var(--cyan-400); border-radius: 50%; box-shadow: 0 0 10px var(--cyan-400); animation: pulse 2s infinite; }
-@keyframes pulse { 0% { opacity: 0.7; } 50% { opacity: 1; } 100% { opacity: 0.7; } }
-.robot-body { position: relative; width: 100%; height: 100%; }
-.robot-head-container {
-  width: 16rem; height: 14rem; background: linear-gradient(to bottom, #1f2937, #111827);
-  border-radius: 3rem; border: 2px solid #374151; position: relative; overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 245, 255, 0.1);
-}
-.robot-face {
-  position: absolute; inset: 1.5rem; background: #000; border-radius: 2rem; border: 1px solid #374151;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;
-}
-.robot-eyes { display: flex; gap: 2.5rem; }
-.robot-eye {
-  width: 2rem; height: 2rem; background: var(--cyan-400); border-radius: 50%;
-  box-shadow: 0 0 25px rgba(0, 245, 255, 0.9), 0 0 40px rgba(0, 245, 255, 0.6);
-  animation: eyeGlow 3s ease-in-out infinite;
-}
-@keyframes eyeGlow {
-  0%, 100% { box-shadow: 0 0 25px rgba(0, 245, 255, 0.9), 0 0 40px rgba(0, 245, 255, 0.6); }
-  50% { box-shadow: 0 0 15px rgba(0, 245, 255, 0.7), 0 0 30px rgba(0, 245, 255, 0.4); }
-}
-.robot-mouth { width: 5rem; height: 0.8rem; background: #374151; border-radius: 0.4rem; box-shadow: 0 0 10px rgba(192, 192, 192, 0.3); }
+.hero-bits { display: block; width: 100%; height: 100%; }
 
 /* ============================================================
    SERVICES  (editorial hairline grid — no glowing cards)
