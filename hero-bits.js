@@ -9,10 +9,11 @@
     if (!canvas || !canvas.getContext) return;
     var ctx = canvas.getContext('2d');
 
-    var S = 360;                       /* logical drawing size, scaled to the real size */
+    var S = 360;                       /* logical drawing width, scaled to the real size */
+    var H = 450;                       /* logical drawing height (4:5) */
     var CELL = 18;                     /* one glyph per cell */
     var COLS = S / CELL;
-    var ROWS = S / CELL;
+    var ROWS = H / CELL;
     var TRAIL = 12;                    /* glyphs in the fading tail behind each head */
     var CYCLE = ROWS + TRAIL;          /* rows a drop travels before it restarts at the top */
     var MIN_SPEED = 4;                 /* rows per second */
@@ -63,7 +64,7 @@
         var px = Math.round(width * dpr);
         if (canvas.width !== px) {
             canvas.width = px;
-            canvas.height = px;
+            canvas.height = Math.round(px * H / S);
         }
         ctx.setTransform(px / S, 0, 0, px / S, 0, 0);
         ctx.textAlign = 'center';
@@ -85,7 +86,7 @@
     }
 
     function draw() {
-        ctx.clearRect(0, 0, S, S);
+        ctx.clearRect(0, 0, S, H);
         for (var c = 0; c < COLS; c++) {
             var col = columns[c];
             var x = c * CELL + CELL / 2;

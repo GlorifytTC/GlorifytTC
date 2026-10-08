@@ -334,7 +334,7 @@ body > .navbar > * { }
 /* ============================================================
    HERO
    ============================================================ */
-.hero { position: relative; padding-top: clamp(3.5rem, 8vw, 6.5rem); padding-bottom: 0; }
+.hero { position: relative; padding-top: clamp(3rem, 6vw, 5rem); padding-bottom: 0; }
 .hero .hero-bg, .hero .bg-circle { display: none; }   /* kill legacy glowing blobs */
 
 .hero-inner { position: relative; z-index: 1; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
@@ -361,7 +361,7 @@ body > .navbar > * { }
 
 /* hero spec strip */
 .hero-meta {
-  margin-top: clamp(3.5rem, 7vw, 6rem);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
   border-top: 1px solid var(--line);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -395,10 +395,10 @@ body > .navbar > * { }
    Behind .hero-inner (z-index:1), bleeds off the clipped hero edge. Decorative. */
 .robot-container {
   position: absolute;
-  top: 56%;
-  right: clamp(120px, 18vw, 340px);
+  top: 50%;
+  right: calc(max(0px, (100% - var(--container)) / 2) + var(--gutter) + clamp(0px, 3.5vw, 60px));
   transform: translateY(-50%);
-  width: clamp(240px, 26vw, 380px);
+  width: clamp(300px, 38vw, 560px);
   z-index: 0;
   pointer-events: none;
 }
@@ -410,8 +410,8 @@ body > .navbar > * { }
 .robot {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
-  max-width: 400px;
+  aspect-ratio: 4 / 5;
+  max-width: 560px;
   margin-inline: auto;
 }
 .hero-bits { display: block; width: 100%; height: 100%; }
