@@ -55,6 +55,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.glorifytc.se/blog-automatisera-arbetsflode</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.glorifytc.se/blog-ai-agent-vs-chatbot</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.glorifytc.se/blog-valja-webbyra</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.glorifytc.se/blog-systemintegration-api</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.glorifytc.se/contact</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
