@@ -3,3 +3,9 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.glorifytc.se/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /

@@ -1,6 +1,6 @@
 # GlorifyTC Website
 
-Static marketing website for GlorifyTC — a Swedish AI, Data Science & digital development company. Hosted on GitHub Pages at [glorifytc.se](https://www.glorifytc.se).
+Static marketing website for GlorifyTC — a Swedish AI, Data Science & digital development company. Hosted on Vercel at [glorifytc.se](https://www.glorifytc.se).
 
 ## Structure
 

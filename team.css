@@ -882,3 +882,4 @@ body {
         font-size: 2rem;
     }
 }
+.avatar-wrapper picture { display: contents; }
